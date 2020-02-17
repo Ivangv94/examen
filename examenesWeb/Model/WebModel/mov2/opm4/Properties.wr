@@ -1,0 +1,155 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="130" id="mov2#opm4" name="generarExamenes">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm4#icu8" gr:x="30" gr:y="60" linkOrder="mov2#opm4#icu8#ln126 mov2#opm4#icu8#ln129">
+      <OKLink id="mov2#opm4#icu8#oln740" name="OKFlow740" to="mov2#opm4#seu16" automaticCoupling="true"/>
+      <InputCollectorParameter id="mov2#opm4#icu8#icp6" name="oidExamen"/>
+      <Link id="mov2#opm4#icu8#ln126" name="Flow126" to="mov2#opm4#cru14" type="transport" validate="true" gr:bendpoints="82,217,-628,-8">
+        <LinkParameter id="mov2#opm4#icu8#ln126#par1891" name="oidExamen_Examenes.oid(ExamenToExamenes)" source="mov2#opm4#icu8#icp6" target="mov2#opm4#cru14.rel6#role12.ent8#att23"/>
+      </Link>
+      <Link id="mov2#opm4#icu8#ln129" name="Flow129" to="mov2#opm4#qu3" type="transport" validate="true" gr:bendpoints="80,283,-835,108;753,280,-162,105">
+        <LinkParameter id="mov2#opm4#icu8#ln129#par1898" name="oidExamen_OIDEXAMEN" source="mov2#opm4#icu8#icp6" target="mov2#opm4#qu3.mov2#opm4#qu3#qi2"/>
+      </Link>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="300" gr:y="60" id="mov2#opm4#seu16" name="contexo" entity="ent5">
+      <OKLink id="mov2#opm4#seu16#oln741" name="OKFlow741" to="mov2#opm4#lpu10">
+        <LinkParameter id="mov2#opm4#seu16#oln741#par1890" name="oid_Input Array" source="ent5#att13Array" target="mov2#opm4#lpu10.array"/>
+        <LinkParameter id="mov2#opm4#seu16#oln741#par1900" name="numeroPreguntas_SecondaryArray8" source="ent5#att39Array" target="mov2#opm4#lpu10#lsa8"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit gr:x="430" gr:y="70" id="mov2#opm4#lpu10" name="Loop10" linkOrder="mov2#opm4#lpu10#ln128">
+      <OKLink id="mov2#opm4#lpu10#oln750" name="OKFlow750" to="mov2#opm4#qu2" code="next">
+        <LinkParameter id="mov2#opm4#lpu10#oln750#par1906" name="Next Element_OIDCTX" source="next" target="mov2#opm4#qu2.mov2#opm4#qu2#qi1"/>
+      </OKLink>
+      <SecondaryArray id="mov2#opm4#lpu10#lsa8" name="SecondaryArray8"/>
+      <Link id="mov2#opm4#lpu10#ln128" name="Flow128" to="mov2#opm4#scu321" type="transport" validate="true" gr:bendpoints="65,-59,-320,-74;169,-60,-216,-75;313,-59,-72,-74">
+        <LinkParameter id="mov2#opm4#lpu10#ln128#par1901" name="Next Element (SecondaryArray8)_contexto" source="mov2#opm4#lpu10#lsa8" target="mov2#opm4#scu321.contexto"/>
+      </Link>
+      <OKLink id="mov2#opm4#lpu10#oln756" name="OKFlow756" to="mov2#opm4#qu3" automaticCoupling="true" code="end" gr:bendpoints="-1,170,-571,0"/>
+    </LoopUnit>
+    <SelectorUnit gr:x="555" gr:y="55" id="mov2#opm4#seu18" name="Selector18" entity="ent2">
+      <Selector id="mov2#opm4#seu18#su47" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm4#seu18#su47#acond35" name="AttCondition35" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att43"/>
+      </Selector>
+      <OKLink id="mov2#opm4#seu18#oln751" name="OKFlow751" to="mov2#opm4#scu321">
+        <LinkParameter id="mov2#opm4#seu18#oln751#par1899" name="oid_fase1Total" source="ent2#att4Array" target="mov2#opm4#scu321.fase1Total"/>
+      </OKLink>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="1410" gr:y="60" id="mov2#opm4#okcu3" name="OK Port3"/>
+    <KOCollectorUnit gr:x="1410" gr:y="215" id="mov2#opm4#kocu3" name="KO Port3"/>
+    <ScriptUnit gr:x="780" gr:y="85" id="mov2#opm4#scu321" name="generaAleatorios">
+      <ScriptUnitText xml:space="preserve">#input Integer[] fase1Total, Integer contexto
+#output fase1, numPreguntas
+ArrayList&lt;Integer&gt; numerosAleatorios = new ArrayList&lt;Integer&gt;();
+//int [] fase1Total = new int[200]
+int contador = fase1Total[0]
+int limite = fase1Total[fase1Total.size()-1]
+
+for (int i = contador; i &lt;= limite; i++) {
+ 
+    numerosAleatorios.add(i);
+    
+}
+
+//usando Java 8
+
+//desordenando los elementos
+Random r = new Random();
+for (int i = numerosAleatorios.size(); i &gt; 0; i--) {
+if(i != 0){
+    int posicion = r.nextInt(i);
+    int tmp = numerosAleatorios[i-1];
+    numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+    numerosAleatorios[posicion] = tmp;
+}}
+
+
+
+fase1Total = numerosAleatorios
+
+int [] fase1 = new int[contexto]
+int [] numPreguntas = new int[contexto]
+
+for(int i = 0; i&lt;contexto; i++){
+fase1[i] = fase1Total[i+1]
+numPreguntas[i] = i+1
+
+}
+
+return["fase1":fase1,"numPreguntas":numPreguntas]</ScriptUnitText>
+      <OKLink id="mov2#opm4#scu321#oln752" name="OKFlow752" to="mov2#opm4#lpu12">
+        <LinkParameter id="mov2#opm4#scu321#oln752#par1902" name="fase1_Input Array" source="result(fase1)" target="mov2#opm4#lpu12.array"/>
+        <LinkParameter id="mov2#opm4#scu321#oln752#par1903" name="numPreguntas_SecondaryArray9" source="result(numPreguntas)" target="mov2#opm4#lpu12#lsa9"/>
+      </OKLink>
+    </ScriptUnit>
+    <LoopUnit gr:x="820" gr:y="190" id="mov2#opm4#lpu12" name="Loop12">
+      <SecondaryArray id="mov2#opm4#lpu12#lsa9" name="SecondaryArray9"/>
+      <OKLink id="mov2#opm4#lpu12#oln753" name="OKFlow753" to="mov2#opm4#cru14" code="next">
+        <LinkParameter id="mov2#opm4#lpu12#oln753#par1904" name="Next Element (SecondaryArray9)_numeroPregunta" source="mov2#opm4#lpu12#lsa9" target="mov2#opm4#cru14.ent9#att35"/>
+        <LinkParameter id="mov2#opm4#lpu12#oln753#par1905" name="Next Element_oidPregunta" source="next" target="mov2#opm4#cru14.ent9#att27"/>
+      </OKLink>
+      <OKLink id="mov2#opm4#lpu12#oln755" name="OKFlow755" to="mov2#opm4#lpu10" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <CreateUnit gr:x="810" gr:y="285" id="mov2#opm4#cru14" name="Create14" entity="ent9">
+      <OKLink id="mov2#opm4#cru14#oln754" name="OKFlow754" to="mov2#opm4#lpu12" automaticCoupling="true" gr:bendpoints="17,-58,12,47"/>
+    </CreateUnit>
+    <QueryUnit gr:x="560" gr:y="180" id="mov2#opm4#qu2" name="buscaPreguntas" mode="select" language="SQL" db="db2">
+      <QueryText xml:space="preserve">SELECT OID FROM BANCOPREGUNTAS WHERE OIDCONTEXTO = (:OIDCTX) ORDER BY OID ASC</QueryText>
+      <QueryInput id="mov2#opm4#qu2#qi1" name="OIDCTX" required="true"/>
+      <QueryOutput id="mov2#opm4#qu2#qo2" name="OID"/>
+      <OKLink id="mov2#opm4#qu2#oln758" name="OKFlow758" to="mov2#opm4#scu321">
+        <LinkParameter id="mov2#opm4#qu2#oln758#par1907" name="OID (Array)_fase1Total" source="mov2#opm4#qu2#qo2" target="mov2#opm4#scu321.fase1Total"/>
+      </OKLink>
+    </QueryUnit>
+    <LoopUnit gr:x="1220" gr:y="250" id="mov2#opm4#lpu11" name="Loop11">
+      <SecondaryArray id="mov2#opm4#lpu11#lsa10" name="FASES"/>
+      <OKLink id="mov2#opm4#lpu11#oln747" name="OKFlow747" to="mov2#opm4#mfu9" code="next">
+        <LinkParameter id="mov2#opm4#lpu11#oln747#par1910" name="Next Element (FASES)_fase" source="mov2#opm4#lpu11#lsa10" target="mov2#opm4#mfu9.ent9#att34"/>
+        <LinkParameter id="mov2#opm4#lpu11#oln747#par1911" name="Next Element_KeyCondition29 [oid]" source="next" target="mov2#opm4#mfu9#su48#kcond29.ent9#att26"/>
+      </OKLink>
+      <OKLink id="mov2#opm4#lpu11#oln749" name="OKFlow749" to="mov2#opm4#okcu3" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <ModifyUnit gr:x="1310" gr:y="120" id="mov2#opm4#mfu9" name="Update9" entity="ent9">
+      <Selector id="mov2#opm4#mfu9#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm4#mfu9#su48#kcond29" name="KeyCondition29" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm4#mfu9#oln748" name="OKFlow748" to="mov2#opm4#lpu11" automaticCoupling="true" gr:bendpoints="6,116,101,1"/>
+    </ModifyUnit>
+    <ScriptUnit gr:x="1070" gr:y="70" id="mov2#opm4#scu320" name="arregloFases">
+      <ScriptUnitText xml:space="preserve">#output fases
+
+Integer [] fases = new Integer[180]
+
+for(int i = 0; i&lt;fases.size(); i++){
+
+if(i &lt; 60){
+
+fases[i] = 1
+
+}else if(i &gt;= 60 &amp;&amp; i&lt;120){
+
+fases[i] = 2
+
+}else if(i &gt;= 120){
+
+fases[i]= 3
+
+}
+
+}
+
+return["fases":fases]</ScriptUnitText>
+      <OKLink id="mov2#opm4#scu320#oln746" name="OKFlow746" to="mov2#opm4#lpu11">
+        <LinkParameter id="mov2#opm4#scu320#oln746#par1908" name="fases_FASES" source="result(fases)" target="mov2#opm4#lpu11#lsa10"/>
+      </OKLink>
+    </ScriptUnit>
+    <QueryUnit gr:x="980" gr:y="160" id="mov2#opm4#qu3" name="Query3" mode="select" language="SQL" db="db2" linkOrder="mov2#opm4#qu3#ln134">
+      <QueryText xml:space="preserve">SELECT OID FROM EXAMEN WHERE EXAMENES_OID = (:OIDEXAMEN) ORDER BY OID ASC;</QueryText>
+      <QueryInput id="mov2#opm4#qu3#qi2" name="OIDEXAMEN" required="true"/>
+      <QueryOutput id="mov2#opm4#qu3#qo3" name="OID"/>
+      <OKLink id="mov2#opm4#qu3#oln745" name="OKFlow744" to="mov2#opm4#scu320" automaticCoupling="true"/>
+      <Link id="mov2#opm4#qu3#ln134" name="Flow134" to="mov2#opm4#lpu11" type="transport" validate="true">
+        <LinkParameter id="mov2#opm4#qu3#ln134#par1909" name="OID (Array)_Input Array" source="mov2#opm4#qu3#qo3" target="mov2#opm4#lpu11.array"/>
+      </Link>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

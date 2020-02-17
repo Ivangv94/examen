@@ -1,0 +1,142 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+<title>Autenticaci—n</title>
+
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" type="text/css" href="gobmxStyle/js/fiel-bootstrap.all.css" />	  
+
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+    <![endif]-->
+    
+    <script>
+        function getSessionId() {
+            return 'gHWOY3ZprB6AHzK4Xjmd7-UInhrGiRg79PzYu2_H';
+        }
+    </script>
+    
+    <script type="text/javascript" language="javascript" src="gobmxStyle/js/sat.js"></script>
+
+  </head>
+<body>
+
+<!-- Contenido -->
+    <main class="page">
+
+	<!-- HTML DE INVOCACIîN -->
+	<div class="container">
+
+		<div class="row">
+
+			<form id="frm-fiel" action="authSignIn" 
+				data-role="gob-widget-fiel" method="post"
+				enctype="application/x-www-form-urlencoded"
+				class="center-margin col-xs-12 col-sm-8 form-horizontal">
+
+				<h3 class="text-center">Ingresa tus credenciales de acceso</h3>
+				<div class="content-box">
+					<div class="content-box-wrapper">
+						<div class="form-group">
+							<label for="certificate" class="col-md-5 control-label">Certificado (cer):</label>
+							<div class="col-md-7">
+								<div class="input-group">
+									<input type="text" class="form-control" readonly /> <span
+										class="input-group-btn"> <span
+										class="btn btn-default btn-file"> Buscar&hellip; <input
+											name="fileCer" type="file" accept=".cer" required=""
+											data-rule-extension="cer"
+											data-msg-extension="Por favor, se requiere archivo con extensi—n aceptada .CER" />
+									</span>
+									</span>
+								</div>
+								<!-- /input-group -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="privateKey" class="col-md-5 control-label">Clave privada (key):</label>
+							<div class="col-md-7">
+								<div class="input-group">
+									<input type="text" size="25" class="form-control" readonly />
+									<span class="input-group-btn"> <span
+										class="btn btn-default btn-file">Buscar&hellip; <input
+											name="fileKey" type="file" accept=".key" required=""
+											data-rule-extension="key"
+											data-msg-extension="Por favor, se requiere archivo con extensi—n aceptada .KEY" />
+									</span>
+									</span>
+								</div>
+								<!-- /input-group -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="pwdPrivateKey" class="col-md-5 control-label">Contrase–a de clave privada:</label>
+							<div class="col-md-7">
+								<input type="password" id="pwdPrivateKey" name="pwdPrivateKey"
+									size="25" autocomplete="off" class="form-control" required="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="rfcEmisor" class="col-md-5 control-label">Datos:</label>
+							<div class="col-md-7">
+								<input type="text" id="nombreEmisor" name="nombreEmisor" size="26"
+									class="form-control" readonly="readonly"">
+								<input type="text" id="curpEmisor" name="curpEmisor" size="26"
+									class="form-control" readonly="readonly"">
+								<input type="text" id="rfcEmisor" name="rfcEmisor" size="26"
+									class="form-control" readonly="readonly"">
+								<input type="text" id="emailEmisor" name="emailEmisor" size="26"
+									class="form-control" readonly="readonly"">
+								<input type="text" id="serialEmisor" name="serialEmisor" size="26"
+									class="form-control" readonly="readonly"">
+								<input type="text" id="subjectEmisor" name="subjectEmisor" size="100"
+									class="form-control" readonly="readonly"">					
+							</div>
+						</div>
+						<div class="form-group button-pane">
+							<div class="col-md-6 col-md-offset-3">
+								<div class="block-button-login">
+									<button type="submit"
+										class="btn btn-block btn-primary btn-sign-in"
+										data-loading-text="Verificando...">Ingresar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="special-block-fiel">
+					<!-- PARAMETROS ADICIONALES QUE SE DESEE ENVIAR EN AUTENTICACION -->
+					
+				</div>
+
+			</form>
+		</div>
+
+	
+
+
+	<div id="modal">
+		<div class="modalcontent">
+			<img src="https://framework-gb.cdn.gob.mx/sso/images/loading.gif"
+				alt="Cargando">
+				<h2 class="text-center">
+					Verificando a <span class="emisorLabel"></span>
+				</h2>
+		</div>
+	</div>
+
+	<!-- ./HTML DE INVOCACIîN -->
+
+
+
+</div>
+    </main>
+
+</body>
+            

@@ -1,0 +1,18 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym1" gr:x="10" gr:y="10" name="Activity Info" bpm:moduleType="activity" bpm:activityInfo="true" layout:singleLayout="true">
+  <OperationUnits>
+    <DeleteUnit id="mov1#hym1#dlu2" name="Delete Note" gr:x="157" gr:y="436" entity="Note">
+      <Selector id="mov1#hym1#dlu2#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#dlu2#su26#kcond15" name="KeyCondition36" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym1#dlu2#oln10" name="OKLink41" to="mov1#hym1#mpage3" automaticCoupling="true"/>
+    </DeleteUnit>
+    <DeleteUnit id="mov1#hym1#dlu3" name="Delete Attachment" gr:x="789" gr:y="435" entity="Attachment">
+      <Selector id="mov1#hym1#dlu3#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#dlu3#su27#kcond16" name="KeyCondition40" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#hym1#dlu3#oln11" name="OKLink11" to="mov1#hym1#mpage3" automaticCoupling="true"/>
+    </DeleteUnit>
+    <LogoutUnit id="mov1#hym1#lou3" name="Logout User" gr:x="800" gr:y="80" siteView="sv1"/>
+    <ProcessUnit id="mov1#hym1#pu18" gr:x="920" gr:y="340" name="Rollback Activity" mode="rollback"/>
+  </OperationUnits>
+</HybridModule>

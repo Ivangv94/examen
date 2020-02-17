@@ -1,0 +1,721 @@
+<SiteView xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="BP Administration" customURLName="BPAdmin" bpm:adminView="true" landmarks="sv2#page5" homePage="sv2#page5" localized="true">
+  <OperationUnits>
+    <ProcessUnit id="sv2#pu2" name="Synchronize MetaData" gr:x="474" gr:y="-10" mode="synchronizeMetadata" createTestUsers="true">
+      <KOLink id="sv2#pu2#kln2" name="KOLink1" to="sv2#page5#pu11">
+        <LinkParameter id="sv2#pu2#kln2#par5" name="Error Info_Error Info" source="errorInfo" target="sv2#page5#pu11.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu2#oln2" name="OKLink1" to="sv2#page5" automaticCoupling="true"/>
+    </ProcessUnit>
+    <LogoutUnit id="sv2#lou1" name="Logout User" gr:x="1360" gr:y="120" siteView="sv1"/>
+    <ProcessUnit id="sv2#pu3" gr:x="220" gr:y="878" name="Cancel Process Instance" mode="cancelProcessInstance">
+      <KOLink id="sv2#pu3#kln3" name="KOLink7" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu3#kln3#par6" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu3#oln3" name="OKLink21" to="sv2#page3" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu4" name="Rollback Activity Instance" gr:x="-82" gr:y="721" mode="rollback">
+      <KOLink id="sv2#pu4#kln4" name="KOLink9" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu4#kln4#par7" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu4#oln4" name="OKLink42" to="sv2#page7#pdu2" gr:bendpoints="-101,-77,-19,96">
+        <LinkParameter id="sv2#pu4#oln4#par8" name="Process Instance Oid_PASSING_Process Instance Oid" sourceLinkParameter="sv2#page7#pdu2#ln36#par45" target="sv2#page7#pdu2.processInstanceOid"/>
+      </OKLink>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu5" gr:x="318" gr:y="-10" name="Delete Process" mode="deleteProcess">
+      <OKLink id="sv2#pu5#oln5" name="OKLink22" to="sv2#page5" automaticCoupling="true"/>
+      <KOLink id="sv2#pu5#kln5" name="KOLink10" to="sv2#page5#pu11">
+        <LinkParameter id="sv2#pu5#kln5#par9" name="Error Info_Error Info" source="errorInfo" target="sv2#page5#pu11.errorInfo"/>
+      </KOLink>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu6" name="Delete Process Instance" gr:x="106" gr:y="738" mode="deleteProcess">
+      <KOLink id="sv2#pu6#kln6" name="KOLink11" to="sv2#page4#pu9">
+        <LinkParameter id="sv2#pu6#kln6#par10" name="Error Info_Error Info" source="errorInfo" target="sv2#page4#pu9.errorInfo"/>
+      </KOLink>
+      <OKLink id="sv2#pu6#oln6" name="OKLink23" to="sv2#page5" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu7" gr:x="452" gr:y="880" name="Disconnect User and Group" mode="assignActivity">
+      <OKLink id="sv2#pu7#oln7" name="OKLink36" to="sv2#page3" automaticCoupling="true"/>
+    </ProcessUnit>
+    <ProcessUnit id="sv2#pu8" name="Change User and Group" gr:x="694" gr:y="672" mode="assignActivity">
+      <OKLink id="sv2#pu8#oln8" name="OKLink16" to="sv2#page3" automaticCoupling="true"/>
+      <UnitComputation unitId="sv2#page3#pwu1" mode="execute"/>
+      <KOLink id="sv2#pu8#kln7" name="KOLink12" to="sv2#page3" automaticCoupling="true" gr:bendpoints="-129,-34,203,-91"/>
+    </ProcessUnit>
+    <JumpUnit id="sv2#ju1" gr:x="1370" gr:y="245" name="Go to home" direction="forward" ignoreHistory="false" collectorUnit="sv1#pcu1"/>
+    <ScriptUnit gr:x="900" gr:y="605" id="sv2#scu4" name="generar preguntas">
+      <ScriptUnitText xml:space="preserve">#input preguntas
+#output preguntas2
+
+
+
+String [] preguntas2
+preguntas2 = preguntas.split(",")
+
+
+return["preguntas2":preguntas2]</ScriptUnitText>
+      <OKLink id="sv2#scu4#oln48" name="OKFlow48" to="sv2#lpu1">
+        <LinkParameter id="sv2#scu4#oln48#par94" name="preguntas_Input Array" source="result(preguntas2)" target="sv2#lpu1.array"/>
+      </OKLink>
+    </ScriptUnit>
+    <LoopUnit gr:x="1145" gr:y="585" id="sv2#lpu1" name="Loop1" linkOrder="sv2#lpu1#ln121">
+      <OKLink id="sv2#lpu1#oln49" name="OKFlow49" to="sv2#seu20" code="next">
+        <LinkParameter id="sv2#lpu1#oln49#par120" name="Next Element (preguntas)_AttCondition20" source="sv2#lpu1#lsa1" target="sv2#seu20#su49#acond20"/>
+      </OKLink>
+      <OKLink id="sv2#lpu1#oln51" name="OKFlow51" to="sv2#page5" automaticCoupling="true" code="end"/>
+      <SecondaryArray id="sv2#lpu1#lsa1" name="preguntas"/>
+      <Link id="sv2#lpu1#ln121" name="Flow121" to="sv2#mfu3" type="transport" validate="true" gr:bendpoints="144,70,-176,-50">
+        <LinkParameter id="sv2#lpu1#ln121#par124" name="Next Element_materias.oid(bancoPreguntasTomaterias)" source="next" target="sv2#mfu3.rel2#role3.ent1#att1"/>
+      </Link>
+    </LoopUnit>
+    <CreateUnit gr:x="1320" gr:y="575" id="sv2#cru3" name="Create3" entity="ent2">
+      <OKLink id="sv2#cru3#oln50" name="OKFlow50" to="sv2#lpu1" automaticCoupling="true" gr:bendpoints="-108,15,87,15"/>
+    </CreateUnit>
+    <ScriptUnit gr:x="1095" gr:y="755" id="sv2#scu5" name="Script5">
+      <ScriptUnitText xml:space="preserve">#output preguntas3, relacionMateria
+
+import java.util.*;
+
+String [] preguntas2 = new String[650]
+String [] preguntas3 = new String[650]
+ArrayList&lt;String&gt; preguntas = new ArrayList&lt;String&gt;();
+String [] relacionMateria = new String[650]
+
+for(int i = 0; i &lt; 650; i++)
+{
+
+StringBuilder str = new StringBuilder('Pregunta ' + i);
+
+preguntas.add(str)
+
+
+}
+preguntas2 = preguntas
+
+for(int i = 0; i &lt; preguntas2.size(); i++)
+{
+preguntas3[i] = preguntas2[i]
+
+}
+
+for(int i = 0; i&lt; preguntas3.size(); i++){
+
+if (i &lt; 10){
+
+relacionMateria[i]=1
+
+}else if (i % i == 0 &amp;&amp; i &gt;= 10)
+{
+
+String str = i.toString()
+
+
+
+if(str.length() == 2)
+{
+String str1 = str.substring(0,1)
+int result = Integer.parseInt(str1);            
+
+relacionMateria[i]= result +1
+}else if(str.length() == 3)
+{
+String str2 = str.substring(0,2)
+int result2 = Integer.parseInt(str2);            
+
+relacionMateria[i]= result2 +1
+}
+
+
+}
+
+}
+ 
+
+return["preguntas3":preguntas3, "relacionMateria":relacionMateria]</ScriptUnitText>
+      <OKLink id="sv2#scu5#oln52" name="OKFlow52" to="sv2#lpu1">
+        <LinkParameter id="sv2#scu5#oln52#par121" name="preguntas_Input Array" source="result(relacionMateria)" target="sv2#lpu1.array"/>
+        <LinkParameter id="sv2#scu5#oln52#par100" name="preguntas2_preguntas" source="result(preguntas3)" target="sv2#lpu1#lsa1"/>
+      </OKLink>
+    </ScriptUnit>
+    <SelectorUnit gr:x="1290" gr:y="760" id="sv2#seu20" name="buscaPregunta" entity="ent2">
+      <Selector id="sv2#seu20#su49" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#seu20#su49#acond20" name="AttCondition20" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att5"/>
+      </Selector>
+      <OKLink id="sv2#seu20#oln53" name="OKFlow53" to="sv2#mfu3" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ModifyUnit gr:x="1445" gr:y="690" id="sv2#mfu3" name="Update3" entity="ent2">
+      <Selector id="sv2#mfu3#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu3#su50#kcond30" name="KeyCondition30" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu3#oln54" name="OKFlow54" to="sv2#lpu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ScriptUnit gr:x="1035" gr:y="515" id="sv2#scu8" name="Script8">
+      <ScriptUnitText xml:space="preserve">#input String xmlInput, String wsURL
+#output mensajeResponse, codigoResponse
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.StringReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+ 
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+ 
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+//   String rfc = "SIAR741028N97"
+//   String curp = "SIAR741028HHGCLL00"
+//   String email = "notario@not1tula.com"
+
+
+        // Code to make a webservice HTTP request
+
+        String responseString = "";
+
+        String outputString = "";
+
+       // String wsURL = "http://10.100.20.2:7006/siger2-ws-inter-1.0/actualizarFedatario?wsdl";
+
+        URL url = new URL(wsURL);
+
+        URLConnection connection = url.openConnection();
+
+        HttpURLConnection httpConn = (HttpURLConnection) connection;
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+
+        byte[] buffer = new byte[xmlInput.length()];
+
+        buffer = xmlInput.getBytes();
+
+        bout.write(buffer);
+
+        byte[] b = bout.toByteArray();
+
+        // Set the appropriate HTTP parameters.
+
+        httpConn.setRequestProperty("Content-Length", String.valueOf(b.length));
+
+        httpConn.setRequestProperty("Content-Type", "text/xml; charset=utf-8");
+
+        httpConn.setRequestProperty("username", "wssiger2_inter");
+
+        httpConn.setRequestProperty("password", "D3PftuVrL1");
+
+        httpConn.setRequestMethod("GET");
+
+        httpConn.setDoOutput(true);
+
+        httpConn.setDoInput(true);
+
+        OutputStream out = httpConn.getOutputStream();
+
+        // Write the content of the request to the outputstream of the HTTP
+
+        // Connection.
+
+        out.write(b);
+
+        out.close();
+
+        // Ready with sending the request.
+
+ 
+
+        // Read the response.
+
+        InputStreamReader isr = new InputStreamReader(httpConn.getInputStream());
+
+        BufferedReader inp = new BufferedReader(isr);
+
+ 
+
+        // Write the SOAP message response to a String.
+
+        while ((responseString = inp.readLine()) != null) {
+
+            outputString = outputString + responseString;
+
+        }
+
+        //println(outputString)
+         
+         
+         String dirtyMensajeResponse = outputString.split("&lt;mensaje&gt;").getAt(1)
+         String mensajeResponse = dirtyMensajeResponse.split("&lt;/mensaje&gt;").getAt(0)
+         
+         String dirtyCodigoResponse = outputString.split("&lt;codigo&gt;").getAt(1)
+         String codigoResponse = dirtyCodigoResponse.split("&lt;/codigo&gt;").getAt(0)
+
+       // Document document = parseXmlFile(outputString);
+       
+             //   println(mensajeResponse)
+               // println(codigoResponse)
+               
+return["mensajeResponse":mensajeResponse,"codigoResponse":codigoResponse]</ScriptUnitText>
+      <OKLink id="sv2#scu8#oln35" name="OKFlow35" to="sv2#page5" automaticCoupling="true"/>
+    </ScriptUnit>
+    <ScriptUnit gr:x="1045" gr:y="380" id="sv2#scu10" name="creaRequest">
+      <ScriptUnitText xml:space="preserve">#input String rfc, String curp, String email, String wsURL
+#output mensajeResponse, codigoResponse
+
+import java.io.BufferedReader;
+
+import java.io.ByteArrayOutputStream;
+
+import java.io.IOException;
+
+import java.io.InputStreamReader;
+
+import java.io.OutputStream;
+
+import java.io.StringReader;
+
+import java.net.HttpURLConnection;
+
+import java.net.MalformedURLException;
+
+import java.net.URL;
+
+import java.net.URLConnection;
+
+ 
+
+import javax.xml.parsers.DocumentBuilder;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+ 
+
+import org.w3c.dom.Document;
+
+import org.w3c.dom.NodeList;
+
+import org.xml.sax.InputSource;
+
+import org.xml.sax.SAXException;
+
+ 
+
+
+ 
+
+//   String rfc = "SIAR741028N97"
+//   String curp = "SIAR741028HHGCLL00"
+//   String email = "notario@not1tula.com"
+
+ 
+
+        // Code to make a webservice HTTP request
+
+        String responseString = "";
+
+        String outputString = "";
+
+       // String wsURL = "http://10.100.20.2:7006/siger2-ws-inter-1.0/actualizarFedatario?wsdl";
+
+        URL url = new URL(wsURL);
+
+        URLConnection connection = url.openConnection();
+
+        HttpURLConnection httpConn = (HttpURLConnection) connection;
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+
+        String xmlInput = "&lt;soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.siger2.se.gob.mx/\"&gt;\r\n" +
+
+                "   &lt;soapenv:Header/&gt;\r\n" +
+
+                "   &lt;soapenv:Body&gt;\r\n" +
+
+                "      &lt;ws:actualizarFedatario&gt;\r\n" +
+
+                "         &lt;!--Optional:--&gt;\r\n" +
+
+                "         &lt;arg0&gt;\r\n" +
+
+                "            &lt;curp&gt;" + curp + "&lt;/curp&gt;\r\n" +
+
+                "            &lt;email&gt;" + email + "&lt;/email&gt;\r\n" +
+
+                "            &lt;rfc&gt;" + rfc + "&lt;/rfc&gt;\r\n" +
+
+                "         &lt;/arg0&gt;\r\n" +
+
+                "      &lt;/ws:actualizarFedatario&gt;\r\n" +
+
+                "   &lt;/soapenv:Body&gt;\r\n" +
+
+                "&lt;/soapenv:Envelope&gt;";
+
+ 
+
+        byte[] buffer = new byte[xmlInput.length()];
+
+        buffer = xmlInput.getBytes();
+
+        bout.write(buffer);
+
+        byte[] b = bout.toByteArray();
+
+        // Set the appropriate HTTP parameters.
+
+        httpConn.setRequestProperty("Content-Length", String.valueOf(b.length));
+
+        httpConn.setRequestProperty("Content-Type", "text/xml; charset=utf-8");
+
+        httpConn.setRequestProperty("username", "wssiger2_inter");
+
+        httpConn.setRequestProperty("password", "D3PftuVrL1");
+
+        httpConn.setRequestMethod("GET");
+
+        httpConn.setDoOutput(true);
+
+        httpConn.setDoInput(true);
+
+        OutputStream out = httpConn.getOutputStream();
+
+        // Write the content of the request to the outputstream of the HTTP
+
+        // Connection.
+
+        out.write(b);
+
+        out.close();
+
+        // Ready with sending the request.
+
+ 
+
+        // Read the response.
+
+        InputStreamReader isr = new InputStreamReader(httpConn.getInputStream());
+
+        BufferedReader inp = new BufferedReader(isr);
+
+ 
+
+        // Write the SOAP message response to a String.
+
+        while ((responseString = inp.readLine()) != null) {
+
+            outputString = outputString + responseString;
+
+        }
+
+        //println(outputString)
+         
+         
+         String dirtyMensajeResponse = outputString.split("&lt;mensaje&gt;").getAt(1)
+         String mensajeResponse = dirtyMensajeResponse.split("&lt;/mensaje&gt;").getAt(0)
+         
+         String dirtyCodigoResponse = outputString.split("&lt;codigo&gt;").getAt(1)
+         String codigoResponse = dirtyCodigoResponse.split("&lt;/codigo&gt;").getAt(0)
+
+       // Document document = parseXmlFile(outputString);
+       
+             //   println(mensajeResponse)
+               // println(codigoResponse)
+               
+      return["mensajeResponse":mensajeResponse,"codigoResponse":codigoResponse]</ScriptUnitText>
+      <OKLink id="sv2#scu10#oln36" name="OKFlow36" to="sv2#page5"/>
+    </ScriptUnit>
+    <SelectorUnit gr:x="1180" gr:y="435" id="sv2#seu345" name="Selector345" entity="ent2">
+      <Selector id="sv2#seu345#su92" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#seu345#su92#acond30" name="AttCondition30" predicate="notNull" booleanOperator="or" implied="false" attributes="ent2#att4"/>
+      </Selector>
+      <OKLink id="sv2#seu345#oln723" name="OKFlow723" to="sv2#lpu9">
+        <LinkParameter id="sv2#seu345#oln723#par1709" name="oid_Input Array" source="ent2#att4Array" target="sv2#lpu9.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit gr:x="1335" gr:y="440" id="sv2#lpu9" name="Loop9">
+      <OKLink id="sv2#lpu9#oln724" name="Flow1071" to="sv2#seu346" code="next">
+        <LinkParameter id="sv2#lpu9#oln724#par1710" name="Next Element_KeyCondition58 [oid]" source="next" target="sv2#seu346#su93#kcond58.ent2#att4"/>
+      </OKLink>
+      <OKLink id="sv2#lpu9#oln86" name="OKFlow86" to="sv2#page5" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <SelectorUnit gr:x="1460" gr:y="410" id="sv2#seu346" name="Selector346" entity="ent2">
+      <Selector id="sv2#seu346#su93" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#seu346#su93#kcond58" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#seu346#oln81" name="OKFlow81" to="sv2#scu318">
+        <LinkParameter id="sv2#seu346#oln81#par96" name="oid_oidPregunta" source="ent2#att4Array" target="sv2#scu318.oidPregunta"/>
+        <LinkParameter id="sv2#seu346#oln81#par97" name="pregunta_pregunta" source="ent2#att5Array" target="sv2#scu318.pregunta"/>
+      </OKLink>
+    </SelectorUnit>
+    <ScriptUnit gr:x="1610" gr:y="430" id="sv2#scu318" name="creaRespuestas">
+      <ScriptUnitText xml:space="preserve">#input String pregunta, int oidPregunta
+#output respuestaCorrecta, respuesta, arregloOid
+
+int [] respuestaCorrecta = new int[4]
+String [] respuesta = new String[4]
+int [] arregloOid = new int[4]
+
+for(int i = 0; i&lt;4; i++){
+int rc
+if(i== 3){
+rc = 1
+} else rc = 0
+//println(rc)
+respuesta[i] = 'Respuesta' + '-' + pregunta
+respuestaCorrecta[i] = rc
+arregloOid[i] = oidPregunta
+}
+
+return["respuestaCorrecta":respuestaCorrecta,"respuesta":respuesta,"arregloOid":arregloOid]</ScriptUnitText>
+      <OKLink id="sv2#scu318#oln82" name="OKFlow82" to="sv2#lpu3">
+        <LinkParameter id="sv2#scu318#oln82#par98" name="arregloOid_Input Array" source="result(arregloOid)" target="sv2#lpu3.array"/>
+        <LinkParameter id="sv2#scu318#oln82#par99" name="respuestaCorrecta_rc" source="result(respuestaCorrecta)" target="sv2#lpu3#lsa3"/>
+        <LinkParameter id="sv2#scu318#oln82#par103" name="respuesta_respuesta" source="result(respuesta)" target="sv2#lpu3#lsa2"/>
+      </OKLink>
+    </ScriptUnit>
+    <LoopUnit gr:x="1725" gr:y="525" id="sv2#lpu3" name="Loop3">
+      <SecondaryArray id="sv2#lpu3#lsa2" name="respuesta"/>
+      <SecondaryArray id="sv2#lpu3#lsa3" name="rc"/>
+      <OKLink id="sv2#lpu3#oln83" name="OKFlow83" to="sv2#cru6" code="next">
+        <LinkParameter id="sv2#lpu3#oln83#par104" name="Next Element_bancoPreguntas.oid(bancoRespuestasTobancoPreguntas)" source="next" target="sv2#cru6.rel1#role1.ent2#att4"/>
+        <LinkParameter id="sv2#lpu3#oln83#par133" name="Next Element (respuesta)_respuesta" source="sv2#lpu3#lsa2" target="sv2#cru6.ent3#att7"/>
+        <LinkParameter id="sv2#lpu3#oln83#par134" name="Next Element (rc)_respuestaCorrecta" source="sv2#lpu3#lsa3" target="sv2#cru6.ent3#att8"/>
+      </OKLink>
+      <OKLink id="sv2#lpu3#oln85" name="OKFlow85" to="sv2#lpu9" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <CreateUnit gr:x="1675" gr:y="625" id="sv2#cru6" name="Create6" entity="ent3">
+      <OKLink id="sv2#cru6#oln84" name="OKFlow84" to="sv2#lpu3" automaticCoupling="true" gr:bendpoints="28,-58,3,52"/>
+    </CreateUnit>
+    <ScriptUnit gr:x="360" gr:y="610" id="sv2#scu13" name="Script13">
+      <ScriptUnitText xml:space="preserve">#output id
+import neoAtlantis.utils.*;
+import mx.gob.se.dgtic.services.mailsender.cliente.*;
+import mx.gob.se.dgtic.services.mailsender.cliente.excepciones.MailSenderServiceException;
+
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.*;
+import neoAtlantis.utils.*;
+import org.apache.log4j.*;
+
+
+	
+		
+		try {
+			ArrayList&lt;String&gt; cp = new ArrayList&lt;String&gt;(); 
+			cp.add("dgnm.gustavo@economia.gob.mx");
+			cp.add("dgnm.ivan@economia.gob.mx");
+			ClienteMailSender c = new ClienteMailSender("https://esb-qa.economia.gob.mx/serviciosOsb/dgtic/envioCorreosService?wsdl","d1e1adfe-4710-4fc9-9500-d017f16cef4c","MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOj3tu75hbW9ijPH5t0Vnd+yrOBiiRi222XmJ0JL5tKWIBcD9ROH25owerZavh22Q7bjV6wVkj6dJzLXwMkeO2IftmpUF8TcRLIjJ76Yyam5F0Dr4DBjlKspVbX0e7GEtE+tcjvvC48OX9+jY98hBLRpqWGiHjqcwbP1XTb4ge4wIDAQAB");
+			String id = c.enviaNotificacionConCopia("dgnm.pedro@economia.gob.mx",cp, "Prueba del cliente");
+			//System.out.println("Mensaje enviado con id: "+id); 
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+return["id":id]</ScriptUnitText>
+      <OKLink id="sv2#scu13#oln92" name="OKFlow92" to="sv2#page5" automaticCoupling="true"/>
+      <KOLink id="sv2#scu13#kln16" name="KOFlow16" to="sv2#page5" automaticCoupling="true" gr:bendpoints="-22,-54,13,271"/>
+    </ScriptUnit>
+    <ScriptUnit gr:x="685" gr:y="615" id="sv2#scu14" name="Script14">
+      <ScriptUnitText xml:space="preserve">#output rutaArchivo
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+
+
+    Logger LOGGER = Logger.getLogger("mx.com.hash.newexcel.ExcelOOXML");
+
+  
+        // Creamos el archivo donde almacenaremos la hoja
+        // de calculo, recuerde usar la extension correcta,
+        // en este caso .xlsx
+        File archivo = new File("reporte.xlsx");
+
+        // Creamos el libro de trabajo de Excel formato OOXML
+        Workbook workbook = new XSSFWorkbook();
+
+        // La hoja donde pondremos los datos
+        Sheet pagina = workbook.createSheet("Personas F&#237;sicas");
+
+        // Creamos el estilo paga las celdas del encabezado
+        CellStyle style = workbook.createCellStyle();
+        // Indicamos que tendra un fondo azul aqua
+        // con patron solido del color indicado
+        style.setFillForegroundColor(IndexedColors.AQUA.getIndex());
+        style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        
+       
+
+        String[] titulos = ["CURP","RFC", "Nombre(s)",
+            "Apellido Paterno", "Apellido Paterno", "Nacionalidad", "Capital Fijo", "Capital Variable"];
+
+
+String [] CURPS = ["CAAP930404HDFMXD07","CAAP930404HDFMXD07","CAAP930404HDFMXD07"]
+String [] RFCS = ["CAAP930404BD8","CAAP930404BD8", "CAAP930404BD8"]
+String [] nombres = ["Pedro","Pedro", "Pedro"]
+String [] apellidos1 = ["Campos", "Campos", "Campos"]
+String [] apellidos2 = ["A&#241;orve", "A&#241;orve", "A&#241;orve"]
+String [] nacion =  ["M&#233;xico","M&#233;xico","M&#233;xico"]
+String [] cf =  ["100", "100","100"]
+String [] cv = ["200","200","200"]
+      
+  String[][] datos = new String[3][8]
+  
+  for(int i = 0; i&lt;CURPS.size(); i++){
+  
+     
+      datos[i][0] = CURPS[i]
+      datos[i][1] = RFCS[i]
+      datos[i][2] = nombres[i]
+      datos[i][3] = apellidos1[i]
+      datos[i][4] = apellidos2[i]
+      datos[i][5] = nacion[i]
+      datos[i][6] = cf[i]
+      datos[i][7] = cv[i]
+     
+      
+      
+  
+  }
+
+for(int i = 0; i&lt;=datos.length; i++){
+ Row fila = pagina.createRow(i);
+ for(int j = 0; j &lt; titulos.length; j++){
+     if(i == 0){ 
+         Cell celda = fila.createCell(j);
+         celda.setCellStyle(style);
+            celda.setCellValue(titulos[j]);
+     }
+     else {
+        Cell celda = fila.createCell(j);
+        
+   
+
+            celda.setCellValue(datos[i-1][j]);
+     
+     }
+ 
+ }
+
+
+}
+        // Ahora guardaremos el archivo
+        try {
+            // Creamos el flujo de salida de datos,
+            // apuntando al archivo donde queremos 
+            // almacenar el libro de Excel
+            FileOutputStream salida = new FileOutputStream(archivo);
+
+            // Almacenamos el libro de 
+            // Excel via ese 
+            // flujo de datos
+            workbook.write(salida);
+
+            // Cerramos el libro para concluir operaciones
+            workbook.close();
+
+            LOGGER.log(Level.INFO, "Archivo creado existosamente en {0}", archivo.getAbsolutePath());
+
+        } catch (FileNotFoundException ex) {
+            LOGGER.log(Level.SEVERE, "Archivo no localizable en sistema de archivos");
+        } catch (IOException ex) {
+            LOGGER.log(Level.SEVERE, "Error de entrada/salida");
+        }
+        
+        String rutaArchivo = archivo.getAbsolutePath();
+        
+return["rutaArchivo":rutaArchivo]</ScriptUnitText>
+      <OKLink id="sv2#scu14#oln730" name="OKFlow730" to="sv2#page5" automaticCoupling="true"/>
+      <KOLink id="sv2#scu14#kln17" name="KOFlow17" to="sv2#page5" automaticCoupling="true" gr:bendpoints="-38,-33,137,262"/>
+    </ScriptUnit>
+    <ScriptUnit gr:x="1315" gr:y="915" id="sv2#scu319" name="Generapreguntas">
+      <ScriptUnitText xml:space="preserve">#input Integer numPregunta
+#output preguntas2
+
+import java.util.*;
+String [] preguntas2 = new String[50]
+String [] preguntas3 = new String[50]
+ArrayList&lt;String&gt; preguntas = new ArrayList&lt;String&gt;();
+String [] relacionMateria = new String[50]
+//int numPregunta = 1
+
+for(int i = 0; i &lt; 50; i++)
+{
+
+StringBuilder str = new StringBuilder('Pregunta ' + i +'-'+numPregunta);
+
+preguntas.add(str)
+
+
+}
+preguntas2 = preguntas
+
+return["preguntas2":preguntas2]</ScriptUnitText>
+      <OKLink id="sv2#scu319#oln735" name="OKFlow735" to="sv2#lpu5">
+        <LinkParameter id="sv2#scu319#oln735#par1888" name="preguntas2_Input Array" source="result(preguntas2)" target="sv2#lpu5.array"/>
+      </OKLink>
+    </ScriptUnit>
+    <SelectorUnit gr:x="1035" gr:y="835" id="sv2#seu15" name="Selector15" entity="ent1">
+      <OKLink id="sv2#seu15#oln733" name="OKFlow733" to="sv2#lpu4">
+        <LinkParameter id="sv2#seu15#oln733#par1885" name="oid_Input Array" source="ent1#att1Array" target="sv2#lpu4.array"/>
+        <LinkParameter id="sv2#seu15#oln733#par1896" name="materiasTocontexto.oid_SecondaryArray4" source="rel3#role5_ent5#att13Array" target="sv2#lpu4#lsa4"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit gr:x="1160" gr:y="935" id="sv2#lpu4" name="Loop4">
+      <OKLink id="sv2#lpu4#oln734" name="OKFlow734" to="sv2#scu319" code="next">
+        <LinkParameter id="sv2#lpu4#oln734#par1886" name="Next Element_numPregunta" source="next" target="sv2#scu319.numPregunta"/>
+      </OKLink>
+      <Link id="sv2#lpu4#ln123" name="Flow123" to="sv2#cru12" type="transport" validate="true" gr:bendpoints="2,-79,-333,-39;235,-79,-100,-39">
+        <LinkParameter id="sv2#lpu4#ln123#par1887" name="Next Element_materias.oid(bancoPreguntasTomaterias)" source="next" target="sv2#cru12.rel2#role3.ent1#att1"/>
+        <LinkParameter id="sv2#lpu4#ln123#par1897" name="Next Element (SecondaryArray4)_oidContexto" source="sv2#lpu4#lsa4" target="sv2#cru12.ent2#att43"/>
+      </Link>
+      <OKLink id="sv2#lpu4#oln739" name="OKFlow739" to="sv2#page5" automaticCoupling="true" code="end"/>
+      <SecondaryArray id="sv2#lpu4#lsa4" name="SecondaryArray4"/>
+    </LoopUnit>
+    <CreateUnit gr:x="1540" gr:y="885" id="sv2#cru12" name="Create12" entity="ent2">
+      <OKLink id="sv2#cru12#oln737" name="OKFlow737" to="sv2#lpu5" automaticCoupling="true" gr:bendpoints="-63,57,57,-18"/>
+    </CreateUnit>
+    <LoopUnit gr:x="1440" gr:y="970" id="sv2#lpu5" name="Loop5">
+      <OKLink id="sv2#lpu5#oln736" name="OKFlow736" to="sv2#cru12" code="next">
+        <LinkParameter id="sv2#lpu5#oln736#par1889" name="Next Element_pregunta" source="next" target="sv2#cru12.ent2#att5"/>
+      </OKLink>
+      <OKLink id="sv2#lpu5#oln738" name="OKFlow738" to="sv2#lpu4" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <ModuleInstanceUnit gr:x="1505" gr:y="575" id="sv2#miu5" action="true" moduleId="mov2#opm4">
+      <OKLink id="sv2#miu5#oln757" name="OKFlow757" to="sv2#page5" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

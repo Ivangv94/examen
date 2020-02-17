@@ -1,0 +1,17 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+
+<head>
+    <meta charset="utf-8">
+</head>
+<ul class="wizard-steps-extensive">
+        <li class="completed">
+            <h5>1</h5>
+            <span>TŽrminos, Condiciones y Pol’tica de Privacidad</span>
+        </li>
+        <li>
+            <h5>2</h5>
+            <span>Firmar Acuerdo de Disoluci—n</span>
+        </li>
+</ul>

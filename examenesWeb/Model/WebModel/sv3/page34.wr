@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="885" gr:y="1870" id="sv3#page34" name="ModificarPreguntasModal">
+  <ContentUnits>
+    <EntryUnit gr:x="360" gr:y="5" id="sv3#page34#enu33" name="Campode modificacion" linkOrder="sv3#page34#enu33#ln1209">
+      <Field id="sv3#page34#enu33#fld87" name="Articulo" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page34#enu33#fld88" name="Fracci&#243;n" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page34#enu33#fld89" name="Pregunta" type="string" modifiable="true" preloaded="true"/>
+      <Link id="sv3#page34#enu33#ln1209" name="Flow1209" to="sv3#mfu11" type="normal" validate="true" gr:bendpoints="-349,106,321,76" ajaxEnabled="true" ajaxOpenWaitingDialog="true" ajaxWaitingDialogMessage="Procesando" ajaxWaitingDialogWidth="200" ajaxWaitingDialogHeight="150">
+        <LinkParameter id="sv3#page34#enu33#ln1209#par1964" name="Articulo_articulo" source="sv3#page34#enu33#fld87" target="sv3#mfu11.ent2#att32"/>
+        <LinkParameter id="sv3#page34#enu33#ln1209#par1965" name="Fracci&#243;n_fraccion" source="sv3#page34#enu33#fld88" target="sv3#mfu11.ent2#att33"/>
+        <LinkParameter id="sv3#page34#enu33#ln1209#par1966" name="Pregunta_pregunta" source="sv3#page34#enu33#fld89" target="sv3#mfu11.ent2#att5"/>
+      </Link>
+    </EntryUnit>
+    <NoOpContentUnit gr:x="0" gr:y="20" id="sv3#page34#gctu10" name="Etiqueta"/>
+    <SelectorUnit gr:x="125" gr:y="0" id="sv3#page34#seu22" name="Selector22" entity="ent2">
+      <Link id="sv3#page34#seu22#ln1208" name="Flow1208" to="sv3#page34#enu33" type="transport" validate="true">
+        <LinkParameter id="sv3#page34#seu22#ln1208#par1961" name="articulo_Articulo" source="ent2#att32Array" target="sv3#page34#enu33#fld87_slot"/>
+        <LinkParameter id="sv3#page34#seu22#ln1208#par1962" name="fraccion_Fracci&#243;n" source="ent2#att33Array" target="sv3#page34#enu33#fld88_slot"/>
+        <LinkParameter id="sv3#page34#seu22#ln1208#par1963" name="pregunta_Pregunta" source="ent2#att5Array" target="sv3#page34#enu33#fld89_slot"/>
+      </Link>
+      <Selector id="sv3#page34#seu22#su56" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page34#seu22#su56#kcond33" name="KeyCondition33" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page34#seu22#ln1210" name="Flow1210" to="sv3#mfu11" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page34#enu33">
+          <layout:Field field="sv3#page34#enu33#fld87"/>
+          <layout:Field field="sv3#page34#enu33#fld88"/>
+          <layout:Field field="sv3#page34#enu33#fld89"/>
+          <layout:Link link="sv3#page34#enu33#ln1209"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page34#gctu10"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

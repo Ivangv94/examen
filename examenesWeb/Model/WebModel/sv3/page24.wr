@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="7525" gr:y="3960" id="sv3#page24" name="Mensaje final">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#page24#mssu5" name="Message5">
+      <Message xml:space="preserve">Finalizaste el ex&#225;men, puedes consultar tu resultado...</Message>
+    </MultiMessageUnit>
+    <EntryUnit id="sv3#page24#enu32" name="Buttons" gr:x="115" gr:y="95" linkOrder="sv3#page24#enu32#ln1127">
+      <Link id="sv3#page24#enu32#ln1127" name="Flow1127" to="sv3#lou4" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page24#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page24#enu32" layout:frameLayout="None">
+          <layout:Link link="sv3#page24#enu32#ln1127"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+</Page>

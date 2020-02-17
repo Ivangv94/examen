@@ -1,0 +1,238 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="120" gr:y="165" id="mov2#opm2" name="Genera aleatorios">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="295" id="mov2#opm2#icu6" name="Input Port">
+      <InputCollectorParameter id="mov2#opm2#icu6#icp2" name="KeyCondition43 [oid]"/>
+      <InputCollectorParameter id="mov2#opm2#icu6#icp3" name="estatus"/>
+      <OKLink id="mov2#opm2#icu6#oln39" to="mov2#opm2#mfu7" validate="true" name="Flow145">
+        <LinkParameter id="mov2#opm2#icu6#oln39#par95" name="inactivo_estatus" target="mov2#opm2#mfu7.ent8#att15" source="mov2#opm2#icu6#icp3"/>
+        <LinkParameter id="mov2#opm2#icu6#oln39#par1682" source="mov2#opm2#icu6#icp2" name="oid_KeyCondition43 [oid]" target="mov2#opm2#mfu7#su90#kcond57.ent8#att23"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov2#opm2#mfu6" name="Update5" gr:x="730" gr:y="270" entity="ent7">
+      <Selector id="mov2#opm2#mfu6#su75" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#mfu6#su75#kcond46" name="KeyCondition45" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#mfu6#oln98" name="OKFlow82" to="mov2#opm2#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov2#opm2#mfu6#kln18" name="KOFlow18" to="mov2#opm2#kocu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit id="mov2#opm2#seu341" name="Selector30" gr:x="1990" gr:y="100" entity="ent8">
+      <Selector id="mov2#opm2#seu341#su87" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm2#seu341#su87#rcond343" name="RoleCondition32" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu341#oln705" name="OKFlow95" to="mov2#opm2#cru10">
+        <LinkParameter id="mov2#opm2#seu341#oln705#par1683" name="oid_Examenes.oid(ExamenToExamenes)" source="ent8#att23Array" target="mov2#opm2#cru10.rel6#role12.ent8#att23"/>
+        <LinkParameter id="mov2#opm2#seu341#oln705#par1684" name="3_fase" target="mov2#opm2#cru10.ent9#att34" sourceValue="3"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov2#opm2#seu342" name="Selector29" gr:x="1770" gr:y="95" entity="ent8">
+      <Selector id="mov2#opm2#seu342#su88" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm2#seu342#su88#rcond344" name="RoleCondition31" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu342#oln706" name="OKFlow91" to="mov2#opm2#cru11">
+        <LinkParameter id="mov2#opm2#seu342#oln706#par1685" name="oid_Examenes.oid(ExamenToExamenes)" source="ent8#att23Array" target="mov2#opm2#cru11.rel6#role12.ent8#att23"/>
+        <LinkParameter id="mov2#opm2#seu342#oln706#par1686" name="2_fase" target="mov2#opm2#cru11.ent9#att34" sourceValue="2"/>
+      </OKLink>
+    </SelectorUnit>
+    <GetUnit id="mov2#opm2#gtu19" name="Get13" gr:x="1250" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="mov2#opm2#gtu19#ln1060" name="Flow147" to="mov2#opm2#seu343" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#gtu19#ln1060#par1687" name="UserCtxParam.oid_RoleCondition30 [oid]" source="mov2#opm2#gtu19.UserCtxParam" target="mov2#opm2#seu343#su89#rcond345.userOID"/>
+      </Link>
+      <Link id="mov2#opm2#gtu19#ln1061" name="Flow151" to="mov2#opm2#seu342" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#gtu19#ln1061#par1688" name="UserCtxParam.oid_RoleCondition31 [oid]" source="mov2#opm2#gtu19.UserCtxParam" target="mov2#opm2#seu342#su88#rcond344.userOID"/>
+      </Link>
+      <Link id="mov2#opm2#gtu19#ln1062" name="Flow153" to="mov2#opm2#seu341" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#gtu19#ln1062#par1689" name="UserCtxParam.oid_RoleCondition32 [oid]" source="mov2#opm2#gtu19.UserCtxParam" target="mov2#opm2#seu341#su87#rcond343.userOID"/>
+      </Link>
+    </GetUnit>
+    <CreateUnit id="mov2#opm2#cru9" name="Create6" gr:x="1495" gr:y="285" entity="ent9">
+      <OKLink id="mov2#opm2#cru9#oln707" name="OKFlow88" to="mov2#opm2#lpu8" automaticCoupling="true" gr:bendpoints="-84,7,76,22"/>
+    </CreateUnit>
+    <ScriptUnit id="mov2#opm2#scu315" name="generaFase2" gr:x="1050" gr:y="280">
+      <ScriptUnitText xml:space="preserve">#output fase1, numPreguntas
+ArrayList&lt;Integer&gt; numerosAleatorios = new ArrayList&lt;Integer&gt;();
+int [] fase1Total = new int[200]
+
+for (int i = 201; i &lt;= 400; i++) {
+ 
+    numerosAleatorios.add(i);
+    
+}
+
+//usando Java 8
+
+//desordenando los elementos
+Random r = new Random();
+for (int i = numerosAleatorios.size(); i &gt; 0; i--) {
+if(i != 0){
+    int posicion = r.nextInt(i);
+    int tmp = numerosAleatorios[i-1];
+    numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+    numerosAleatorios[posicion] = tmp;
+}}
+
+
+
+fase1Total = numerosAleatorios
+
+int [] fase1 = new int[60]
+int [] numPreguntas = new int[60]
+
+for(int i = 0; i&lt;60; i++){
+fase1[i] = fase1Total[i+1]
+numPreguntas[i]=i+1
+
+}
+return["fase1":fase1,"numPreguntas":numPreguntas]</ScriptUnitText>
+      <OKLink id="mov2#opm2#scu315#oln708" name="OKFlow84" to="mov2#opm2#scu316" automaticCoupling="true"/>
+      <Link id="mov2#opm2#scu315#ln1063" name="Flow150" to="mov2#opm2#lpu6" type="transport" validate="true" gr:bendpoints="307,-84,-288,-84">
+        <LinkParameter id="mov2#opm2#scu315#ln1063#par1690" name="fase1_Input Array" source="result(fase1)" target="mov2#opm2#lpu6.array"/>
+        <LinkParameter id="mov2#opm2#scu315#ln1063#par1691" name="numPreguntas_numeroPregunta" source="result(numPreguntas)" target="mov2#opm2#lpu6#lsa5"/>
+      </Link>
+    </ScriptUnit>
+    <GetUnit id="mov2#opm2#gtu20" name="Get11" gr:x="300" gr:y="160" contextParameters="UserCtxParam">
+      <Link id="mov2#opm2#gtu20#ln1064" name="Flow143" to="mov2#opm2#mfu7" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#gtu20#ln1064#par1692" name="UserCtxParam.oid_Aspirante.oid(ExamenesToAspirante)" source="mov2#opm2#gtu20.UserCtxParam" target="mov2#opm2#mfu7.rel5#role9.userOID"/>
+      </Link>
+      <Link id="mov2#opm2#gtu20#ln1065" name="Flow146" to="mov2#opm2#mfu6" type="transport" validate="true" gr:bendpoints="247,1,-173,-114">
+        <LinkParameter id="mov2#opm2#gtu20#ln1065#par1693" name="UserCtxParam.oid_KeyCondition45 [oid]" source="mov2#opm2#gtu20.UserCtxParam" target="mov2#opm2#mfu6#su75#kcond46.userOID"/>
+      </Link>
+    </GetUnit>
+    <LoopUnit id="mov2#opm2#lpu6" name="Loop4" gr:x="1665" gr:y="280">
+      <OKLink id="mov2#opm2#lpu6#oln709" name="OKFlow90" to="mov2#opm2#seu342" code="next" automaticCoupling="true"/>
+      <Link id="mov2#opm2#lpu6#ln1066" name="Flow152" to="mov2#opm2#cru11" type="transport" validate="true" gr:bendpoints="60,24,-70,4">
+        <LinkParameter id="mov2#opm2#lpu6#ln1066#par1694" name="Next Element_oidPregunta" source="next" target="mov2#opm2#cru11.ent9#att27"/>
+        <LinkParameter id="mov2#opm2#lpu6#ln1066#par1695" name="Next Element (numeroPregunta)_numeroPregunta" source="mov2#opm2#lpu6#lsa5" target="mov2#opm2#cru11.ent9#att35"/>
+      </Link>
+      <OKLink id="mov2#opm2#lpu6#oln710" name="OKFlow93" to="mov2#opm2#lpu7" code="end" automaticCoupling="true" gr:bendpoints="32,66,-233,61;141,77,-124,72;226,61,-39,56"/>
+      <SecondaryArray id="mov2#opm2#lpu6#lsa5" name="numeroPregunta"/>
+    </LoopUnit>
+    <ScriptUnit id="mov2#opm2#scu316" name="generaFase3" gr:x="1205" gr:y="280">
+      <ScriptUnitText xml:space="preserve">#output fase1, numPreguntas
+ArrayList&lt;Integer&gt; numerosAleatorios = new ArrayList&lt;Integer&gt;();
+int [] fase1Total = new int[200]
+
+for (int i = 401; i &lt;= 600; i++) {
+ 
+    numerosAleatorios.add(i);
+    
+}
+
+//usando Java 8
+
+//desordenando los elementos
+Random r = new Random();
+for (int i = numerosAleatorios.size(); i &gt; 0; i--) {
+if(i != 0){
+    int posicion = r.nextInt(i);
+    int tmp = numerosAleatorios[i-1];
+    numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+    numerosAleatorios[posicion] = tmp;
+}}
+
+
+
+fase1Total = numerosAleatorios
+
+int [] fase1 = new int[60]
+int [] numPreguntas = new int[60]
+
+for(int i = 0; i&lt;60; i++){
+fase1[i] = fase1Total[i+1]
+numPreguntas[i]=i+1
+
+}
+return["fase1":fase1,"numPreguntas":numPreguntas]</ScriptUnitText>
+      <OKLink id="mov2#opm2#scu316#oln711" name="OKFlow85" to="mov2#opm2#lpu8" automaticCoupling="true"/>
+      <Link id="mov2#opm2#scu316#ln1067" name="Flow154" to="mov2#opm2#lpu7" type="transport" validate="true" gr:bendpoints="376,72,-329,67">
+        <LinkParameter id="mov2#opm2#scu316#ln1067#par1696" name="fase1_Input Array" source="result(fase1)" target="mov2#opm2#lpu7.array"/>
+        <LinkParameter id="mov2#opm2#scu316#ln1067#par1697" name="numPreguntas_numeroPregunta" source="result(numPreguntas)" target="mov2#opm2#lpu7#lsa6"/>
+      </Link>
+    </ScriptUnit>
+    <ScriptUnit id="mov2#opm2#scu317" name="generaFase1" gr:x="885" gr:y="280">
+      <ScriptUnitText xml:space="preserve">#output fase1, numPreguntas
+ArrayList&lt;Integer&gt; numerosAleatorios = new ArrayList&lt;Integer&gt;();
+int [] fase1Total = new int[200]
+
+for (int i = 1; i &lt;= 200; i++) {
+ 
+    numerosAleatorios.add(i);
+    
+}
+
+//usando Java 8
+
+//desordenando los elementos
+Random r = new Random();
+for (int i = numerosAleatorios.size(); i &gt; 0; i--) {
+if(i != 0){
+    int posicion = r.nextInt(i);
+    int tmp = numerosAleatorios[i-1];
+    numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+    numerosAleatorios[posicion] = tmp;
+}}
+
+
+
+fase1Total = numerosAleatorios
+
+int [] fase1 = new int[60]
+int [] numPreguntas = new int[60]
+
+for(int i = 0; i&lt;60; i++){
+fase1[i] = fase1Total[i+1]
+numPreguntas[i] = i+1
+
+}
+
+return["fase1":fase1,"numPreguntas":numPreguntas]</ScriptUnitText>
+      <OKLink id="mov2#opm2#scu317#oln712" name="OKFlow83" to="mov2#opm2#scu315" automaticCoupling="true"/>
+      <Link id="mov2#opm2#scu317#ln1068" name="Flow148" to="mov2#opm2#lpu8" type="transport" validate="true" gr:bendpoints="230,56,-205,56">
+        <LinkParameter id="mov2#opm2#scu317#ln1068#par1698" name="fase1_Input Array" source="result(fase1)" target="mov2#opm2#lpu8.array"/>
+        <LinkParameter id="mov2#opm2#scu317#ln1068#par1699" name="numPreguntas_numeroPregunta" source="result(numPreguntas)" target="mov2#opm2#lpu8#lsa7"/>
+      </Link>
+    </ScriptUnit>
+    <LoopUnit id="mov2#opm2#lpu7" name="Loop5" gr:x="1930" gr:y="285">
+      <OKLink id="mov2#opm2#lpu7#oln713" name="OKFlow94" to="mov2#opm2#seu341" code="next" automaticCoupling="true"/>
+      <Link id="mov2#opm2#lpu7#ln1069" name="Flow155" to="mov2#opm2#cru10" type="transport" validate="true" gr:bendpoints="80,12,-85,17">
+        <LinkParameter id="mov2#opm2#lpu7#ln1069#par1700" name="Next Element_oidPregunta" source="next" target="mov2#opm2#cru10.ent9#att27"/>
+        <LinkParameter id="mov2#opm2#lpu7#ln1069#par1701" name="Next Element (numeroPregunta)_numeroPregunta" source="mov2#opm2#lpu7#lsa6" target="mov2#opm2#cru10.ent9#att35"/>
+      </Link>
+      <SecondaryArray id="mov2#opm2#lpu7#lsa6" name="numeroPregunta"/>
+      <OKLink id="mov2#opm2#lpu7#oln720" name="OKFlow720" to="mov2#opm2#okcu1" automaticCoupling="true" code="end"/>
+    </LoopUnit>
+    <CreateUnit id="mov2#opm2#cru10" name="Create8" gr:x="2090" gr:y="270" entity="ent9">
+      <OKLink id="mov2#opm2#cru10#oln714" name="OKFlow97" to="mov2#opm2#lpu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <LoopUnit id="mov2#opm2#lpu8" name="Loop3" gr:x="1340" gr:y="280">
+      <OKLink id="mov2#opm2#lpu8#oln715" name="OKFlow86" to="mov2#opm2#seu343" code="next" automaticCoupling="true"/>
+      <Link id="mov2#opm2#lpu8#ln1070" name="Flow149" to="mov2#opm2#cru9" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#lpu8#ln1070#par1702" name="Next Element_oidPregunta" source="next" target="mov2#opm2#cru9.ent9#att27"/>
+        <LinkParameter id="mov2#opm2#lpu8#ln1070#par1703" name="Next Element (numeroPregunta)_numeroPregunta" source="mov2#opm2#lpu8#lsa7" target="mov2#opm2#cru9.ent9#att35"/>
+      </Link>
+      <OKLink id="mov2#opm2#lpu8#oln716" name="OKFlow89" to="mov2#opm2#lpu6" code="end" automaticCoupling="true" gr:bendpoints="65,66,-260,66;163,76,-162,76;260,64,-65,64"/>
+      <SecondaryArray id="mov2#opm2#lpu8#lsa7" name="numeroPregunta"/>
+    </LoopUnit>
+    <CreateUnit id="mov2#opm2#cru11" name="Create7" gr:x="1790" gr:y="290" entity="ent9">
+      <OKLink id="mov2#opm2#cru11#oln717" name="OKFlow92" to="mov2#opm2#lpu6" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="mov2#opm2#seu343" name="Selector28" gr:x="1455" gr:y="75" entity="ent8">
+      <Selector id="mov2#opm2#seu343#su89" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov2#opm2#seu343#su89#rcond345" name="RoleCondition30" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu343#oln718" name="OKFlow87" to="mov2#opm2#cru9">
+        <LinkParameter id="mov2#opm2#seu343#oln718#par1704" name="oid_Examenes.oid(ExamenToExamenes)" source="ent8#att23Array" target="mov2#opm2#cru9.rel6#role12.ent8#att23"/>
+        <LinkParameter id="mov2#opm2#seu343#oln718#par1705" name="1_fase" target="mov2#opm2#cru9.ent9#att34" sourceValue="1"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModifyUnit id="mov2#opm2#mfu7" name="Update2" gr:x="530" gr:y="260" entity="ent8">
+      <Selector id="mov2#opm2#mfu7#su90" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#mfu7#su90#kcond57" name="KeyCondition43" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#mfu7#oln719" name="OKFlow81" to="mov2#opm2#mfu6">
+        <LinkParameter id="mov2#opm2#mfu7#oln719#par1706" name="resolviendo_estatus" target="mov2#opm2#mfu6.ent7#att19" sourceValue="resolviendo"/>
+      </OKLink>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="2255" gr:y="30" id="mov2#opm2#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="2255" gr:y="180" id="mov2#opm2#kocu1" name="KO Port1"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,27 @@
+[21 ene 2020 16:55:32] DEBUG Executing SQL script
+[21 ene 2020 16:55:32] INFO ================================================================================
+[21 ene 2020 16:55:32] INFO onError= 'stop'
+[21 ene 2020 16:55:32] INFO autoCommit= 'false'
+[21 ene 2020 16:55:32] INFO username= 'examenes'
+[21 ene 2020 16:55:32] INFO outputPath= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/UpdateSQL.xml'
+[21 ene 2020 16:55:32] INFO outputLogPath= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/UpdateSQL.xml.log'
+[21 ene 2020 16:55:32] INFO encoding= ''
+[21 ene 2020 16:55:32] INFO driverClass= 'oracle.jdbc.driver.OracleDriver'
+[21 ene 2020 16:55:32] INFO sqlScript= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/UpdateSQL.sql'
+[21 ene 2020 16:55:32] INFO eventSocketPort= '44860'
+[21 ene 2020 16:55:32] INFO statementSeparator= ';'
+[21 ene 2020 16:55:32] INFO derby.system.home= '/home/tecnologo/wr7/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby'
+[21 ene 2020 16:55:32] INFO password= 'Ys0601p'
+[21 ene 2020 16:55:32] INFO url= 'jdbc:oracle:thin:@172.18.53.173:1521:orades01'
+[21 ene 2020 16:55:32] INFO ================================================================================
+[21 ene 2020 16:55:32] INFO Connecting to the Database...
+[21 ene 2020 16:55:33] INFO Database connection estabilished
+[21 ene 2020 16:55:33] INFO transaction isolation: 2
+[21 ene 2020 16:55:33] DEBUG ================================================================================
+[21 ene 2020 16:55:33] DEBUG Executing SQL script file: /home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/UpdateSQL.sql
+[21 ene 2020 16:55:33] DEBUG Executing statement:  alter table "EXAMENES"."BANCOPREGUNTAS"  add  "CONTEXTOGLOBAL_OID"  number(19,0)
+[21 ene 2020 16:55:33] DEBUG Executing statement:  alter table "EXAMENES"."BANCOPREGUNTAS"   add constraint FK_BANCOPREGUNTAS_CONTEXTOGLOB foreign key ("CONTEXTOGLOBAL_OID") references "EXAMENES"."CONTEXTOGLOBAL" ("OID")
+[21 ene 2020 16:55:33] DEBUG ================================================================================
+[21 ene 2020 16:55:33] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[21 ene 2020 16:55:33] INFO Database connection closed
+[21 ene 2020 16:55:33] DEBUG Total time: 1141 milliseconds

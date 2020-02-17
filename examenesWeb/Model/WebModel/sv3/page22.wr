@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1665" gr:y="225" id="sv3#page22" name="Selecci&#243;n de ex&#225;men">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv3#page22#inu10" name="Examenes" entity="ent8" linkOrder="sv3#page22#inu10#ln130" displayAttributes="ent8#att25" maxResults="5">
+      <Link id="sv3#page22#inu10#ln130" name="Flow130" to="sv3#miu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page22#inu10#ln130#par1707" name="inactivo_estatus" sourceValue="resolviendo" target="sv3#miu2.mov2#opm2#icu6#icp3"/>
+        <LinkParameter id="sv3#page22#inu10#ln130#par1708" name="oid_KeyCondition43 [oid]" source="data[].ent8#att23" target="sv3#miu2.mov2#opm2#icu6#icp2"/>
+      </Link>
+      <Selector id="sv3#page22#inu10#su40" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page22#inu10#su40#acond22" name="AttCondition22" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att15" value="activo"/>
+      </Selector>
+    </IndexUnit>
+    <MultiMessageUnit gr:x="145" gr:y="0" id="sv3#page22#mssu6" name="Message6"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page22#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page22#inu10">
+          <layout:Link link="sv3#page22#inu10#ln130"/>
+          <layout:Attribute attribute="ent8#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+</Page>

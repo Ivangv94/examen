@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle>
+  <Entry key="definirVariables">Porcentajes por materia:</Entry>
+  <Entry key="Flow113">Actualizar porcentaje</Entry>
+  <Entry key="Flow115">Actualizar</Entry>
+  <Entry key="Home administrador">Administraci&#243;n</Entry>
+  <Entry key="materia">Materia:</Entry>
+  <Entry key="Materia">Materia:</Entry>
+  <Entry key="Materia:">Materia:</Entry>
+  <Entry key="Modal variables">Modificar porcentaje</Entry>
+  <Entry key="porcentaje">Porcentaje:</Entry>
+  <Entry key="Porcentaje">Porcentaje:</Entry>
+  <Entry key="Variables">Materias:</Entry>
+</Bundle>

@@ -1,0 +1,16 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+<head>
+    <meta charset="utf-8">
+</head>
+<ul class="wizard-steps-extensive">
+        <li class="completed">
+            <h5>1</h5>
+            <span>Balance Final</span>
+        </li>
+        <li>
+            <h5>2</h5>
+            <span>Documentos</span>
+        </li>
+</ul>

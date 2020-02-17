@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+  <script>var  y = (window.parent.location).toString();
+			var url = "";
+			if (y.indexOf('economia') == -1)
+            url = location.protocol + "//" + document.domain + ":"+  location.port + "/" + location.pathname.split('/')[1] + "/";
+        	else url = location.protocol + "//" + document.domain + "/"  + location.pathname.split('/')[1] + "/";
+        	openEstructura = function() {
+				location.href = url + "EstructuraAccionaria.do";
+			}
+        	openAcuerdo = function() {
+				location.href = url + "AcuerdoDisolucion.do";
+			}
+			openCierre = function() {
+				location.href = url + "BalanceFinal.do";
+			}
+        	</script>
+</head>
+<body>
+<div class = "row">
+<div class="col-md-12">
+<h2>Publicaciones de Sociedades Mercantiles</h2>
+<hr class="red">
+<p>Aqu’ podr‡s realizar las operaciones y publicaciones correspondientes del proceso de disoluci—n y liquidaci—n de tu sociedad mercantil.</p>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Paso 1.- Publica tu estructura accionaria</h3>
+        <hr>
+        <p class="card-text">Para realizar el proceso de disoluci—n y liquidaci—n contemplado en el art’culo 249 Bis 1 de la Ley General de Sociedades Mercantiles, debes publicar en el Sistema Electr—nico de Publicaciones de Sociedades Mercantiles el Aviso de la estructura accionaria vigente de la sociedad..</p>
+        <a href="javascript:openEstructura()" class="btn btn-primary pull-right" >Acceder</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Paso 2.- Acuerdo de disoluci—n y liquidaci—n</h3>
+        <hr>
+        <p class="card-text">Si ya publicaste la estructura accionaria vigente de la sociedad, los socios y accionistas deben acordar la disoluci—n y liquidaci—n de conformidad con lo dispuesto en el art’culo 249 Bis 1, fracci—n I, de la Ley General de Sociedades Mercantiles, y publicar el acta en el Sistema Electr—nico de Publicaciones de Sociedades Mercantiles.</p>
+        <a href="javascript:openAcuerdo()" id="btnAD" class="btn btn-primary pull-right">Acceder</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Paso 3.- Balance final</h3>
+        <hr>
+        <p class="card-text">Una vez publicada la estructura accionara y el acta de disoluci—n y liquidaci—n de la sociedad, debes publicar el balance final en el Sistema Electr—nico de Publicaciones de Sociedades Mercantiles para cancelar el folio mercantil de la sociedad en el Registro Pœblico de Comercio conforme a lo establecido en el art’culo 249 Bis 1, fracci—n VI, de la Ley General de Sociedades Mercantiles.</p>
+        <a href="javascript:openCierre()" id="btnCF" class="btn btn-primary pull-right">Acceder</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="bottom-buffer"></div>
+<div class="vertical-buffer"></div>
+<!--Prueba gob mx-->
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+#?delimiters [%, %], [%=, %]
+<wr:LayoutParameter label="Use Empty Unit Message" name="use-empty-unit-message" type="boolean" default="false">
+Defines the usage of a message for empty units.
+Allowed values are: true(default) or false.
+</wr:LayoutParameter>
+<wr:LayoutParameter label="Empty Unit Message" name="empty-unit-message" type="string" default="emptyUnitMessage">
+Defines the key of the message to use if the unit is empty.
+Default value: emptyUnitMessage
+</wr:LayoutParameter>
+[%
+import org.apache.commons.lang.StringUtils
+
+setHTMLOutput()
+def unitId = unit["id"]
+
+def useEmptyUnitMessage = params["use-empty-unit-message"]
+def emptyUnitMessage = params["empty-unit-message"]
+
+def links = unit.selectNodes("layout:Link").findAll{it["_exp"]!='t'}
+def unitLink = links.empty ? null : links[0]
+def link = unitLink?.valueOf("@link")
+def blockFactor = unit["blockFactor"]
+def isSortable = "false"
+def isScrollable = unit["blockFactor"] != "" ? "true": "false"
+
+
+def firstLink = unit.selectSingleNode("layout:Link[contains(@link,'First')]")
+def previousLink = unit.selectSingleNode("layout:Link[contains(@link,'Previous')]")
+def blockLink = unit.selectSingleNode("layout:Link[contains(@link,'Block')]")
+def nextLink = unit.selectSingleNode("layout:Link[contains(@link,'Next')]")
+def lastLink = unit.selectSingleNode("layout:Link[contains(@link,'Last')]")
+
+%]
+
+[%
+def getIconPath(linkLayout) {
+	folder = linkLayout.parameters["icon-folder"]
+	name = StringUtils.defaultIfEmpty(linkLayout.parameters["icon-name"], linkLayout.contextElement?.attributeValue("name"))
+	extension = linkLayout.parameters["icon-extension"]
+	return getFilePath(folder, name, extension)
+}
+%]
+
+[% if (useEmptyUnitMessage != "true") { %]
+<c:if test="${not(empty <wr:Id context="unit"/>) and (<wr:Id context="unit"/>.dataSize gt 0)}">
+[% } else { %]
+<c:choose>
+<c:when test="${not(empty <wr:Id context="unit"/>) and (<wr:Id context="unit"/>.dataSize gt 0)}">
+[% } %]
+	<wr:Frame>
+		<div class="plain <wr:StyleClass/>">
+			<div class="plain PowerIndexUnit">
+				<table class="table table-striped" border="0" cellspacing="1" cellpadding="2">
+					<tr>
+						[% if (links.size() == 1) {%]
+							<th class="<wr:StyleClass/> header"></th>
+						[% } %]
+						<wr:Iterate var="att" context="unit" select="layout:Attribute">
+							<wr:Visible>
+								<th nowrap="nowrap" class="<wr:StyleClass/> header">
+									[% if (isSortable == "true") { %]
+										[% def sortLink = unit.selectSingleNode("layout:Link[@link='" + unit["id"] + att["attribute"] + "']")
+										   if(sortLink != null) { %]
+											<wr:Link context="sortLink" class="sort" type="sort"/>
+										[% } else { %]
+											<wr:Label/>
+										[% } %]
+									[% } else { %]
+										<wr:Label/>
+									[% } %]
+								</th>
+							</wr:Visible>
+						</wr:Iterate>
+
+						[% if (links.size() > 1) { %]
+							<wr:Iterate var="l" context="unit" select="layout:Link[string(@_exp) != 't']">
+								<wr:Visible>
+									<th class="<wr:StyleClass/> header"></th>
+								</wr:Visible>
+							</wr:Iterate>
+						[% } %]
+					</tr>
+					<c:forEach var="current" varStatus="status" items="${<wr:Id context="unit"/>.data}">
+						<c:set var="index" value="${status.index}"/>
+							<tr>
+								[% if (links.size() == 1) {%]
+									<wr:Visible context="unitLink" position="'index'">
+										<td>
+											<a href="<wr:URL context="unitLink" position="'index'"/>" class="<wr:StyleClass context="unitLink"/> link<c:if test="${<wr:Id context="unit"/>.currentIndex eq index}">Current</c:if>"
+											[%if (unitLink?.attributeValue("newWindow") == "true") { %] target="_blank" [% } %]>
+												<img src="WRResources/spacer.gif" class="bullet<c:if test="${<wr:Id context="unit"/>.currentIndex eq index}">Current</c:if>" border="0" alt="<wr:Label context="unitLink"/>"/>
+											</a>
+										</td>
+									</wr:Visible>
+								[% } %]
+								<wr:Iterate var="attr" context="unit" select="layout:Attribute">
+									<wr:Visible position="'index'">
+										<td class="<wr:StyleClass/> value<c:if test="${<wr:Id context="unit"/>.currentIndex eq index}">Current</c:if>">
+											<wr:Value/>
+										</td>
+									</wr:Visible>
+								</wr:Iterate>
+
+								[% if (links.size() > 1) { %]
+									<wr:Iterate var="l" context="unit" select="layout:Link[string(@_exp) != 't']">
+										<wr:Visible position="'index'">
+											<td>
+												<c:choose>
+													<c:when test="${<wr:Id context="unit"/>.currentIndex eq index}">
+														<wr:Link class="linkCurrent"/>
+													</c:when>
+													<c:otherwise>
+														<wr:Link  class="link"/>
+													</c:otherwise>
+												</c:choose>
+											</td>
+										</wr:Visible>
+									</wr:Iterate>
+								[% } %]
+							</tr>
+						</c:forEach>
+					</table>
+
+
+
+
+
+
+					[% if (isScrollable == "true") { %]
+						<c:if test="${<wr:Id context="unit"/>.scroller.of gt [%= blockFactor %]}">
+							<table border="0" cellspacing="1" cellpadding="2" align="center">
+								<tr>
+								    [% if (previousLink) { %]
+										<td class="scrollText">
+											<wr:Visible context="previousLink">
+												<c:choose>
+													<c:when test="${<wr:Id context="unit"/>.scroller.current ne <wr:Id context="unit"/>.scroller.previous}">
+														<wr:Link class="scroll" context="previousLink"/>
+													</c:when>
+													<c:otherwise>
+														[% def previousLinkLayout = getLinkLayout(previousLink)
+														   if (previousLinkLayout.parameters["show"] && (previousLinkLayout.parameters["show"] == "icon" || previousLinkLayout.parameters["show"] == "icon & text")) { %]
+															<table cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="middle">
+																		<img src="[%=getIconPath(previousLinkLayout) %]" border="0"/>
+																	</td>
+																	[% if (previousLinkLayout.parameters["show"] == "icon & text") { %]
+																		<td>
+																			<bean:message key="PowerIndex.Previous"/>
+																		</td>
+																	[% } %]
+																</tr>
+															</table>
+														[% } else { %]
+															<span><bean:message key="PowerIndex.Previous"/></span>
+														[% } %]
+													</c:otherwise>
+												</c:choose>
+											</wr:Visible>
+										</td>
+								    [% } %]
+								    
+										<td colspan="5">
+											<wr:Visible context="blockLink">
+												<c:forEach var="current" varStatus="status" items="${<wr:Id context="unit"/>.scroller.blocks}">
+													<c:set var="index" value="${status.index}"/>
+													<span class="jump">
+														<c:choose>
+															<c:when test="${current ne <wr:Id context="unit"/>.scroller.current}">
+																<a class="<wr:StyleClass context="blockLink"/> link" href="<wr:URL context="blockLink"/>" onclick="<wr:AjaxURL context="blockLink" />">${current}</a>
+															</c:when>
+															<c:otherwise>
+																${current}
+															</c:otherwise>
+														</c:choose>
+													</span>
+												</c:forEach>
+											</wr:Visible>
+										</td>
+									
+								    [% if (nextLink) { %]
+										<td class="scrollText">
+											<wr:Visible context="nextLink">
+												<c:choose>
+													<c:when test="${<wr:Id context="unit"/>.scroller.current ne <wr:Id context="unit"/>.scroller.next}">
+														<wr:Link class="scroll" context="nextLink"/>
+													</c:when>
+													<c:otherwise>
+														[% def nextLinkLayout = getLinkLayout(nextLink)
+														if (nextLinkLayout.parameters["show"] && (nextLinkLayout.parameters["show"] == "icon" || nextLinkLayout.parameters["show"] == "icon & text")) { %]
+															<table cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="middle">
+																		<img src="[%=getIconPath(nextLinkLayout) %]" border="0"/>
+																	</td>
+																	[% if (nextLinkLayout.parameters["show"] == "icon & text") { %]
+																		<td>
+																			<bean:message key="PowerIndex.Next"/>
+																		</td>
+																	[% } %]
+																</tr>
+															</table>
+														[% } else { %]
+															<span><bean:message key="PowerIndex.Next"/></span>
+														[% } %]
+													</c:otherwise>
+												</c:choose>
+											</wr:Visible>
+										</td>
+								    [% } %]
+								</tr>
+								
+							</table>
+						</c:if>
+					[%}%]
+				</div>
+			</div>
+		</wr:Frame>
+[% if (useEmptyUnitMessage != "true") { %]
+</c:if>
+[% } else { %]
+</c:when>
+<c:otherwise>
+	<wr:Frame>
+		<div class="plain <wr:StyleClass/>">
+			<div class="plain PowerIndexUnit">
+				<table class="table table-striped">
+					<tr>
+						<td><bean:message key="[%printJSPTagValue(emptyUnitMessage)%]"/></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</wr:Frame>
+</c:otherwise>
+</c:choose>
+[% } %]

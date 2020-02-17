@@ -1,0 +1,10 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Home" homePage="sv1#page1" localized="true">
+  <OperationUnits>
+    <LoginUnit id="sv1#lgu1" name="Login User" gr:x="190" gr:y="315">
+      <KOLink id="sv1#lgu1#kln1" name="KOLink6" to="sv1#page1" automaticCoupling="true" gr:bendpoints="40,-54,50,146"/>
+    </LoginUnit>
+    <ParameterCollectorUnit id="sv1#pcu1" gr:x="470" gr:y="115" name="Home Page">
+      <OKLink id="sv1#pcu1#oln1" name="OKFlow31" to="sv1#page1" automaticCoupling="true"/>
+    </ParameterCollectorUnit>
+  </OperationUnits>
+</SiteView>

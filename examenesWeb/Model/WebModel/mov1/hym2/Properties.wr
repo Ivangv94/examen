@@ -1,0 +1,14 @@
+<HybridModule xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym2" gr:x="134" gr:y="10" name="Examen - Aplicante - Establece variables" bpm:moduleType="activity" bpm:uuids="K1I6C4LD_HA651Z.K1IBT9XJ_2DZCG0" layout:singleLayout="true">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#hym2#icu1" name="Input" gr:x="-275" gr:y="85">
+      <OKLink id="mov1#hym2#icu1#oln18" name="OKLink" automaticCoupling="true" to="mov1#hym2#page14"/>
+    </InputCollectorUnit>
+    <ProcessUnit id="mov1#hym2#pu20" name="Complete Activity" mode="completeActivity" gr:x="800" gr:y="0"/>
+    <ProcessUnit id="mov1#hym2#pu21" name="Save Activity" mode="saveActivity" gr:x="800" gr:y="150"/>
+    <ProcessUnit id="mov1#hym2#pu22" name="Leave Activity" mode="leaveActivity" gr:x="800" gr:y="260"/>
+    <ActivityParametersUnit id="mov1#hym2#apu2" name="Set Parameters" gr:x="560" gr:y="100">
+      <OKLink id="mov1#hym2#apu2#oln19" name="OKLink" automaticCoupling="false" to="mov1#hym2#pu20" codeRef="mov1#hym2#page14#enu8#ln99"/>
+      <OKLink id="mov1#hym2#apu2#oln20" name="OKLink" automaticCoupling="false" to="mov1#hym2#pu21" codeRef="mov1#hym2#page14#enu8#ln100"/>
+    </ActivityParametersUnit>
+  </OperationUnits>
+</HybridModule>

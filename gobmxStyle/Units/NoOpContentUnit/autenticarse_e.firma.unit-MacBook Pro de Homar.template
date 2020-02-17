@@ -1,0 +1,104 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GobMX VUN - SSO</title>
+    <link href="https://framework-gb.cdn.gob.mx/favicon.ico" rel="shortcut icon">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="gobmxStyle/css/fiel-bootstrap.all.css" />
+
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+    <![endif]-->
+    
+    
+  </head>
+<body>
+    <main class="page">
+	<div class="container">
+		<div class="row">
+                    <form id="frm-fiel" action="/sso/j_security_check" 
+			data-role="gob-widget-fiel" method="post"
+			enctype="application/x-www-form-urlencoded"
+			class="center-margin col-xs-12 col-sm-8 form-horizontal">
+
+			<h3 class="text-center">Ingresa tus credenciales de acceso</h3>
+                            <div class="content-box">
+				<div class="content-box-wrapper">
+                                    <div class="form-group">
+                                        <label for="certificate" class="col-md-5 control-label">Certificado (cer):</label>
+					<div class="col-md-7">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" readonly /> 
+                                                <span class="input-group-btn"> 
+                                                    <span class="btn btn-default btn-file"> Buscar&hellip; 
+                                                        <input name="fileCer" type="file" accept=".cer" required=""
+											data-rule-extension="cer"
+											data-msg-extension="Por favor, se requiere archivo con extensi—n aceptada .CER" />
+                                                    </span>
+						</span>
+                                            </div>
+					</div>
+                                    </div>
+                                    <div class="form-group">
+					<label for="privateKey" class="col-md-5 control-label">Clave privada (key):</label>
+                                        <div class="col-md-7">
+                                            <div class="input-group">
+						<input type="text" size="25" class="form-control" readonly />
+						<span class="input-group-btn"> 
+                                                    <span class="btn btn-default btn-file">Buscar&hellip; 
+                                                        <input name="fileKey" type="file" accept=".key" required=""
+                                                                    data-rule-extension="key"
+                                                                    data-msg-extension="Por favor, se requiere archivo con extensi—n aceptada .KEY" />
+                                                    </span>
+						</span>
+                                            </div>
+					</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwdPrivateKey" class="col-md-5 control-label">Contrase–a de clave privada:</label>
+                                        <div class="col-md-7">
+                                            <input type="password" id="pwdPrivateKey" name="pwdPrivateKey" size="25" autocomplete="off" class="form-control" required=""/>
+					</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rfcEmisor" class="col-md-5 control-label">RFC:</label>
+					<div class="col-md-7">
+                                            <input type="text" id="rfcEmisor" name="rfcEmisor" size="26" class="form-control" readonly="readonly"/>
+					</div>
+                                    </div>
+                                    <div class="form-group button-pane">
+					<div class="col-md-6 col-md-offset-3">
+                                            <div class="block-button-login">
+                                                <button type="submit" class="btn btn-block btn-primary btn-sign-in" data-loading-text="Verificando...">Ingresar</button>
+                                            </div>
+					</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="special-block-fiel">					
+                            </div>
+                    </form>
+		</div>
+
+            <div id="modal">
+		<div class="modalconent">
+			<img src="https://framework-gb.cdn.gob.mx/sso/images/loading.gif" alt="Cargando">
+                            <h2 class="text-center">
+					Verificando a <span class="emisorLabel"></span>
+                            </h2>
+		</div>
+            </div>
+        </div>
+    </main>
+    <script src="gobmxStyle/js/gobmx.js"></script>
+    <script src="gobmxStyle/js/sat-fiel-1.0.0.source.all_2.js"></script>
+</body>

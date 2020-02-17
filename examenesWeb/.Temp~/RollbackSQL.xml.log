@@ -1,0 +1,41 @@
+[15 ene 2020 11:47:59] DEBUG Executing SQL script
+[15 ene 2020 11:47:59] INFO ================================================================================
+[15 ene 2020 11:47:59] INFO onError= 'stop'
+[15 ene 2020 11:47:59] INFO autoCommit= 'false'
+[15 ene 2020 11:47:59] INFO username= 'examenes'
+[15 ene 2020 11:47:59] INFO outputPath= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/RollbackSQL.xml'
+[15 ene 2020 11:47:59] INFO outputLogPath= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/RollbackSQL.xml.log'
+[15 ene 2020 11:47:59] INFO encoding= ''
+[15 ene 2020 11:47:59] INFO driverClass= 'oracle.jdbc.driver.OracleDriver'
+[15 ene 2020 11:47:59] INFO sqlScript= '/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/RollbackSQL.sql'
+[15 ene 2020 11:47:59] INFO eventSocketPort= '41804'
+[15 ene 2020 11:47:59] INFO statementSeparator= ';'
+[15 ene 2020 11:47:59] INFO derby.system.home= '/home/tecnologo/wr7/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby'
+[15 ene 2020 11:47:59] INFO password= 'Ys0601p'
+[15 ene 2020 11:47:59] INFO url= 'jdbc:oracle:thin:@172.18.53.173:1521:orades01'
+[15 ene 2020 11:47:59] INFO ================================================================================
+[15 ene 2020 11:48:00] INFO Connecting to the Database...
+[15 ene 2020 11:48:00] INFO Database connection estabilished
+[15 ene 2020 11:48:00] INFO transaction isolation: 2
+[15 ene 2020 11:48:00] DEBUG ================================================================================
+[15 ene 2020 11:48:00] DEBUG Executing SQL script file: /home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/RollbackSQL.sql
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."USER"   drop constraint "FK_USER_GROUP"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."USER"  drop column  "GROUP_OID"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."PROCESSINSTANCE"   drop constraint "FK_PROCESSINSTANCE_PROCESS"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."PROCESSINSTANCE"  drop column  "PROCESS_OID"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."ATTACHMENT"   drop constraint "FK_ATTACHMENT_USER"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."ATTACHMENT"  drop column  "USER_OID"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."ATTACHMENT_PROCESSINSTANCE"   drop constraint "FK_ATTACHMENT_PROCESSINSTANC_2"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  alter table "EXAMENES"."ATTACHMENT_PROCESSINSTANCE"   drop constraint "FK_ATTACHMENT_PROCESSINSTANCE"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  drop table "EXAMENES"."ATTACHMENT_PROCESSINSTANCE"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  drop table "EXAMENES"."USER"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  drop index "IDX_PROCESSINSTANCE_STATUS"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  drop table "EXAMENES"."PROCESSINSTANCE"
+[15 ene 2020 11:48:00] DEBUG Executing statement:  drop index "IDX_PROCESS_UUID"
+[15 ene 2020 11:48:01] DEBUG Executing statement:  drop table "EXAMENES"."PROCESS"
+[15 ene 2020 11:48:01] DEBUG Executing statement:  drop table "EXAMENES"."GROUP"
+[15 ene 2020 11:48:01] DEBUG Executing statement:  drop table "EXAMENES"."ATTACHMENT"
+[15 ene 2020 11:48:01] DEBUG ================================================================================
+[15 ene 2020 11:48:01] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[15 ene 2020 11:48:01] INFO Database connection closed
+[15 ene 2020 11:48:01] DEBUG Total time: 1365 milliseconds

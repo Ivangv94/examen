@@ -1,0 +1,89 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="140" gr:y="275" id="mov2#opm3" name="guardaRespuestas">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm3#icu7" gr:x="-515" gr:y="65">
+      <InputCollectorParameter id="mov2#opm3#icu7#icp4" name="oidRespuesta"/>
+      <Link id="mov2#opm3#icu7#ln151" name="Flow151" to="mov2#opm3#mfu4" type="transport" validate="true" gr:bendpoints="83,80,-577,-5">
+        <LinkParameter id="mov2#opm3#icu7#ln151#par1713" name="oidRespuesta_oidRespuesta" source="mov2#opm3#icu7#icp4" target="mov2#opm3#mfu4.ent10#att30"/>
+      </Link>
+      <Link id="mov2#opm3#icu7#ln152" name="Flow152" to="mov2#opm3#cru7" type="transport" validate="true" gr:bendpoints="143,-74,-487,1">
+        <LinkParameter id="mov2#opm3#icu7#ln152#par172" name="oidRespuesta_oidRespuesta" source="mov2#opm3#icu7#icp4" target="mov2#opm3#cru7.ent10#att30"/>
+        <LinkParameter id="mov2#opm3#icu7#ln152#par149" name="oidPregunta_oidPregunta" source="mov2#opm3#icu7#icp5" target="mov2#opm3#cru7.ent10#att29"/>
+      </Link>
+      <InputCollectorParameter id="mov2#opm3#icu7#icp5" name="oidPregunta"/>
+      <Link id="mov2#opm3#icu7#ln1188" name="OKFlow92" to="mov2#opm3#seu29" type="transport" gr:bendpoints="100,-115,-370,-110;440,-118,-30,-113">
+        <LinkParameter id="mov2#opm3#icu7#ln1188#par1874" name="oidRespuesta_AttCondition31" source="mov2#opm3#icu7#icp5" target="mov2#opm3#seu29#su95#acond31"/>
+      </Link>
+      <OKLink id="mov2#opm3#icu7#oln727" name="OKFlow727" to="mov2#opm3#switch5">
+        <LinkParameter id="mov2#opm3#icu7#oln727#par1884" name="oidRespuesta_Switch" source="mov2#opm3#icu7#icp4" target="mov2#opm3#switch5.switch"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <SelectorUnit gr:x="285" gr:y="50" id="mov2#opm3#seu29" name="buscaRespuesta" entity="ent10">
+      <Selector id="mov2#opm3#seu29#su95" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm3#seu29#su95#acond31" name="AttCondition31" predicate="eq" booleanOperator="or" implied="false" attributes="ent10#att29"/>
+        <RelationshipRoleCondition id="mov2#opm3#seu29#su95#rcond31" name="RoleCondition31" role="rel7#role13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm3#seu29#oln93" name="OKFlow93" to="mov2#opm3#inn3">
+        <LinkParameter id="mov2#opm3#seu29#oln93#par169" name="oid_Input" source="ent10#att28Array" target="mov2#opm3#inn3.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <GetUnit gr:x="170" gr:y="-120" id="mov2#opm3#gtu13" name="Get13" contextParameters="UserCtxParam" linkOrder="mov2#opm3#gtu13#ln150 mov2#opm3#gtu13#ln153 mov2#opm3#gtu13#ln1189">
+      <Link id="mov2#opm3#gtu13#ln150" name="Flow150" to="mov2#opm3#seu29" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov2#opm3#gtu13#ln153" name="Flow153" to="mov2#opm3#cnu4" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="6,-56,-584,-171;590,-56,0,-171"/>
+      <Link id="mov2#opm3#gtu13#ln1189" name="Flow1189" to="mov2#opm3#seu30" type="transport" validate="true">
+        <LinkParameter id="mov2#opm3#gtu13#ln1189#par1875" name="UserCtxParam.oid_RoleCondition32 [oid]" source="mov2#opm3#gtu13.UserCtxParam" target="mov2#opm3#seu30#su101#rcond32.userOID"/>
+      </Link>
+    </GetUnit>
+    <IsNotNullUnit gr:x="465" gr:y="85" id="mov2#opm3#inn3" name="Is Not Null3">
+      <KOLink id="mov2#opm3#inn3#kln13" name="KOFlow13" to="mov2#opm3#cru7" automaticCoupling="true"/>
+      <OKLink id="mov2#opm3#inn3#oln94" name="OKFlow94" to="mov2#opm3#mfu4">
+        <LinkParameter id="mov2#opm3#inn3#oln94#par170" name="Input Value_KeyCondition61 [oid]" source="inputValue" target="mov2#opm3#mfu4#su96#kcond61.ent10#att28"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="605" gr:y="-10" id="mov2#opm3#cru7" name="Create7" entity="ent10">
+      <OKLink id="mov2#opm3#cru7#oln95" name="OKFlow95" to="mov2#opm3#cnu4" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="635" gr:y="145" id="mov2#opm3#mfu4" name="Update4" entity="ent10">
+      <Selector id="mov2#opm3#mfu4#su96" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm3#mfu4#su96#kcond61" name="KeyCondition61" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm3#mfu4#oln721" name="OKFlow721" to="mov2#opm3#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov2#opm3#mfu4#kln15" name="KOFlow15" to="mov2#opm3#kocu2" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ConnectUnit gr:x="735" gr:y="-20" id="mov2#opm3#cnu4" name="relAspirante" relationship="rel7#role14">
+      <SourceSelector id="mov2#opm3#cnu4#su98" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm3#cnu4#su98#kcond62" name="KeyCondition62" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov2#opm3#cnu4#su99" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm3#cnu4#su99#kcond63" name="KeyCondition63" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov2#opm3#cnu4#oln97" name="OKFlow97" to="mov2#opm3#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov2#opm3#cnu4#kln14" name="KOFlow14" to="mov2#opm3#kocu2" automaticCoupling="true"/>
+    </ConnectUnit>
+    <OKCollectorUnit gr:x="1030" gr:y="-15" id="mov2#opm3#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="1030" gr:y="150" id="mov2#opm3#kocu2" name="KO Port2"/>
+    <TimeUnit gr:x="-15" gr:y="75" id="mov2#opm3#tmu8" name="Time8" linkOrder="mov2#opm3#tmu8#ln1191 mov2#opm3#tmu8#ln1192">
+      <OKLink id="mov2#opm3#tmu8#oln728" name="OKFlow728" to="mov2#opm3#seu30" automaticCoupling="true"/>
+      <Link id="mov2#opm3#tmu8#ln1191" name="Flow1191" to="mov2#opm3#cru7" type="transport" validate="true" gr:bendpoints="-1,-144,-636,-69;633,-142,-2,-67">
+        <LinkParameter id="mov2#opm3#tmu8#ln1191#par1877" name="Current/Input Timestamp_estampaRespuesta" source="currentTimestamp" target="mov2#opm3#cru7.ent10#att37"/>
+      </Link>
+      <Link id="mov2#opm3#tmu8#ln1192" name="Flow1192" to="mov2#opm3#mfu4" type="transport" validate="true" gr:bendpoints="-1,141,-666,56;602,142,-63,57">
+        <LinkParameter id="mov2#opm3#tmu8#ln1192#par1878" name="Current/Input Timestamp_estampaRespuesta" source="currentTimestamp" target="mov2#opm3#mfu4.ent10#att37"/>
+      </Link>
+    </TimeUnit>
+    <SelectorUnit gr:x="100" gr:y="50" id="mov2#opm3#seu30" name="buscaExamen" entity="ent8" linkOrder="mov2#opm3#seu30#ln1190">
+      <Selector id="mov2#opm3#seu30#su101" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm3#seu30#su101#acond32" name="AttCondition32" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att15" value="resolviendo"/>
+        <RelationshipRoleCondition id="mov2#opm3#seu30#su101#rcond32" name="RoleCondition32" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <OKLink id="mov2#opm3#seu30#oln729" name="OKFlow729" to="mov2#opm3#seu29" automaticCoupling="true"/>
+      <Link id="mov2#opm3#seu30#ln1190" name="Flow1190" to="mov2#opm3#cru7" type="transport" validate="true" gr:bendpoints="-3,-96,-483,-21;361,-97,-119,-22">
+        <LinkParameter id="mov2#opm3#seu30#ln1190#par1876" name="oid_oidExamen" source="ent8#att23Array" target="mov2#opm3#cru7.ent10#att36"/>
+      </Link>
+    </SelectorUnit>
+    <SwitchUnit gr:x="-200" gr:y="75" id="mov2#opm3#switch5" name="Switch5">
+      <Case value="null"/>
+      <OKLink id="mov2#opm3#switch5#oln731" name="OKFlow731" to="mov2#opm3#tmu8" automaticCoupling="true"/>
+      <OKLink id="mov2#opm3#switch5#oln732" name="OKFlow732" to="mov2#opm3#okcu2" automaticCoupling="true" code="null" gr:bendpoints="-1,-154,-1301,-74;1161,-153,-139,-73"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

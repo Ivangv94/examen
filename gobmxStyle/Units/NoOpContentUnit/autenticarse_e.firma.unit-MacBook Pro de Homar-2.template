@@ -1,0 +1,79 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+
+<link href="https://framework-gb.cdn.gob.mx/favicon.ico" rel="shortcut icon">*<link href="gobmxStyle/css/main.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="gobmxStyle/css/fiel-bootstrap.css">
+<!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+<!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+<![endif]-->
+<script type="text/javascript" language="javascript" src="gobmxStyle/js/sat-fiel-1.js"></script>    
+<script type="text/javascript" src="gobmxStyle/js/modernizr.js"></script>
+<link rel="stylesheet" href="gobmxStyle/css/css.css" media="all">
+<script type="text/javascript" src="gobmxStyle/js/pace.js"></script>
+<form id="frm-fiel" action="/sso/j_security_check" data-role="gob-widget-fiel" method="post" enctype="application/x-www-form-urlencoded" class="center-margin col-xs-12 col-sm-8 form-horizontal" novalidate="novalidate">
+   <h3 class="text-center">Ingresa tus credenciales de acceso</h3>
+   <div class="content-box">
+      <div class="content-box-wrapper">
+         <div class="form-group">
+            <label for="certificate" class="col-md-5 control-label">Certificado (cer):</label>
+            <div class="col-md-7">
+               <div class="input-group">
+                  <input class="form-control" readonly="readonly" type="text"> 
+                  <span class="input-group-btn"> 
+                  <span class="btn btn-default btn-file"> Buscar… 
+                  <input name="fileCer" accept=".cer" required="" data-rule-extension="cer" data-msg-extension="Por favor, se requiere archivo con extensión aceptada .CER" aria-required="true" type="file">
+                  </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="privateKey" class="col-md-5 control-label">Clave privada (key):</label>
+            <div class="col-md-7">
+               <div class="input-group">
+                  <input size="25" class="form-control" readonly="readonly" type="text">
+                  <span class="input-group-btn"> 
+                  <span class="btn btn-default btn-file">Buscar… 
+                  <input name="fileKey" accept=".key" required="" data-rule-extension="key" data-msg-extension="Por favor, se requiere archivo con extensión aceptada .KEY" aria-required="true" type="file">
+                  </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="pwdPrivateKey" class="col-md-5 control-label">Contraseña de clave privada:</label>
+            <div class="col-md-7">
+               <input id="pwdPrivateKey" name="pwdPrivateKey" size="25" autocomplete="off" class="form-control" required="" aria-required="true" type="password">
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="rfcEmisor" class="col-md-5 control-label">RFC:</label>
+            <div class="col-md-7">
+               <input id="rfcEmisor" name="rfcEmisor" size="26" class="form-control" readonly="readonly" type="text">
+            </div>
+         </div>
+         <div class="form-group button-pane">
+            <div class="col-md-6 col-md-offset-3">
+               <div class="block-button-login">
+                  <button type="submit" class="btn btn-block btn-primary btn-sign-in" data-loading-text="Verificando...">Ingresar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="special-block-fiel">					
+   </div>
+</form>
+</div>
+<div id="modal">
+<div class="modalconent">
+   <img src="gobmxStyle/public/img/loading.gif" alt="Cargando">
+   <h2 class="text-center">
+      Verificando a <span class="emisorLabel"></span>
+   </h2>
+</div>
+            

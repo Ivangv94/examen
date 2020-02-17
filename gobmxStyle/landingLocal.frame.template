@@ -1,0 +1,55 @@
+<hmtl>
+<head>
+  <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<div class = "row">
+<div class="col-md-12">
+<h2>Sistema de Disoluci—n y Liquidaci—n Simplificada de Sociedades Mercantiles.</h2>
+<hr class="red">
+<p>Bienvenido al Sistema de Disoluci—n y Liquidaci—n Simplificada de Sociedades Mercantiles, favor de seleccionar el proceso al que desea iniciar.</p>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Registro de Estructura Accionaria</h3>
+        <hr>
+        <p class="card-text">Para este m—dulo necesitamos la e.fima de la Persona Moral y la del Representante Legal que se encuntre resgistrada en el Servicio de Administraci—n Tributaria.</p>
+        <a href="http://localhost:8080/disolucionWeb/spu7.do?link=ln658&spu7.startActivityTypeOid=18&sp=page63&fllbck=.sv9" class="btn btn-primary pull-right">Iniciar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Acuerdo de Disoluci—n</h3>
+        <hr>
+        <p class="card-text">Para este m—dulo necesitamos la e.fima de la Persona Moral y la del Representante Legal que se encuntre resgistrada en el Servicio de Administraci—n Tributaria.</p>
+        <a href="http://localhost:8080/disolucionWeb/spu7.do?link=ln658&amp;spu7.startActivityTypeOid=27&amp;sp=page63&amp;fllbck=.sv9" class="btn btn-primary pull-right">Iniciar</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Cierre de Folio Mercantil</h3>
+        <hr>
+        <p class="card-text">Para este m—dulo necesitamos la e.fima de la Persona Moral y la del Representante Legal que se encuntre resgistrada en el Servicio de Administraci—n Tributaria.</p>
+        <a href="http://localhost:8080/disolucionWeb/spu7.do?link=ln658&amp;spu7.startActivityTypeOid=65&amp;sp=page63&amp;fllbck=.sv9" class="btn btn-primary pull-right">Iniciar</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="bottom-buffer"></div>
+<div class="vertical-buffer"></div>
+<!--Prueba gob mx-->
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+<script>
+  $gmx(document).ready(function() {
+    ...
+  });
+</script>
+</body>
+</hmtl>

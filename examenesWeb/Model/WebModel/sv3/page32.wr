@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2320" gr:y="1240" id="sv3#page32" name="Ponderacion">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv3#page32#inu7" name="Simple List7" entity="ent5" displayAttributes="ent5#att14 ent5#att39" linkOrder="sv3#page32#inu7#ln133">
+      <Link id="sv3#page32#inu7#ln133" name="Cambiar" to="sv3#page33#enu17" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowWidth="600" ajaxWindowHeight="400" ajaxWindowClosable="true" ajaxWindowMinimizable="true" ajaxWindowModal="true">
+        <LinkParameter id="sv3#page32#inu7#ln133#par1893" name="numeroPreguntas_Campo" source="data[].ent5#att39" target="sv3#page33#enu17#fld84_slot"/>
+        <LinkParameter id="sv3#page32#inu7#ln133#par1894" name="oid_OID" source="data[].ent5#att13" target="sv3#page33#enu17#fld85_slot"/>
+      </Link>
+    </IndexUnit>
+    <MultiMessageUnit gr:x="115" gr:y="50" id="sv3#page32#mssu8" name="Mensajedeexito"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page32#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page32#inu7">
+          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Attribute attribute="ent5#att39"/>
+          <layout:Link link="sv3#page32#inu7#ln133"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+</Page>

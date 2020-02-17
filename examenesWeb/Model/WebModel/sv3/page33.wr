@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2360" gr:y="1580" id="sv3#page33" name="modificacionponderacion">
+  <ContentUnits>
+    <NoOpContentUnit gr:x="0" gr:y="0" id="sv3#page33#gctu5" name="Etiqueta"/>
+    <EntryUnit gr:x="110" gr:y="20" id="sv3#page33#enu17" name="CampoMod" fieldOrder="sv3#page33#enu17#fld84" linkOrder="sv3#page33#enu17#ln136">
+      <Field id="sv3#page33#enu17#fld84" name="Campo" type="integer" preloaded="true" modifiable="true"/>
+      <Field id="sv3#page33#enu17#fld85" name="OID" type="integer" preloaded="true" hidden="true"/>
+      <Link id="sv3#page33#enu17#ln136" name="Flow136" to="sv3#mfu10" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWaitingDialog="true" ajaxWaitingDialogMessage="Procesando">
+        <LinkParameter id="sv3#page33#enu17#ln136#par1895" name="OID_KeyCondition31 [oid]" source="sv3#page33#enu17#fld85" target="sv3#mfu10#su46#kcond31.ent5#att13"/>
+        <LinkParameter id="sv3#page33#enu17#ln136#par1912" name="Campo_numeroPreguntas" source="sv3#page33#enu17#fld84" target="sv3#mfu10.ent5#att39"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv3#page33#gctu5" layout:frameLayout="gobmxStyle/Etiqueta"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="7"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv3#page33#enu17" layout:frameLayout="None">
+          <layout:Field field="sv3#page33#enu17#fld84">
+            <layout:LayoutParameter name="label-position" value="top" type="field"/>
+            <layout:LayoutParameter name="label-width" value="1" type="field"/>
+          </layout:Field>
+          <layout:Link link="sv3#page33#enu17#ln136"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="7"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+</Page>

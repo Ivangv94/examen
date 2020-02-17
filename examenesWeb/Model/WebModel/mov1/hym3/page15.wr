@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym3#page15" name="2.0 Seleccionar examen" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym3#page15#apu5" name="Get Parameters" gr:x="0" gr:y="0"/>
+    <EntryUnit id="mov1#hym3#page15#enu9" name="Buttons" gr:x="260" gr:y="165">
+      <Link id="mov1#hym3#page15#enu9#ln102" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym3#apu4"/>
+      <Link id="mov1#hym3#page15#enu9#ln103" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym3#apu4" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym3#page15#enu9#ln104" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym3#pu25"/>
+    </EntryUnit>
+    <IndexUnit id="mov1#hym3#page15#inu11" name="Examenes" gr:x="45" gr:y="100" entity="ent8" displayAttributes="ent8#att25" maxResults="5" linkOrder="mov1#hym3#page15#inu11#ln145">
+      <Selector id="mov1#hym3#page15#inu11#su68" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#hym3#page15#inu11#su68#acond25" name="AttCondition22" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att15" value="activo"/>
+      </Selector>
+      <Link id="mov1#hym3#page15#inu11#ln145" name="Flow145" to="mov1#hym3#miu1" type="normal" validate="true">
+        <LinkParameter id="mov1#hym3#page15#inu11#ln145#par159" name="inactivo_estatus" sourceValue="inactivo" target="mov1#hym3#miu1.mov2#opm2#icu6#icp3"/>
+        <LinkParameter id="mov1#hym3#page15#inu11#ln145#par160" name="oid_KeyCondition43 [oid]" source="data[].ent8#att23" target="mov1#hym3#miu1.mov2#opm2#icu6#icp2"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym3#page15#enu9" layout:frameLayout="None">
+          <layout:Link link="mov1#hym3#page15#enu9#ln102">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym3#page15#enu9#ln103"/>
+          <layout:Link link="mov1#hym3#page15#enu9#ln104"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#hym3#page15#inu11">
+          <layout:Attribute attribute="ent8#att25"/>
+          <layout:Link link="mov1#hym3#page15#inu11#ln145"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

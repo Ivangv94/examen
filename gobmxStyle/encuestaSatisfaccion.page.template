@@ -1,0 +1,220 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+<wr:Page type="HTML4_Transitional"/>
+<wr:Resources types="jspdeclaration"/>
+<%@ page contentType="text/html; charset=UTF-8"%> 
+<webratio:Page page="<wr:Id context="page"/>"/>
+<html>
+    <div id="survey" class="survey-popup small-top-buffer">
+	<div class="row">
+  <a class="fire">
+    <span class="title">Contesta nuestra encuesta de satisfacción.</span>
+    <span id="icon-survey" class="fa fa-file-text-o"></span>
+  </a>
+  <hr>
+  
+  <div class="survey col-sm-12 clearfix">
+	<form id="survey-form">
+	  <div class="survey-form">
+	  <fieldset id="query_1">
+		<legend>¿Cómo fue tu experiencia en gob.mx?</legend>
+		<div id="Q_A" class="btn-group row">
+		  <div class="col-md-4 col-xs-4">
+		  	<button id="radEncGood" class="ga-survey" value="Feliz">
+		  	  <img src="https://framework-gb.cdn.gob.mx/assets/images/icons/survey/ico-survey-good.svg">
+		  	</button>
+		  </div>
+		  <div class="col-md-4 col-xs-4">
+		  	<button id="radEncReg" class="ga-survey" value="Neutral">
+		  	  <img src="https://framework-gb.cdn.gob.mx/assets/images/icons/survey/ico-survey-neutral.svg">
+		  	</button>
+		  </div>
+		  <div class="col-md-4 col-xs-4">
+		  	<button id="radEncBad" class="ga-survey" value="Triste">
+		  	  <img src="https://framework-gb.cdn.gob.mx/assets/images/icons/survey/ico-survey-bad.svg">
+		  	</button>
+		  </div>
+		</div>
+	  </fieldset>
+	  <fieldset id="query_1_a" class="hidden">
+	  	<legend>¿Fue fácil encontrar lo que buscabas?</legend>
+	  	<div id="Q_B" class="radio-group clearfix">
+	  	  <div class="col-sm-12">
+	  		<input type="radio" name="A_R" id="radEncA_R1" value="1">
+	  		<label for="A_R">Muy Fácil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input type="radio" name="A_R" id="radEncA_R2" value="2">
+	  		<label for="A_R">Fácil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input type="radio" name="A_R" id="radEncA_R3" value="3">
+	  		<label for="A_R">Difícil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input type="radio" name="A_R" id="radEncA_R4" value="4">
+	  		<label for="A_R">Muy Difícil</label>
+	  	  </div>
+	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_s" class="hidden">
+	  	<legend>¿De qué estado de la República nos visitas?</legend>	  	
+	  	<div class="col-md-12">
+  	  		<div class="form-group" style="margin-bottom: 114px;">
+  	  			<select id="estados" class="form-control"></select>
+  	  		</div>
+  	  		<div class="form-group">
+  	  			<button type="button" class="Q_S_btn btn btn-primary btn-small pull-right">Siguiente</button>
+  	  		</div>
+  	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_1_alt" class="hidden">
+		<legend>¿Qué buscabas?</legend>
+	  	<div id="Q_I" class="clearfix">
+	  	  <div class="col-sm-12">
+	  		<textarea id="txtA" class="form-control" rows="6" maxlength="250" style="font-size: 14px; width: 100%;"></textarea>
+	  		<span class="small">Máximo 250 caracteres</span>
+	  	  </div>
+	  	</div>
+	  	<div class="clearfix">
+  	  	  <button type="button" class="Q_I_btn btn btn-primary btn-small pull-right">Siguiente</button>
+  	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_1_b" class="hidden">
+	  	<legend>¿Qué te gustó más?</legend>
+	  	<p class="small">Puedes seleccionar más de uno.</p>
+	  	<div id="Q_C" class="radio-group clearfix">
+	  	  <div class="col-sm-12">
+	  		<input id="radEncA_R1" type="checkbox" name="A_R" value="1">
+	  		<label for="A_R">La información es clara y precisa</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="radEncA_R2" type="checkbox" name="A_R" value="2">
+	  		<label for="A_R">El diseño es agradable</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="radEncA_R3" type="checkbox" name="A_R" value="3">
+	  		<label for="A_R">Está bien organizado</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="radEncA_R4" type="checkbox" name="A_R" value="4">
+	  		<label for="A_R">Es sencillo navegar</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="radEncA_R5" type="checkbox" name="A_R" value="5">
+	  		<label for="A_R">El lenguaje es amigable</label>
+	  	  </div>
+	  	  <div class="clearfix">
+	  	  	<button type="button" class="Q_C_btn btn btn-primary btn-small pull-right">Siguiente</button>
+	  	  </div>
+	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_1_c" class="hidden">
+	  	<legend>¿Recomendarías nuestro portal a un amigo o familiar?</legend>
+	  	<div id="Q_D" class="radio-group clearfix">
+	  	  <div class="col-sm-12">
+	  		<input id="radEncC_R1" type="radio" name="A_R" value="4">
+	  		<label for="A_R">Si</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="radEncC_R2" type="radio" name="A_R" value="1">
+	  		<label for="A_R">No</label>
+	  	  </div>
+	  	</div>
+	  	<div class="clearfix">
+        <button type="button" class="btn-finalizar btn btn-primary btn-small pull-right" style="margin-left: 8px; margin-top: 2px;" disabled>Finalizar</button>
+        <img src="https://framework-gb.cdn.gob.mx/assets/images/oval-white.svg" class="pull-right hidden loading">
+      </div>
+	  </fieldset>
+
+	  <fieldset id="query_2" class="hidden">
+		<legend>¿Fue fácil encontrar lo que buscabas?</legend>
+	  	<div id="Q_F" class="radio-group clearfix">
+	  	  <div class="col-sm-12">
+	  		<input id="rdEncA_R1" type="radio" name="A_R" value="1">
+	  		<label for="A_R">Muy Fácil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="rdEncA_R2" type="radio" name="A_R" value="2">
+	  		<label for="A_R">Fácil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="rdEncA_R3" type="radio" name="A_R" value="3">
+	  		<label for="A_R">Difícil</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="rdEncA_R4" type="radio" name="A_R" value="4">
+	  		<label for="A_R">Muy Difícil</label>
+	  	  </div>
+	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_2_b" class="hidden">
+	  	<legend>¿Qué mejorarías?</legend>
+	  	<p class="small">Puedes seleccionar más de una opción.</p>
+	  	<div id="Q_G" class="radio-group clearfix">
+	  	  <div class="col-sm-12">
+	  		<input id="ckEncB_A1" type="checkbox" name="A_R" value="1">
+	  		<label for="A_R">Diseño</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="ckEncB_A2" type="checkbox" name="A_R" value="2">
+	  		<label for="A_R">Navegación dentro del sitio</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="ckEncB_A3" type="checkbox" name="A_R" value="3">
+	  		<label class="too-long" for="A_R">Claridad y precisión de la información</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="ckEncB_A4" type="checkbox" name="A_R" value="4">
+	  		<label for="A_R">Organización de los contenidos</label>
+	  	  </div>
+	  	  <div class="col-sm-12">
+	  		<input id="ckEncB_A5" type="checkbox" name="A_R" value="5">
+	  		<label for="A_R">Lenguaje utilizado</label>
+	  	  </div>
+	  	</div>
+	  	<div class="clearfix">	  	  
+	  	  <button type="button" class="btn-finalizar btn btn-primary btn-small pull-right" style="margin-left: 8px; margin-top: 2px;" disabled>Finalizar</button>
+	  	  <img src="https://framework-gb.cdn.gob.mx/assets/images/oval-white.svg" class="hidden pull-right loading">
+	  	</div>
+	  </fieldset>
+
+	  <fieldset id="query_2_alt" class="hidden">
+		<legend>¿Qué buscabas?</legend>
+	  	<div id="Q_H" class="clearfix">
+	  	  <div class="col-sm-12">
+	  		<textarea id="txtA1" class="form-control" rows="6" maxlength="250" style="font-size: 14px; width: 100%;"></textarea>
+	  		<span class="small">Máximo 250 caracteres</span>
+	  	  </div>
+	  	</div>
+	  	<div class="clearfix">
+  	  	  <button type="button" class="Q_H_btn btn btn-primary btn-small pull-right">Siguiente</button>
+  	  	</div>
+	  </fieldset>
+
+	</div>
+	<p class="hidden survey-thanks" style="text-align: center; color: white; font-weight: 700;">Gracias por tu opinión.</p>
+	</form>
+
+	<fieldset class="subscribe-fieldset">
+  	  <p>Suscríbete al newsletter de gob.mx</p>  	  
+  	  <div class="col-md-12 subs">
+	  	<input type="text" class="form-control" id="email-survey" name="email" aria-label="Ingresa tu correo electronico" placeholder="usuario@ejemplo.com">
+	  	<button type="button" id="subscribe-survey" class="btn blue-right" style="right: 20px;">
+	      <span class="icon-caret-right"></span>
+	  	</button>
+  	  </div>
+  	  <div class="col-md-12">
+  		<span id="responseSignup" class="small" style="color: white;"></span>
+  	  </div>
+  </fieldset>
+  </div>
+</div>
+</div>
+</body>
+</html>

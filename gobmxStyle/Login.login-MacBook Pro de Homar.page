@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
+<% response.setHeader("X-UA-Compatible", "IE=edge"); %>
+<% 	
+  response.setHeader("Cache-Control", "no-store,no-cache, must-revalidate");
+  response.setDateHeader("Expires", -1);
+  response.setHeader("Pragma", "No-cache");
+  String baseURI = com.webratio.struts.Requests.newUriBuilder(request).setPath("/").setAbsolute(true).build();
+%>
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	<base href="<%=baseURI.endsWith("/") ? baseURI : (baseURI + '/')%>"/>
+	<title>Login</title>
+  	<link href="BootstrapStyle/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="BootstrapStyle/css/app.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="BootstrapStyle/assets/js/html5shiv.js"></script>
+		<script src="BootstrapStyle/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">	
+</head>
+<body class="signin">
+<html:form action="loginAction.do" enctype="multipart/form-data">
+<html:hidden property="lastURL"/>
+<div class="container">
+<html lang="es">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
+	    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<title>Inicio|Inicio</title>
+		<!-- Secci—n de favicon -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="gobmxStyle/public/favicons/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="gobmxStyle/public/favicons/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="gobmxStyle/public/favicons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="gobmxStyle/public/favicons/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="gobmxStyle/public/favicons/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="gobmxStyle/public/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="gobmxStyle/public/favicons/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="gobmxStyle/public/favicons/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="gobmxStyle/public/favicons/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="gobmxStyle/public/favicons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="gobmxStyle/public/favicons/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="gobmxStyle/public/favicons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="gobmxStyle/public/favicons/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="&nbsp;"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+		
+		
+			
+	<link href="gobmxStyle/public/css/mis_estilos.css;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=p5jAQG7QS2uANHlL1LehYA" type="text/css" rel="stylesheet" data-wr-resname="mis_estilos_css">
+			
+	<link href="builtin/960_Fluid_Nestable_12.css;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=kt9iLMdR9kwNKBDJXkTG5Q" type="text/css" rel="stylesheet" data-wr-resname="wr-960gs-12">
+	<link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" type="text/css" rel="stylesheet" data-wr-resname="gobmx_main_css">
+	<link href="wrdefault/css/default.css;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=aPlQXba8uOBDXTkD6mUNXw" type="text/css" rel="stylesheet" data-wr-resname="wrdefault-style">
+	<link href="builtin/grid_elements.css;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=XfJd7OB*_2KMCW6NT7fKzKA" type="text/css" rel="stylesheet" data-wr-resname="wr-ui-gridsystem">
+<script>if (typeof wr !== "undefined") { wr.ui.html.resx.refreshLoaded(); }</script>
+		
+	<script src="WRResources/ajax/jquery/jquery.min.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=oT9-IIulNGgd6tsex6LlSg" data-wr-resname="jquery" data-wr-resver="1.7.2"></script>
+	<script src="WRResources/script.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=UAMCyjDmVXgQ15zhTqkezA" data-wr-resname="wr-utils-supportscripts" data-wr-resver="7.2.16"></script>
+			
+			
+			<!--[if lt IE 9]>
+	<script src="gobmxStyle/js/html5shiv.min.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=7a3NOJZd73lb5jLeE7R3FA" data-wr-resname="html5shiv"></script>
+			<![endif]-->
+			<!--[if lt IE 9]>
+	<script src="gobmxStyle/js/respond.min.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=ZZVRvY9Rc9sS0yVnv*_xbGw" data-wr-resname="respond"></script>
+			<![endif]-->
+	<script src="gobmxStyle/dist/js/bootstrap.min.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=0eopcOU4AhFjgc-T9hp0eg" data-wr-resname="bootstrap-js"></script>
+	<script src="gobmxStyle/public/js/main.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=4K28aua87dUESnwT1kwqbg" data-wr-resname="main_js"></script>
+	<script src="https://framework-gb.cdn.gob.mx/gobmx.js" data-wr-resname="gobmx_main_js"></script>
+	<script src="gobmxStyle/js/bootstrap-filestyle.min.js;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?s=tnu-qvWOeC3KKp*_Y-fsZ2g" data-wr-resname="bs-filestyle-js"></script>
+<script>if (typeof wr !== "undefined") { wr.ui.html.resx.refreshLoaded(); }</script>
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+
+		<script type="text/javascript" language="javascript" src="gobmxStyle/js/sat32.js"></script> 
+		<style type="text/css">
+		.buttonSubmitHide {
+ 		display: none;
+			}
+
+</style>
+	</head>
+<body class="bootstrap-default">
+<a href="#main-content" class="sr-only">Skip to main content</a>
+	
+	
+			<form name="page1FormBean" id="page1FormBean" method="post" action="/gobmxWeb/form_page1.do;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3" enctype="multipart/form-data">
+		
+			<input type="hidden" name="CSRFToken" value="gqPY12yUqI1e1XGwrvwrGSBOrXJI_Jm41kj5_UnvMJw">
+			<input type="hidden" name="lastURL" value="page1.do" id="lastURL_page1">
+				<input type="hidden" name="ln2" value="miu1.do;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?sp=page1&amp;link=ln2">
+				<input type="hidden" name="ln119" value="scu2.do;jsessionid=HmiJxYFWlKVB8vQLsISSJyvjXK_Dx1MCr_KCRPRG.macbook-pro-de-miguel-3?sp=page1&amp;link=ln119">
+	<nav class="navbar navbar-default sub-navbar  navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://www.gob.mx/se/">SE</a>
+			</div>
+			<div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav" role="menu">
+	            </ul>
+	            <!-- <div class="nav navbar-right user-location">
+	            </div> -->
+			</div>
+		</div>
+	</nav>
+<div class="container container-fixed-top-padding formulario_principal">
+	<div class="col-sm-8">
+		<ol class="breadcrumb">
+			<li><a href="page1.do"><i class="icon icon-home"></i></a></li>
+			<li class="active">
+				Inicio
+			</li>
+		</ol>
+	</div>
+	<div class="col-sm-4">
+		<div class="user-credencials">
+			<ul class="list-unstyled">
+				<li>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- <div class="nav navbar-right user-location">
+	</div> -->
+	<div class="row">
+		<div class="col-md-12">
+			<div id="main-content" role="main">
+<div class="container_12">
+				<div class="grid_8 suffix_4 alpha omega agrd_16">
+
+				</div>
+					<div class="clear"></div>
+				<div class="grid_8 suffix_4 alpha omega agrd_16">
+	
+				</div>
+					<div class="clear"></div>
+				<div class="grid_8 suffix_4 alpha omega agrd_16">
+<div class="EntryUnit ">
+	<div class="form-horizontal ">
+	    
+		<h2>Introducir Credenciales de Acceso</h2>
+<hr class="red">
+	<div class="form-signin">
+				
+				<div class="form-group btn-file fileCer">
+					  <label for="fld21" class="control-label col-md-5">Certificado (cer):</label>
+					<div class="controls col-md-7">
+					<input type="hidden" name="fld21_preload" value="" id="fld21_preload">
+			<span class="none" data-buttonText="???es_MX.buscar???"></span>
+			<input type="file" name="fld21" accept="" value="" id="fld21" class="wr-submitButtons:ln2 btn-file fileCer">
+		
+					
+					</div>
+				</div>
+				
+				<div class="form-group btn-file fileKey">
+					  <label for="fld22" class="control-label col-md-5">Clave privada (key):</label>
+					<div class="controls col-md-7">
+					<input type="hidden" name="fld22_preload" value="" id="fld22_preload">
+			<span class="none" data-buttonText="???es_MX.buscar???"></span>
+			<input type="file" name="fld22" accept="" value="" id="fld22" class="wr-submitButtons:ln2 btn-file fileKey">
+		
+					
+					</div>
+				</div>
+				
+				<div class="form-group pwdPrivateKey">
+					  <label for="fld23" class="control-label col-md-5">Contrase–a de clave privada:</label>
+					<div class="controls col-md-7">
+					<input type="password" autocomplete="off" id="fld23" class="wr-submitButtons:ln2 form-control pwdPrivateKey" name="fld23"/>
+					
+					</div>
+				</div>
+				
+				<div class="form-group rfcEmisor">
+					  <label for="fld24" class="control-label col-md-5">RFC:</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld24" value="" readonly="readonly" id="fld24" class="wr-submitButtons:ln2  form-control rfcEmisor">
+					
+					</div>
+				</div>
+				
+				<div class="form-group base64">
+					  <label for="fld31" class="control-label col-md-5">Base64</label>
+					<div class="controls col-md-7">
+					<textarea name="fld31" rows="8" readonly="readonly" id="fld31" class="form-control base64"></textarea>
+					
+					</div>
+				</div>
+				
+				<div class="form-group curpEmisor">
+					  <label for="fld26" class="control-label col-md-5">curpEmisor</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld26" value="" readonly="readonly" id="fld26" class="wr-submitButtons:ln2  form-control curpEmisor">
+					
+					</div>
+				</div>
+				
+				<div class="form-group emailEmisor">
+					  <label for="fld29" class="control-label col-md-5">emailEmisor</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld29" value="" readonly="readonly" id="fld29" class="wr-submitButtons:ln2  form-control emailEmisor">
+					
+					</div>
+				</div>
+				
+				<div class="form-group nombreEmisor">
+					  <label for="fld25" class="control-label col-md-5">nombreEmisor</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld25" value="" readonly="readonly" id="fld25" class="wr-submitButtons:ln2  form-control nombreEmisor">
+					
+					</div>
+				</div>
+				
+				<div class="form-group serialEmisor">
+					  <label for="fld2" class="control-label col-md-5">Contrase–a</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld2" value="" readonly="readonly" id="fld2" class="wr-submitButtons:ln2  form-control serialEmisor">
+					
+					</div>
+				</div>
+				
+				<div class="form-group tipoPersona">
+					  <label for="fld28" class="control-label col-md-5">tipoPersona</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld28" value="" readonly="readonly" id="fld28" class="wr-submitButtons:ln2  form-control tipoPersona">
+					
+					</div>
+				</div>
+				
+				<div class="form-group Username">
+					  <label for="fld1" class="control-label col-md-5">Username</label>
+					<div class="controls col-md-7">
+					<input type="text" name="fld1" value="" readonly="readonly" id="fld1" class="wr-submitButtons:ln2  form-control Username">
+					
+					</div>
+				</div>
+				
+				<div class="form-group x509">
+					  <label for="fld27" class="control-label col-md-5">Certificado</label>
+					<div class="controls col-md-7">
+					<textarea name="fld27" rows="8" readonly="readonly" id="fld27" class="form-control x509"></textarea>
+					
+					</div>
+				</div>
+	</div>
+	<div class="row"><div class="col-md-offset-5 col-md-7">
+		<div class="form-group form-btn">
+					 <button title="Ingresar" onclick="$('#page1FormBean')[0].target='_self'";"uid_call('directory.item.button1','clickin')" class="btn  btn-primary autenticar pull-right" id="button:ln2" name="button:ln2" type="submit" value="Ingresar">
+			Ingresar</button>
+		</div>
+	</div></div>
+</div>	
+				</div>
+					<div class="clear"></div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</form>
+		<script type="text/javascript">
+			if (typeof wr !== "undefined" && wr.getApp().isConfigurable()) {
+				wr.getApp().mergeConfig({
+					"ui+": {
+						autoFocusFirstWindow: true
+					}
+				});
+			}
+		</script>
+
+
+<br>
+</body>
+</html>
+	    <div class="form-group" >
+	    	
+	    	<input id="userName" name="userName" autocomplete="off" type="hidden" class="wr-submitButtons:login form-control input-block-level">
+	    </div>
+	    <div class="form-group" >
+        	<input id="password" name="password" autocomplete="off" type="hidden" class="wr-submitButtons:login form-control input-block-level2">
+        </div>
+        <div class="form-group form-btn" >
+			<button class="btn btn-primary btn-block buttonSubmitHide" id="button:login" type="submit">Login</button>
+		</div>
+	</div>
+	
+	<hr class="footer-bar"/>
+	<footer class="copy-footer">
+		<p class="text-center">Creado por la <a href="http://www.gob.mx/economia" target="_blank" title="Plataforma Estructura">Secretar&iacute;a de Econom&iacute;a</sup></a></p>
+	</footer>
+</div>
+</html:form>
+<script>
+  $gmx(document).ready(function() {
+    ...
+  });
+</script>
+<script src="WRResources/ajax/jquery/jquery.min.js" type="text/javascript" rel="javascript"></script>	
+<script src="WRResources/script.js" type="text/javascript" rel="javascript"></script>
+<script src="BootstrapStyle/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="BootstrapStyle/js/app.min.js" type="text/javascript"></script>
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+</body>
+</html> 

@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym2#page14" name="Establece variables" gr:x="10" gr:y="-5">
+  <ContentUnits>
+    <ActivityParametersUnit id="mov1#hym2#page14#apu3" name="Get Parameters" gr:x="0" gr:y="0"/>
+    <EntryUnit id="mov1#hym2#page14#enu8" name="Buttons" gr:x="260" gr:y="165">
+      <Link id="mov1#hym2#page14#enu8#ln99" name="Finish" type="normal" validate="true" automaticCoupling="false" to="mov1#hym2#apu2"/>
+      <Link id="mov1#hym2#page14#enu8#ln100" name="Save and Work Later" type="normal" validate="false" automaticCoupling="false" to="mov1#hym2#apu2" gr:bendpoints="164,-32,-64,96"/>
+      <Link id="mov1#hym2#page14#enu8#ln101" name="Cancel" type="normal" validate="false" automaticCoupling="false" to="mov1#hym2#pu22"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12" label="Buttons" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="mov1#hym2#page14#enu8" layout:frameLayout="None">
+          <layout:Link link="mov1#hym2#page14#enu8#ln99">
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="Confirm Finish" type="link"/>
+          </layout:Link>
+          <layout:Link link="mov1#hym2#page14#enu8#ln100"/>
+          <layout:Link link="mov1#hym2#page14#enu8#ln101"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+  <layout:LayoutParameter name="auto-refresh" value="true" type="page"/>
+</Page>

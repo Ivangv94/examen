@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+  <Properties>
+    <Property name="ajaxActivated">true</Property>
+    <Property name="applicationServer">Tomcat</Property>
+    <Property name="cloudDeploy">false</Property>
+    <Property name="commonsLibDir">/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.commons.libs_7.2.14.201608091213/lib</Property>
+    <Property name="dbConfigPath">/tmp/WRDBConfig8188351293967225899.xml</Property>
+    <Property name="defaultEncoding"></Property>
+    <Property name="deployCorePluginDir">/home/tecnologo/WR7.2 .16/WebRatio/configuration/org.eclipse.osgi/bundles/324/1/.cp</Property>
+    <Property name="derbySystemHome">/home/tecnologo/wr7/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
+    <Property name="enterpriseProjectDir"></Property>
+    <Property name="eventSocketPort">38702</Property>
+    <Property name="excludedProjects" type="list"></Property>
+    <Property name="generationTime">202002171611</Property>
+    <Property name="helpersPluginDir">/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.generator.helpers_7.2.14.201608091213</Property>
+    <Property name="i18nBundleKeysFile" type="file"></Property>
+    <Property name="i18nExtraBundleFile" type="file"></Property>
+    <Property name="localDeploy">false</Property>
+    <Property name="lockDir">/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~</Property>
+    <Property name="normalizeDescriptors">false</Property>
+    <Property name="outputPath">/home/tecnologo/WR7.2 .16/Tomcat/webapps/examenesWeb</Property>
+    <Property name="phases">All</Property>
+    <Property name="projectDir">/home/tecnologo/wr7/WebRatio/workspace/examenesWeb</Property>
+    <Property name="projectName">examenesWeb</Property>
+    <Property name="projectPath">/tmp/Project7845112646123902608.wr</Property>
+    <Property name="projectType">WEBPROJECT</Property>
+    <Property name="rootModuleName"></Property>
+    <Property name="uiPluginDir">/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.ide.ui_7.2.14.201608091213</Property>
+    <Property name="webappPluginDir">/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.generator.webapp_7.2.14.201608091213</Property>
+    <Property name="wrBuildId">201608091213</Property>
+    <Property name="wrGenerateOldValidationRules">false</Property>
+    <Property name="wrModelStatistics">pages=35|units=1519</Property>
+    <Property name="wrVersion">7.2.14</Property>
+  </Properties>
+  <Plugins>
+    <Plugin id="com.webratio.commons.libs" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.commons.libs_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.commons.transform" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.commons.transform_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.debug" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.debug_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.json" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.json_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.apache.commons.codec" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.apache.commons.codec_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.apache.commons.collections" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.apache.commons.collections_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.apache.commons.httpclient" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.apache.commons.httpclient_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.apache.commons.lang" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.apache.commons.lang_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.apache.commons.logging" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.apache.commons.logging_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.dom4j" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.dom4j_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.lib.javassist" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.lib.javassist_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.rtx.extras" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.rtx.extras_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.rtx" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.rtx_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.struts13" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.struts13_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.units.bpm" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.bpm_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.bpm" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.bpm_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.content" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.content_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.controlflow" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.controlflow_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.module" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.module_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.operation" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.operation_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.session" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.session_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.utility" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.utility_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.validation" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.validation_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.units.ws" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.units.ws_7.2.14.201608091213" type="components"/>
+    <Plugin id="com.webratio.ws" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.ws_7.2.14.201608091213"/>
+    <Plugin id="com.webratio.xsd" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/com.webratio.xsd_7.2.14.201608091213"/>
+  </Plugins>
+  <Styles>
+    <Style name="Excel" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/Excel_7.2.14.201608091213"/>
+    <Style name="gobmxStyle" path="/home/tecnologo/wr7/WebRatio/workspace/gobmxStyle"/>
+    <Style name="Reports" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/Reports_7.2.14.201608091213"/>
+    <Style name="WebRatio" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/WebRatio_7.2.14.201608091213"/>
+    <Style name="WRDefault" path="/home/tecnologo/WR7.2 .16/WebRatio/plugins/WRDefault_7.2.14.201608091213"/>
+  </Styles>
+  <FileEncodings/>
+</Configuration>

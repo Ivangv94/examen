@@ -1,0 +1,122 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov1#hym1#mpage3" name="Master page" gr:x="291" gr:y="34">
+  <ContentUnits>
+    <DataUnit id="mov1#hym1#mpage3#dau6" name="Process" gr:x="319" gr:y="233" entity="ProcessInstance" displayAttributes="processInstanceOid processInstanceName processInstanceProcessName processInstanceDescription" linkOrder="mov1#hym1#mpage3#dau6#ln79 mov1#hym1#mpage3#dau6#ln80">
+      <Selector id="mov1#hym1#mpage3#dau6#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#mpage3#dau6#su30#kcond19" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1#hym1#mpage3#dau6#ln79" name="Rollback Activity" to="mov1#hym1#pu18" type="normal" validate="true">
+        <LinkParameter id="mov1#hym1#mpage3#dau6#ln79#par87" name="Activity Instance Oid_PASSING_Activity Instance Oid" sourceLinkParameter="mov1#hym1#mpage3#apu1#ln83#par89" target="mov1#hym1#pu18.activityInstanceOid"/>
+      </Link>
+      <Link id="mov1#hym1#mpage3#dau6#ln80" name="History Diagram" to="mov1#hym1#page13#pdu4" automaticCoupling="true" type="normal" validate="true" newWindow="true"/>
+    </DataUnit>
+    <ProcessUnit id="mov1#hym1#mpage3#pu19" name="History" gr:x="182" gr:y="242" mode="history">
+      <Link id="mov1#hym1#mpage3#pu19#ln81" name="Link59" to="mov1#hym1#mpage3#inu4" type="transport" automaticCoupling="true" validate="true"/>
+    </ProcessUnit>
+    <DataUnit id="mov1#hym1#mpage3#dau7" name="Activity" gr:x="20" gr:y="232" entity="ActivityInstance" displayAttributes="activityInstanceName activityInstanceActiveTimestamp activityInstanceDescription">
+      <Selector id="mov1#hym1#mpage3#dau7#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#mpage3#dau7#su31#kcond20" name="Key Condition" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <IndexUnit id="mov1#hym1#mpage3#inu4" name="Process History" gr:x="167" gr:y="111" entity="ActivityInstance" displayAttributes="activityInstanceName activityInstanceCompletedTimestamp activityInstanceUserName">
+      <Selector id="mov1#hym1#mpage3#inu4#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#mpage3#inu4#su32#kcond21" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <SortAttribute attribute="activityInstanceCompletedTimestamp" order="descending"/>
+      <SortAttribute attribute="activityInstanceOid" order="descending"/>
+    </IndexUnit>
+    <ActivityParametersUnit id="mov1#hym1#mpage3#apu1" name="GetInfo" gr:x="182" gr:y="384">
+      <Link id="mov1#hym1#mpage3#apu1#ln82" name="link" to="mov1#hym1#mpage3#dau7" type="transport" automaticCoupling="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln83" name="Link72" to="mov1#hym1#mpage3#dau6" type="transport" validate="true">
+        <LinkParameter id="mov1#hym1#mpage3#apu1#ln83#par88" name="Process Instance Oid_KeyCondition18 [oid]" source="processInstanceOid" target="mov1#hym1#mpage3#dau6#su30#kcond19.processInstanceOid"/>
+        <LinkParameter id="mov1#hym1#mpage3#apu1#ln83#par89" name="Activity Instance Oid_PASSING" source="taskOid" passing="true"/>
+      </Link>
+      <Link id="mov1#hym1#mpage3#apu1#ln84" name="Link58" to="mov1#hym1#mpage3#pu19" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln85" name="Link35" to="mov1#hym1#mpage3#pwu8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln86" name="Link37" to="mov1#hym1#mpage3#pwu7" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln87" name="Link118" to="mov1#hym1#opg2#cru2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln88" name="Link120" to="mov1#hym1#opg2#cnu2" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="mov1#hym1#mpage3#apu1#ln89" name="Link121" to="mov1#hym1#opg1#cnu1" automaticCoupling="true" type="transport" validate="true"/>
+    </ActivityParametersUnit>
+    <PowerIndexUnit id="mov1#hym1#mpage3#pwu7" entity="Attachment" displayAttributes="attachmentUserName attachmentTimestamp attachmentFile" sortable="false" checkable="false" name="Attachments" gr:x="320" gr:y="370" blockFactor="5" blockWindow="5" linkOrder="mov1#hym1#mpage3#pwu7#ln90">
+      <Selector id="mov1#hym1#mpage3#pwu7#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#hym1#mpage3#pwu7#su33#rcond21" role="processInstance2Attachments" predicate="in" implied="false" name="RoleCondition27"/>
+      </Selector>
+      <Link id="mov1#hym1#mpage3#pwu7#ln90" name="delete" to="mov1#hym1#dlu3" type="normal" automaticCoupling="true" validate="true" ajaxEnabled="true"/>
+      <SortAttribute attribute="attachmentOid" order="descending"/>
+      <SortAttribute attribute="attachmentTimestamp" order="descending"/>
+    </PowerIndexUnit>
+    <EntryUnit id="mov1#hym1#mpage3#enu6" name="New Note" linkOrder="mov1#hym1#mpage3#enu6#ln91" gr:x="0" gr:y="482">
+      <Field id="mov1#hym1#mpage3#enu6#fld11" name="Note:" type="text" modifiable="true" contentType="text/plain">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym1#mpage3#enu6#fld11#mnd2" name="NotNull"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym1#mpage3#enu6#ln91" name="Write" to="mov1#hym1#opg2#tmu6" type="normal" automaticCoupling="false" validate="true" ajaxEnabled="true"/>
+      <Link id="mov1#hym1#mpage3#enu6#ln92" name="test" to="mov1#hym1#opg2#cru2" type="transport" validate="true">
+        <LinkParameter id="mov1#hym1#mpage3#enu6#ln92#par90" name="Note:_text" source="mov1#hym1#mpage3#enu6#fld11" target="mov1#hym1#opg2#cru2.noteText"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="mov1#hym1#mpage3#enu7" name="New Attachment" linkOrder="mov1#hym1#mpage3#enu7#ln93" gr:x="330" gr:y="489">
+      <Field id="mov1#hym1#mpage3#enu7#fld12" name="File:" type="blob" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov1#hym1#mpage3#enu7#fld12#mnd3" name="NotNull"/>
+        </VRules>
+      </Field>
+      <Link id="mov1#hym1#mpage3#enu7#ln93" name="Upload" to="mov1#hym1#opg1#tmu5" type="normal" automaticCoupling="false" validate="true" ajaxEnabled="true"/>
+      <Link id="mov1#hym1#mpage3#enu7#ln94" name="file" to="mov1#hym1#opg1#cru1" type="transport" validate="true">
+        <LinkParameter id="mov1#hym1#mpage3#enu7#ln94#par91" name="file_file" source="mov1#hym1#mpage3#enu7#fld12" target="mov1#hym1#opg1#cru1.attachmentFile"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="mov1#hym1#mpage3#gtu7" name="User" gr:x="100" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="mov1#hym1#mpage3#gtu7#ln95" name="Link56" to="mov1#hym1#mpage3#dau8" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <DataUnit id="mov1#hym1#mpage3#dau8" name="Current User" gr:x="315" gr:y="0" entity="User" displayAttributes="userName" linkOrder="mov1#hym1#mpage3#dau8#ln96">
+      <Selector id="mov1#hym1#mpage3#dau8#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#mpage3#dau8#su34#kcond22" name="KeyCondition31" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov1#hym1#mpage3#dau8#ln96" name="Logout" to="mov1#hym1#lou3" type="normal" validate="true"/>
+    </DataUnit>
+    <PowerIndexUnit id="mov1#hym1#mpage3#pwu8" entity="Note" displayAttributes="noteUserName noteTimestamp noteText" sortable="false" blockFactor="5" blockWindow="5" checkable="false" useCountQuery="false" name="Notes" gr:x="22" gr:y="363" linkOrder="mov1#hym1#mpage3#pwu8#ln97">
+      <SortAttribute attribute="noteOid" order="descending"/>
+      <SortAttribute attribute="noteTimestamp" order="descending"/>
+      <Selector id="mov1#hym1#mpage3#pwu8#su35" defaultPolicy="fill" booleanOperator="or">
+        <RelationshipRoleCondition id="mov1#hym1#mpage3#pwu8#su35#rcond22" role="processInstance2Notes" predicate="in" implied="false" name="ProcessNotes"/>
+        <RelationshipRoleCondition id="mov1#hym1#mpage3#pwu8#su35#rcond23" role="activityInstance2Notes" predicate="in" implied="false" name="ActivityNotes"/>
+      </Selector>
+      <Link id="mov1#hym1#mpage3#pwu8#ln97" name="delete" to="mov1#hym1#dlu2" type="normal" automaticCoupling="true" validate="true" ajaxEnabled="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:cellLayout="Print Frame" label="Process Details" layout:frameLayout="None"/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Left">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:frameLayout="None"/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="mov1#hym1#mpage3#dau8" layout:frameLayout="None" layout:unitLayout="WRDefault/User">
+            <layout:Link link="mov1#hym1#mpage3#dau8#ln96">
+              <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+              <layout:LayoutParameter name="btn-style" value="default" type="link"/>
+            </layout:Link>
+            <layout:LayoutParameter name="prefix-text" value="Welcome" type="unit"/>
+            <layout:Attribute attribute="userName"/>
+          </layout:Unit>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <Variable id="mov1#hym1#mpage3#var12" name="rollbackable" type="boolean" unitId="mov1#hym1#mpage3#dau7" parameter="data.activityInstanceRollbackable"/>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+</MasterPage>

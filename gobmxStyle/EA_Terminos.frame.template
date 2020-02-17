@@ -1,0 +1,33 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+"<link href=""https://framework-gb.cdn.gob.mx/assets/styles/main.css"" rel=""stylesheet"">
+<script src=""https://framework-gb.cdn.gob.mx/gobmx.js""></script>
+
+<ul class=""wizard-steps-extensive"">
+        <li class=""completed"">
+            <h5>1</h5>
+            <span>TŽrminos y condiciones</span>
+        </li>
+        <li>
+            <h5>2</h5>
+            <span>Datos de la sociedad</span>
+        </li>
+        <li>
+            <h5>3</h5>
+            <span>Capturar accionistas</span>
+        </li>
+        <li>
+            <h5>4</h5>
+            <span>Regresar a modificar</span>
+        </li>
+        <li>
+            <h5>5</h5>
+            <span>Firmar estructura</span>
+        </li>
+        <li>
+            <h5>6</h5>
+            <span>Fin del proceso</span>
+        </li>
+        
+</ul>"

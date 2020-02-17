@@ -1,0 +1,103 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1855" gr:y="600" id="sv3#page19" name="Home aplicante">
+  <ContentUnits>
+    <EntryUnit gr:x="15" gr:y="0" id="sv3#page19#enu16" name="Buttons" linkOrder="sv3#page19#enu16#ln122 sv3#page19#enu16#ln1193">
+      <Link id="sv3#page19#enu16#ln122" name="Flow122" to="sv3#qu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#page19#enu16#ln1193" name="Regresar" to="sv3#page31" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+    <IndexUnit gr:x="100" gr:y="45" id="sv3#page19#inu9" name="Simple List9" entity="ent8" displayAttributes="ent8#att24 ent8#att25 ent8#att15">
+      <Selector id="sv3#page19#inu9#su64" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page19#inu9#su64#acond23" name="AttCondition23" predicate="eq" booleanOperator="or" implied="false" attributes="ent8#att15" value="activo"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv3#page19#inu9">
+          <layout:Attribute attribute="ent8#att24"/>
+          <layout:Attribute attribute="ent8#att25"/>
+          <layout:Attribute attribute="ent8#att15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="8" layout:cellLayout="Print Frame">
+        <layout:Grid containerType="grid" label="Buttons">
+          <layout:Row>
+            <layout:Cell colspan="4">
+              <layout:Link unitId="sv3#page19#enu16" link="sv3#page19#enu16#ln122">
+                <layout:LayoutParameter name="btn-style" value="success" type="link"/>
+              </layout:Link>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="4">
+              <layout:Link unitId="sv3#page19#enu16" link="sv3#page19#enu16#ln1193">
+                <layout:LayoutParameter name="btn-style" value="primary" type="link"/>
+              </layout:Link>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="3"/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+</Page>

@@ -1,0 +1,53 @@
+<ul class="wizard-steps-extensive">
+        <li class="completed">
+            <h5>1</h5>
+            <span>Denominaci—n</span>
+        </li>
+        <li>
+            <h5>2</h5>
+            <span>Contrato social</span>
+        </li>
+        <li>
+            <h5>3</h5>
+            <span> Inscripci—n a RPC (Registro Pœblico de Comercio)</span>
+        </li>
+        <li>
+            <h5>4</h5>
+            <span> RFC (Registro Federal de Contibuyentes)</span>
+        </li>
+        <li>
+            <h5>5</h5>
+            <span>Enrolamiento y e.firma</span>
+        </li>
+        <li>
+            <h5>6</h5>
+            <span>Alta patronal</span>
+        </li>
+    </ul>
+
+<ul class="wizard-steps">
+        <li class="completed">
+            <h5>1</h5>
+            <span>Denominaci—n</span>
+        </li>
+        <li>
+            <h5>2</h5>
+            <span>Contrato social</span>
+        </li>
+        <li>
+            <h5>3</h5>
+            <span> Inscripciï¿½n a RPC (Registro Pœblico de Comercio)</span>
+        </li>
+        <li>
+            <h5>4</h5>
+            <span> RFC (Registro Federal de Contibuyentes)</span>
+        </li>
+        <li>
+            <h5>5</h5>
+            <span>Enrolamiento y e.firma</span>
+        </li>
+        <li>
+            <h5>6</h5>
+            <span>Alta patronal</span>
+        </li>
+    </ul>

@@ -1,0 +1,24 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym1#opg1" name="Attachments" transaction="true" gr:x="581" gr:y="685">
+  <OperationUnits>
+    <GetUnit id="mov1#hym1#opg1#gtu6" name="User" gr:x="186" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="mov1#hym1#opg1#gtu6#ln78" name="Link78" to="mov1#hym1#opg1#cru1" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <TimeUnit id="mov1#hym1#opg1#tmu5" name="NOW" gr:x="59" gr:y="3">
+      <OKLink id="mov1#hym1#opg1#tmu5#oln12" name="OKLink14" to="mov1#hym1#opg1#cru1">
+        <LinkParameter id="mov1#hym1#opg1#tmu5#oln12#par86" name="Current/Input Timestamp_timestamp" source="currentTimestamp" target="mov1#hym1#opg1#cru1.attachmentTimestamp"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit id="mov1#hym1#opg1#cru1" name="Create Attachment" gr:x="177" gr:y="125" entity="Attachment">
+      <OKLink id="mov1#hym1#opg1#cru1#oln13" name="OKLink10" to="mov1#hym1#opg1#cnu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <ConnectUnit id="mov1#hym1#opg1#cnu1" name="Connect to process" gr:x="0" gr:y="114" relationship="processInstance2Attachments">
+      <SourceSelector id="mov1#hym1#opg1#cnu1#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#opg1#cnu1#su28#kcond17" name="KeyCondition41" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov1#hym1#opg1#cnu1#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#opg1#cnu1#su29#kcond18" name="KeyCondition42" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov1#hym1#opg1#cnu1#oln14" name="OKLink13" to="mov1#hym1#mpage3" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationGroup>

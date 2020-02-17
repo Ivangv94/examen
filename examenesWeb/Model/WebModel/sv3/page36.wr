@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1310" gr:y="1435" id="sv3#page36" name="Carga preguntas">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page36#enu14" name="Form14" linkOrder="sv3#page36#enu14#ln137">
+      <Field id="sv3#page36#enu14#fld86" name="doc" type="blob" modifiable="true"/>
+      <Link id="sv3#page36#enu14#ln137" name="Flow137" to="sv3#exu1" type="normal" validate="true" ajaxEnabled="true" ajaxOpenWaitingDialog="true" ajaxWaitingDialogMessage="procesando">
+        <LinkParameter id="sv3#page36#enu14#ln137#par1913" name="doc_BLOB" source="sv3#page36#enu14#fld86" target="sv3#exu1.blob"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="110" gr:y="35" id="sv3#page36#enu22" name="Button" linkOrder="sv3#page36#enu22#ln1194">
+      <Link id="sv3#page36#enu22#ln1194" name="Flow1194" to="sv3#page20" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="7" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="sv3#page36#enu14" layout:frameLayout="None">
+          <layout:Field field="sv3#page36#enu14#fld86">
+            <layout:LayoutParameter name="label-position" value="top" type="field"/>
+          </layout:Field>
+          <layout:Link link="sv3#page36#enu14#ln137">
+            <layout:LayoutParameter name="btn-style" value="success" type="link"/>
+          </layout:Link>
+          <layout:LayoutParameter name="panel-type" value="primary" type="frame"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6" layout:cellLayout="Print Frame">
+        <layout:Unit unitId="sv3#page36#enu22" layout:frameLayout="None">
+          <layout:Link link="sv3#page36#enu22#ln1194">
+            <layout:LayoutParameter name="btn-style" value="primary" type="link"/>
+          </layout:Link>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+</Page>

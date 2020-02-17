@@ -1,0 +1,88 @@
+/*Ordenar alfabeticamente empezando por
+1.tag
+2.id
+3.clases
+4.combinaciones de los anteriores
+ */
+.aceptarter2{
+    margin-left: 31%;
+}
+
+.cancelar{
+  float: right;
+  margin-right: 0.5em   
+}
+
+.continuar{
+  float: right;
+  margin-right: 0.5em
+}
+
+.efirma{
+  float: right;
+  margin-right: 0.5em
+}
+
+.pull-right{
+  float: right!important;
+  margin-left: 0.5em
+}
+
+.formulario_principal{
+  margin-top: 4em;
+
+}
+.page-header{
+  border: none !important;
+}
+.ventana{
+	background: url(../img/fondo.png);
+    background-size: 215px 84px;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    color: white !important;
+}
+
+.guardar{
+  float: right;
+  margin-right: 0.5em;   
+}
+.finalizarBtn{
+  float: right;
+}
+.jump,
+.scrollText{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    color: #12C;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+.user-credencials .value,
+.user-credencials .unit-actions{
+  display: inline-block;
+}
+.user-credencials .unit-actions{
+  float: right;
+}
+
+.navbar-brand{color:#fff!important}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #000!important;
+    background-color: #fff!important;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+    color: #fff!important;
+}
+
+.page-header {
+    padding-bottom: 1.5px!important;
+    margin: 50px 0 2px!important;
+}

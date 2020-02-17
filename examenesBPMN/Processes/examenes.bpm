@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpm version="1.0.9"?>
+
+<BPMProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:showTooltip="true" gr:showActivityParameters="true" uuid="K1I6C4LD_HA651Z" poolOrder="pool1">  
+  <Pool id="pool1" name="Examen" uuid="K1I6C4LD_KC"> 
+    <Parameters/>  
+    <Lane id="pool1#lane1" name="Aplicante" notification="None" uuid="K1I6C4LD_3M6" roles="K1I6CGUK_6XS"> 
+      <StartEvent id="pool1#lane1#strev2" name="Admin" uuid="K1IBSLUX_SUD6FT" gr:x="13" gr:y="32" execution="userExecution"> 
+        <FlowConnector id="pool1#lane1#strev2#fcon8" to="pool1#lane1#task5" uuid="K1IBTVO7_B8AFZO"/> 
+      </StartEvent>  
+      <Task id="pool1#lane1#task5" name="Establece variables" uuid="K1IBT9XJ_2DZCG0" gr:x="140" gr:y="0" execution="userExecution"> 
+        <FlowConnector id="pool1#lane1#task5#fcon9" to="pool1#lane1#endevt4" uuid="K1IBU6QE_5M1U1A"/> 
+      </Task>  
+      <EndEvent id="pool1#lane1#endevt4" name="Fin" uuid="K1IBTZ6W_TP878O" gr:x="460" gr:y="30"/> 
+    </Lane>  
+    <Lane id="pool1#lane2" name="Aspirante" uuid="K1I7S9IM_PBFU85" roles="K1I6DTN2_5CA"> 
+      <Task id="pool1#lane2#task3" name="2.0 Seleccionar examen" uuid="K1IBJXYZ_88PVI6" gr:x="120" gr:y="40" execution="userExecution"> 
+        <FlowConnector id="pool1#lane2#task3#fcon6" to="pool1#lane2#task4" uuid="K1IBOOY5_FW15SQ"/> 
+      </Task>  
+      <Task id="pool1#lane2#task4" name="3.0 Resuelve examen" uuid="K1IBO6FC_YGW5HP" gr:x="450" gr:y="40" execution="userExecution"> 
+        <FlowConnector id="pool1#lane2#task4#fcon7" to="pool1#lane2#endevt3" uuid="K1IBSBK7_HKL7JI"/> 
+      </Task>  
+      <EndEvent id="pool1#lane2#endevt3" name="Fin" uuid="K1I6C4LD_29D" gr:x="693" gr:y="72"/>  
+      <StartEvent id="pool1#lane2#strev3" name="Inicio aspirante" uuid="K3HL5JSZ_DN872U" gr:x="0" gr:y="70" execution="userExecution">
+        <FlowConnector id="pool1#lane2#strev3#fcon1" to="pool1#lane2#task3" uuid="K3HL61Y1_5BRWYS"/>
+      </StartEvent>
+    </Lane>  
+    <Lane id="pool1#lane3" name="Administrador" uuid="K1I7WHR1_FAGCKT" roles="K1I6F46K_4T4"> 
+      <Task id="pool1#lane3#task2" name="1.0 Generar examen" execution="userExecution" uuid="K1I6C4LD_O6" gr:x="240" gr:y="158"> 
+        <FlowConnector id="pool1#lane3#task2#fcon5" to="pool1#lane3#endevt1" uuid="K1IBO048_912OFM"/> 
+      </Task>  
+      <StartEvent id="pool1#lane3#strev1" name="Inicio" execution="userExecution" uuid="K1I6C4LD_KJ" gr:x="93" gr:y="190"> 
+        <FlowConnector id="pool1#lane3#strev1#fcon4" to="pool1#lane3#task2" uuid="K1I6C4LD_X"/> 
+      </StartEvent>  
+      <EndEvent id="pool1#lane3#endevt1" name="Fin" uuid="K3HL6N62_ETLWI7" gr:x="670" gr:y="180"/>
+    </Lane> 
+  </Pool> 
+</BPMProject>

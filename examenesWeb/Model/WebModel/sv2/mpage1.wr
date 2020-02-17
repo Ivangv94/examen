@@ -1,0 +1,35 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#mpage1" name="MasterPage 1" gr:x="1025" gr:y="75">
+  <ContentUnits>
+    <DataUnit id="sv2#mpage1#dau2" name="Current User" linkOrder="sv2#mpage1#dau2#ln33" gr:x="170" gr:y="0" entity="User" displayAttributes="userName">
+      <Selector id="sv2#mpage1#dau2#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mpage1#dau2#su9#kcond4" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#mpage1#dau2#ln33" name="Logout" to="sv2#lou1" type="normal" automaticCoupling="false" validate="true"/>
+    </DataUnit>
+    <GetUnit id="sv2#mpage1#gtu1" name="User" gr:x="0" gr:y="10" contextParameters="UserCtxParam">
+      <Link id="sv2#mpage1#gtu1#ln34" name="Link56" to="sv2#mpage1#dau2" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <NoOpContentUnit id="sv2#mpage1#gctu1" gr:x="190" gr:y="155" name="Home" linkOrder="sv2#mpage1#gctu1#ln35">
+      <Link id="sv2#mpage1#gctu1#ln35" name="Home" to="sv2#ju1" type="normal" validate="true"/>
+    </NoOpContentUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv2#mpage1#dau2" layout:frameLayout="None" layout:unitLayout="WRDefault/User">
+            <layout:Link link="sv2#mpage1#dau2#ln33"/>
+            <layout:LayoutParameter name="prefix-text" value="Welcome" type="unit"/>
+            <layout:Attribute attribute="userName"/>
+          </layout:Unit>
+          <layout:Link unitId="sv2#mpage1#gctu1" link="sv2#mpage1#gctu1#ln35" layout:linkVisibilityCondition="sv2#mpage1#cexpr5"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <Variable id="sv2#mpage1#var6" name="UserOid" type="integer" unitId="sv2#mpage1#dau2" parameter="data.userOID"/>
+  <ConditionExpression id="sv2#mpage1#cexpr5" name="NotLogged">
+    <TextValue xml:space="preserve">import com.webratio.rtx.core.BeanHelper
+return BeanHelper.isNullOrEmptyString(UserOid)</TextValue>
+  </ConditionExpression>
+</MasterPage>

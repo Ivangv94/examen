@@ -1,0 +1,31 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+<ul class="wizard-steps-extensive">
+        <li class="completed">
+            <h5>1</h5>
+            <span>Términos, Condiciones y Política de Privacidad</span>
+        </li>
+        
+        <li class="completed">
+            <h5>2</h5>
+            <span>Datos registrales de la sociedad</span>
+        </li>
+        <li class="completed">
+            <h5>3</h5>
+            <span>Estructura accionaria de la sociedad</span>
+        </li>
+        <li class="completed">
+            <h5>4</h5>
+            <span>Participación de cada socio o accionista</span>
+        </li>
+        <li class="completed">
+            <h5>5</h5>
+            <span>Estructura accionaria de la sociedad</span>
+        </li>
+        <li class="completed">
+            <h5>6</h5>
+            <span>Documentos</span>
+        </li>
+       
+</ul>

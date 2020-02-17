@@ -1,0 +1,20 @@
+#?delimiters [%, %], [%=, %]
+[%
+setHTMLOutput()
+def type = field["type"]
+def fieldId = field["field"]
+def plain = getById(fieldId)?.name == "Field"
+def fieldProp = field["field"] + ((isLocalizedType(type) && plain) ? "_locale" : "")
+def subType = getById(field["subType"])
+def typeId = (field["subType"] != "") ? field["subType"] : type
+
+if (mode == "full") { %]
+    
+[%} else if (mode == "label") { %]
+
+[%} else if (mode == "error") { %]
+     
+[%} else {%]
+    
+[%} 
+%]

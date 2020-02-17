@@ -1,0 +1,55 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page2" gr:x="690" gr:y="800" name="Select User and Group Assignee" layout:pageLayout="WRDefault/Empty" ignoreMasterPage="true" ajaxEnabled="true">
+  <ContentUnits>
+    <SelectorUnit id="sv2#page2#seu1" entity="ActivityInstance" distinctAttributes="activityInstanceCode activityInstanceName activityInstanceStatus activityInstanceUserName" name="Activity Instance" gr:x="8" gr:y="0">
+      <Selector id="sv2#page2#seu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page2#seu1#su1#kcond1" predicate="in" implied="false" name="oids"/>
+      </Selector>
+      <Link id="sv2#page2#seu1#ln3" name="Link82" to="sv2#page2#hinu1" type="transport" validate="true" automaticCoupling="true"/>
+      <Link id="sv2#page2#seu1#ln4" name="Link2" to="sv2#pu8" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
+    <HierarchicalIndexUnit id="sv2#page2#hinu1" gr:x="148" gr:y="0" name="Groups" sortable="false" entity="Group" displayAttributes="groupName" linkOrder="sv2#page2#hinu1#ln5 sv2#page2#hinu1#ln6">
+      <SortAttribute attribute="groupName" order="ascending"/>
+      <Selector id="sv2#page2#hinu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page2#hinu1#su2#rcond1" name="activityToGroup" predicate="in" implied="false" role="activityInstance2ActivityType.activityType2Groups"/>
+      </Selector>
+      <HierarchicalIndexLevel id="sv2#page2#hinu1#hiulvl1" name="Users" entity="User" displayAttributes="userName" role="Group2User">
+        <SortAttribute attribute="userName" order="ascending"/>
+      </HierarchicalIndexLevel>
+      <Link id="sv2#page2#hinu1#ln5" name="select" to="sv2#pu8" type="normal" validate="true" gr:bendpoints="1,-173,136,0">
+        <LinkParameter id="sv2#page2#hinu1#ln5#par11" name="oid(Groups)_Group Oid" source="data[].groupOID" target="sv2#pu8.groupOid"/>
+        <LinkParameter id="sv2#page2#hinu1#ln5#par12" name="oid(Users)_User Oid" source="data[].sv2#page2#hinu1#hiulvl1data[].userOID" target="sv2#pu8.userOid"/>
+      </Link>
+      <Link id="sv2#page2#hinu1#ln6" name="select" to="sv2#pu8" type="normal" validate="true">
+        <LinkParameter id="sv2#page2#hinu1#ln6#par13" name="oid(Groups)_Group Oid" source="data[].groupOID" target="sv2#pu8.groupOid"/>
+        <LinkParameter id="sv2#page2#hinu1#ln6#par14" name="$$NULL$$_User Oid" sourceValue="$$NULL$$" target="sv2#pu8.userOid"/>
+      </Link>
+    </HierarchicalIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page2#hinu1" layout:frameLayout="None">
+          <layout:Attribute attribute="groupName"/>
+          <layout:Attribute attribute="userName"/>
+          <layout:Link link="sv2#page2#hinu1#ln5"/>
+          <layout:Link link="sv2#page2#hinu1#ln6"/>
+          <layout:LayoutParameter name="show-first-attribute-name" value="none" type="unit"/>
+          <layout:LayoutParameter name="link-position" value="on_row" type="unit"/>
+          <layout:LayoutParameter name="show-branch-attribute-name" value="none" type="unit"/>
+          <layout:LayoutParameter name="level-link-position" value="on_row" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

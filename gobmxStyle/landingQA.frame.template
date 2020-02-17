@@ -1,0 +1,9 @@
+<hmtl>
+<head>
+<script>function Redirect(){
+                  window.location.href = ("https://qapsm.economia.gob.mx/PSM/");
+                }
+        
+                setTimeout('Redirect()', 0);</script>
+</head>
+</hmtl>

@@ -1,0 +1,11 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+<!DOCTYPE html>
+<html>
+<body>
+
+ <img src="gobmxStyle/public/img/ineDE_validar.png" alt="ine D,E" style='height: 100%; width: 100%; object-fit: contain'>
+
+</body>
+</html>

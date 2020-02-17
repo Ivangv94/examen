@@ -1,0 +1,337 @@
+[21 ene 2020 16:55:41] Building database metadata model
+[21 ene 2020 16:55:41] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@237dc815, includeTables=true, username=examenes, outputLogPath=/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/DB.xml.log, readIndexes=null, driverClass=oracle.jdbc.driver.OracleDriver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.OracleMetaDataProvider, outputPath=/home/tecnologo/wr7/WebRatio/workspace/examenesWeb/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/home/tecnologo/wr7/WebRatio/workspace/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:oracle:thin:@172.18.53.173:1521:orades01, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=42241}
+[21 ene 2020 16:55:41] URL: jdbc:oracle:thin:@172.18.53.173:1521:orades01
+[21 ene 2020 16:55:41] Product name: Oracle
+[21 ene 2020 16:55:41] Product version: Oracle Database 11g Release 11.1.0.0.0 - Production
+[21 ene 2020 16:55:41] Driver name: Oracle JDBC driver
+[21 ene 2020 16:55:41] Driver version: 10.2.0.1.0
+[21 ene 2020 16:55:41] Driver major version: 10
+[21 ene 2020 16:55:41] Driver minor version: 2
+[21 ene 2020 16:55:41] Identifier quote string: 2
+[21 ene 2020 16:55:41] Retrieving schemas
+[21 ene 2020 16:55:41]   Adding owner schema: EXAMENES
+[21 ene 2020 16:55:41] Retrieving sequences
+[21 ene 2020 16:55:42] Could not read database sequences using SQL
+java.sql.SQLException: ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:112)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:331)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:288)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:743)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:213)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:796)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1031)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:836)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1124)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3285)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3329)
+	at com.webratio.commons.db.metadata.OracleMetaDataProvider.processSequences(OracleMetaDataProvider.java:100)
+	at com.webratio.commons.db.metadata.AbstractMetaDataProvider.getDatabase(AbstractMetaDataProvider.java:98)
+	at com.webratio.commons.db.metadata.MetaDataRetriever.runAnt(MetaDataRetriever.java:136)
+	at com.webratio.commons.db.metadata.MetaDataRetriever.main(MetaDataRetriever.java:51)
+[21 ene 2020 16:55:42] Retrieving [TABLE, VIEW, SYNONYM] for schema 'EXAMENES'
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ACTIVITYINSTANCE_CANDIDATEUSER' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ADMINEXAMEN' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ADMINISTRADOR' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ASPIRANTE_RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.ATTACHMENT' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.BANCOPREGUNTAS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.BANCORESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.CONTEXTO' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.CONTEXTOGLOBAL' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.EXAMEN' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.EXAMENES' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.GROUP' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.GROUP_ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.GROUP_MODULE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.HT_ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.MATERIAS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.MODULE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.NOTE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.NOTE_ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.NOTE_PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.NOTIFICATION' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.PARAMETERINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.PARAMETERTYPE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.PREVIOUSACTIVITYINSTANCE_NEXTA' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.PROCESS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.SEQUENCEFLOW' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.USER' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.USER_GROUP' [type = TABLE]
+[21 ene 2020 16:55:42]   Found 'EXAMENES.USER_NOTIFICATIONS' [type = TABLE]
+[21 ene 2020 16:55:42] Retrieving columns for 'EXAMENES.ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: STATUS [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: READY_SINCE [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: ACTIVE_SINCE [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: COMPLETED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: ABORTED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: CANCELLED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: WORKED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:42]   Found column: ROLLBACKABLE [type = NUMBER][SQL/XOPEN type = 3][size = 1][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: CONTEXT [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: GROUP_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: ACTIVITYTYPE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: PROCESSINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42] Retrieving primary keys for 'EXAMENES.ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found primary key column: OID
+[21 ene 2020 16:55:42] Retrieving columns for 'EXAMENES.ACTIVITYINSTANCE_CANDIDATEUSER' [type = TABLE]
+[21 ene 2020 16:55:42]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42] Retrieving primary keys for 'EXAMENES.ACTIVITYINSTANCE_CANDIDATEUSER' [type = TABLE]
+[21 ene 2020 16:55:42]   Found primary key column: ACTIVITYINSTANCE_OID
+[21 ene 2020 16:55:42]   Found primary key column: USER_OID
+[21 ene 2020 16:55:42] Retrieving columns for 'EXAMENES.ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:42]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:42]   Found column: ID [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: CODE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: DEFAULT_INSTANCE_NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: DESCRIPTION [type = CLOB][SQL/XOPEN type = 2005][size = 4000][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: TYPE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: EXECUTION [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: SORT_NUMBER [type = FLOAT][SQL/XOPEN type = 6][size = 126][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: UUID [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: PROCESS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.ADMINEXAMEN' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: PORCENTAJE [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: MATERIA [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: OIDADMIN [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ADMINEXAMEN' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.ADMINISTRADOR' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: APELLIDOPATERNO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: APELLIDOMATERNO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: NOMBRE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ADMINISTRADOR' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: USER_OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: APELLIDOPATERNO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: APELLIDOMATERNO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: NOMBRE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: FECHAREGISTRO [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:43]   Found column: ESTATUS [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: USER_OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.ASPIRANTE_RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: RESPUESTAS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ASPIRANTE_RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: USER_OID
+[21 ene 2020 16:55:43]   Found primary key column: RESPUESTAS_OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.ATTACHMENT' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: FILE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: TITLE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: TIMESTAMP [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:43]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.ATTACHMENT' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.BANCOPREGUNTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: PREGUNTA [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: FRACCION [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: ARTICULO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: OIDCONTEXTO [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: MATERIAS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: CONTEXTO_OID [type = NUMBER][SQL/XOPEN type = 3][size = 19][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: CONTEXTOGLOBAL_OID [type = NUMBER][SQL/XOPEN type = 3][size = 19][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.BANCOPREGUNTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.BANCORESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: RESPUESTACORRECTA [type = NUMBER][SQL/XOPEN type = 3][size = 1][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: RESPUESTA [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: BANCOPREGUNTAS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.BANCORESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.CONTEXTO' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: CONTEXTO [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: NUMEROPREGUNTAS [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: CONTEXTOGLOBAL_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.CONTEXTO' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.CONTEXTOGLOBAL' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: MATERIA [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.CONTEXTOGLOBAL' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.EXAMEN' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: OIDPREGUNTA [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: FASE [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: NUMEROPREGUNTA [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: EXAMENES_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.EXAMEN' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.EXAMENES' [type = TABLE]
+[21 ene 2020 16:55:43]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: FECHACREACION [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:43]   Found column: NOMBRE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: ESTATUS [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: ADMINISTRADOR_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43]   Found column: ASPIRANTE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:43] Retrieving primary keys for 'EXAMENES.EXAMENES' [type = TABLE]
+[21 ene 2020 16:55:43]   Found primary key column: OID
+[21 ene 2020 16:55:43] Retrieving columns for 'EXAMENES.GROUP' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: GROUPNAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MODULE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.GROUP' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.GROUP_ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: GROUP_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYTYPE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.GROUP_ACTIVITYTYPE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: GROUP_OID
+[21 ene 2020 16:55:44]   Found primary key column: ACTIVITYTYPE_OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.GROUP_MODULE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: GROUP_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MODULE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.GROUP_MODULE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: GROUP_OID
+[21 ene 2020 16:55:44]   Found primary key column: MODULE_OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.HT_ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.HT_ASPIRANTE' [type = TABLE]
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.MATERIAS' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: DESCRIPCION [type = CLOB][SQL/XOPEN type = 2005][size = 4000][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MATERIA [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: CONTEXTO_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.MATERIAS' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.MODULE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MODULEID [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MODULENAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MODULEDOMAINNAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.MODULE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.NOTE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: TEXT [type = CLOB][SQL/XOPEN type = 2005][size = 4000][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: TIMESTAMP [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.NOTE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.NOTE_ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: NOTE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.NOTE_ACTIVITYINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: NOTE_OID
+[21 ene 2020 16:55:44]   Found primary key column: ACTIVITYINSTANCE_OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.NOTE_PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: NOTE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: PROCESSINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.NOTE_PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: NOTE_OID
+[21 ene 2020 16:55:44]   Found primary key column: PROCESSINSTANCE_OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.NOTIFICATION' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: MESSAGE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: READ [type = NUMBER][SQL/XOPEN type = 3][size = 1][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.NOTIFICATION' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.PARAMETERINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: VALUE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: CURRENT [type = NUMBER][SQL/XOPEN type = 3][size = 1][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: TIMESTAMP [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: PARAMETERTYPE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: PROCESSINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.PARAMETERINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.PARAMETERTYPE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: DESCRIPTION [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: TYPE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: PROCESS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.PARAMETERTYPE' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.PREVIOUSACTIVITYINSTANCE_NEXTA' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID_2 [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: ACTIVITYINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.PREVIOUSACTIVITYINSTANCE_NEXTA' [type = TABLE]
+[21 ene 2020 16:55:44]   Found primary key column: ACTIVITYINSTANCE_OID_2
+[21 ene 2020 16:55:44]   Found primary key column: ACTIVITYINSTANCE_OID
+[21 ene 2020 16:55:44] Retrieving columns for 'EXAMENES.PROCESS' [type = TABLE]
+[21 ene 2020 16:55:44]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: CODE [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: DEFAULT_INSTANCE_NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: DESCRIPTION [type = CLOB][SQL/XOPEN type = 2005][size = 4000][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: UUID [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44]   Found column: VERSION [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:44] Retrieving primary keys for 'EXAMENES.PROCESS' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: NAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: SUBPROCESSINDEX [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: STATUS [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: ACTIVE_SINCE [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:45]   Found column: COMPLETED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:45]   Found column: CANCELLED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:45]   Found column: ABORTED_AT [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:45]   Found column: PROCESS_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: PROCESSINSTANCE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.PROCESSINSTANCE' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: OIDRESPUESTA [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: OIDPREGUNTA [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: OIDEXAMEN [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: ESTAMPARESPUESTA [type = TIMESTAMP(6)][SQL/XOPEN type = 93][size = 11][dec. digits = 6]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.RESPUESTAS' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.SEQUENCEFLOW' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: LABEL [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: CONDITION [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: DEFAULT [type = NUMBER][SQL/XOPEN type = 3][size = 1][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: SORT_NUMBER [type = FLOAT][SQL/XOPEN type = 6][size = 126][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: ACTIVITYTYPE_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: ACTIVITYTYPE_OID_2 [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.SEQUENCEFLOW' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.USER' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: USERNAME [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: PASSWORD [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: EMAIL [type = VARCHAR2][SQL/XOPEN type = 12][size = 1020][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: GROUP_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.USER' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.USER_GROUP' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: GROUP_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.USER_GROUP' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: USER_OID
+[21 ene 2020 16:55:45]   Found primary key column: GROUP_OID
+[21 ene 2020 16:55:45] Retrieving columns for 'EXAMENES.USER_NOTIFICATIONS' [type = TABLE]
+[21 ene 2020 16:55:45]   Found column: USER_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45]   Found column: NOTIFICATION_OID [type = NUMBER][SQL/XOPEN type = 3][size = 10][dec. digits = 0]
+[21 ene 2020 16:55:45] Retrieving primary keys for 'EXAMENES.USER_NOTIFICATIONS' [type = TABLE]
+[21 ene 2020 16:55:45]   Found primary key column: USER_OID
+[21 ene 2020 16:55:45]   Found primary key column: NOTIFICATION_OID
+[21 ene 2020 16:55:45] Database metadata retrieved (3864 ms)
+[21 ene 2020 16:55:46] Database connection closed

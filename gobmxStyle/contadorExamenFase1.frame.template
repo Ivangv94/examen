@@ -1,0 +1,29 @@
+<div id="reloj" />
+ 
+<script>
+horas = 00
+minutos = 00
+segundos = 9
+
+
+ 
+function muestraReloj() {
+    console.log("a");
+    if (segundos === 0){ segundos=59; minutos --;}
+  
+ 
+    var string = "";
+    string += horas +':'+ minutos + ':'+ segundos;
+    document.getElementById("reloj").innerHTML = string;
+ 
+    segundos --;
+    
+    if(minutos === -1){ console.log("El tiempo terminó");
+    
+    document.getElementById("reloj").style.display = 'none';
+    
+    
+    }
+}
+setInterval(muestraReloj, 1000);
+</script>

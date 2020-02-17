@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="7.2.0.4"?>
+
+<WebProject xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="true" jobGroupName="WEBRATIO" wrTempNewProject="true" bpm:bpmBased="true">
+  <ServiceDataProviders/>
+  <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="com.webratio.units.bpm" natureId="com.webratio.ide.units.wrunitsnature"/>
+  <ReferencedProject name="examenesBPMN" natureId="com.webratio.bpm.businessmodelingnature"/>
+  <BPMResources>
+    <BPMResource id="bpmr1" name="examenes" uuid="K1I6C4LD_HA651Z" path="/examenesBPMN/Processes/examenes.bpm"/>
+  </BPMResources>
+  <ReferencedProject name="gobmxStyle" natureId="com.webratio.ide.styles.wrstylenature"/>
+</WebProject>

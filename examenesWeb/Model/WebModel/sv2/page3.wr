@@ -1,0 +1,160 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page3" name="Process Instance Details" gr:x="288" gr:y="694">
+  <ContentUnits>
+    <DataUnit id="sv2#page3#dau1" name="Process Instance Details" linkOrder="sv2#page3#dau1#ln8 sv2#page3#dau1#ln9 sv2#page3#dau1#ln10 sv2#page3#dau1#ln11" gr:x="0" gr:y="1" entity="ProcessInstance" displayAttributes="processInstanceName processInstanceDescription processInstanceStatus processInstanceActiveTimestamp processInstanceCompletedTimestamp processInstanceCancelledTimestamp processInstanceAbortedTimestamp">
+      <Selector id="sv2#page3#dau1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page3#dau1#su3#kcond2" name="oid" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page3#dau1#ln7" name="Link75" to="sv2#page3#pwu1" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page3#dau1#ln8" name="Back" to="sv2#page5" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page3#dau1#ln9" name="Mark as Cancelled" to="sv2#pu3" type="normal" validate="true">
+        <LinkParameter id="sv2#page3#dau1#ln9#par15" name="oid_Process Instance Oids" source="data.processInstanceOid" target="sv2#pu3.processInstanceOids"/>
+      </Link>
+      <Link id="sv2#page3#dau1#ln10" name="diagram" to="sv2#page7#pdu2" type="normal" automaticCoupling="true" validate="true" newWindow="true"/>
+      <Link id="sv2#page3#dau1#ln11" name="Delete Process Instance" to="sv2#pu6" type="normal" validate="true">
+        <LinkParameter id="sv2#page3#dau1#ln11#par16" name="oid_Process Instance Oids" source="data.processInstanceOid" target="sv2#pu6.processInstanceOids"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit id="sv2#page3#pwu1" entity="ActivityInstance" displayAttributes="activityInstanceName activityInstanceUserName activityInstanceGroupName activityInstanceExecution activityInstanceStatus activityInstanceReadyTimestamp activityInstanceActiveTimestamp activityInstanceCompletedTimestamp activityInstanceAbortedTimestamp activityInstanceCancelledTimestamp" sortable="true" checkable="false" name="Activity List" gr:x="188" gr:y="0" linkOrder="sv2#page3#pwu1#ln12 sv2#page3#pwu1#ln13" sortHistorySize="3" ajaxEnableExpandedLinks="false">
+      <Selector id="sv2#page3#pwu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page3#pwu1#su4#rcond2" role="processInstance2ActivityInstances" predicate="in" implied="false" name="processInstance"/>
+      </Selector>
+      <Link id="sv2#page3#pwu1#ln12" name="Select User and Group Assignee" to="sv2#page2#seu1" type="normal" automaticCoupling="true" validate="true" ajaxEnabled="true" ajaxOpenWindow="true" ajaxWindowAutoResizing="false" ajaxWindowClosable="true" ajaxWindowModal="true" ajaxWindowUseTitle="true" ajaxWindowTitle="Select User and Group Assignee" ajaxWindowWidth="400" ajaxWindowHeight="400"/>
+      <Link id="sv2#page3#pwu1#ln13" name="Remove Assignee" to="sv2#pu7" type="normal" validate="true">
+        <LinkParameter id="sv2#page3#pwu1#ln13#par17" name="oid_Activity Instance Oid" source="data[].activityInstanceOid" target="sv2#pu7.activityInstanceOid"/>
+        <LinkParameter id="sv2#page3#pwu1#ln13#par18" name="$$NULL$$_Group Oid" sourceValue="$$NULL$$" target="sv2#pu7.groupOid"/>
+        <LinkParameter id="sv2#page3#pwu1#ln13#par19" name="$$NULL$$_User Oid" sourceValue="$$NULL$$" target="sv2#pu7.userOid"/>
+      </Link>
+      <SortAttribute attribute="activityInstanceReadyTimestamp" order="ascending"/>
+      <SortAttribute attribute="activityInstanceActiveTimestamp" order="ascending"/>
+      <SortAttribute attribute="activityInstanceCompletedTimestamp" order="ascending"/>
+      <SortAttribute attribute="activityInstanceName" order="ascending"/>
+      <SortAttribute attribute="activityInstanceGroupName" order="ascending"/>
+      <SortAttribute attribute="activityInstanceStatus" order="ascending"/>
+      <SortAttribute attribute="activityInstanceAbortedTimestamp" order="ascending"/>
+      <SortAttribute attribute="activityInstanceCancelledTimestamp" order="ascending"/>
+      <SortAttribute attribute="activityInstanceUserName" order="ascending"/>
+      <SortAttribute attribute="activityInstanceExecution" order="descending"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#dau1" manualLinks="true" manualLinkOrder="sv2#page3#dau1#ln10 sv2#page3#dau1#ln9 sv2#page3#dau1#ln11">
+          <layout:Attribute attribute="processInstanceName" label="Name"/>
+          <layout:Attribute attribute="processInstanceDescription" label="Description"/>
+          <layout:Attribute attribute="processInstanceStatus" label="Status"/>
+          <layout:Attribute attribute="processInstanceActiveTimestamp" label="Active Since"/>
+          <layout:Attribute attribute="processInstanceCompletedTimestamp" label="Completed at"/>
+          <layout:Attribute attribute="processInstanceCancelledTimestamp" label="Cancelled at"/>
+          <layout:Attribute attribute="processInstanceAbortedTimestamp" label="Aborted at"/>
+          <layout:Link label="History Diagram" link="sv2#page3#dau1#ln10">
+            <layout:LayoutParameter name="show" value="icon &amp; text" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page3#dau1#ln9" layout:linkVisibilityCondition="sv2#page3#cexpr2">
+            <layout:LayoutParameter name="show" value="icon &amp; text" type="link"/>
+            <layout:LayoutParameter name="icon-name" value="delete_gray" type="link"/>
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="confirmCancelProcess" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page3#dau1#ln11">
+            <layout:LayoutParameter name="show" value="icon &amp; text" type="link"/>
+            <layout:LayoutParameter name="icon-name" value="delete" type="link"/>
+            <layout:LayoutParameter name="confirmation" value="true" type="link"/>
+            <layout:LayoutParameter name="confirm-message" value="confirmDeletion" type="link"/>
+          </layout:Link>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#pwu1">
+          <layout:LayoutParameter name="use-alternate" value="true" type="unit"/>
+          <layout:Attribute attribute="activityInstanceName" label="Name" styleClass="nowrap"/>
+          <layout:Attribute attribute="activityInstanceUserName" label="Assignee" styleClass="nowrap"/>
+          <layout:Attribute attribute="activityInstanceGroupName" label="Group"/>
+          <layout:Attribute attribute="activityInstanceExecution" label="Execution"/>
+          <layout:Attribute attribute="activityInstanceStatus" label="Status"/>
+          <layout:Attribute attribute="activityInstanceReadyTimestamp" label="Ready Since" styleClass="nowrap"/>
+          <layout:Attribute attribute="activityInstanceActiveTimestamp" label="Active Since"/>
+          <layout:Attribute attribute="activityInstanceCompletedTimestamp" label="Completed at" styleClass="nowrap"/>
+          <layout:Attribute attribute="activityInstanceAbortedTimestamp" label="Aborted at"/>
+          <layout:Attribute attribute="activityInstanceCancelledTimestamp" label="Cancelled at"/>
+          <layout:Link link="sv2#page3#pwu1#ln12" layout:linkDisableCondition="sv2#page3#cexpr4" layout:linkDisableConditionNegated="true">
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-name" value="assign" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page3#pwu1#ln13" layout:linkDisableConditionNegated="true" layout:linkDisableCondition="sv2#page3#cexpr3">
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-name" value="unassign" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page3#pwu1activityInstanceReadyTimestamp"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceActiveTimestamp"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceCompletedTimestamp"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceName"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceGroupName"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceStatus"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceAbortedTimestamp"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceCancelledTimestamp"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceUserName"/>
+          <layout:Link link="sv2#page3#pwu1activityInstanceExecution"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell align="right" width="100%" colspan="12">
+        <layout:Unit unitId="sv2#page3#dau1" manualAttributes="true" manualLinks="true" layout:frameLayout="None" manualLinkOrder="sv2#page3#dau1#ln8">
+          <layout:Link link="sv2#page3#dau1#ln8">
+            <layout:LayoutParameter name="link-style" value="button" type="link"/>
+          </layout:Link>
+          <layout:LayoutParameter name="link-position" value="right" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv2#page3#var2" name="processStatus" parameter="data.processInstanceStatus" unitId="sv2#page3#dau1"/>
+  <ConditionExpression id="sv2#page3#cexpr2" name="Process not Cancelled">
+    <TextValue xml:space="preserve">processStatus != "cancelled"</TextValue>
+  </ConditionExpression>
+  <Variable id="sv2#page3#var3" name="activityExecution" parameter="data[].activityInstanceExecution" unitId="sv2#page3#pwu1"/>
+  <Variable id="sv2#page3#var4" name="activityStatus" parameter="data[].activityInstanceStatus" unitId="sv2#page3#pwu1"/>
+  <Variable id="sv2#page3#var5" name="activityUserName" parameter="data[].activityInstanceUserName" unitId="sv2#page3#pwu1"/>
+  <ConditionExpression id="sv2#page3#cexpr3" name="Activity Assigned">
+    <TextValue xml:space="preserve">activityUserName != null &amp;&amp; (activityStatus == 'ready' || activityStatus == 'active')</TextValue>
+  </ConditionExpression>
+  <ConditionExpression id="sv2#page3#cexpr4" name="Activity Assignable">
+    <TextValue xml:space="preserve">activityExecution == 'user' &amp;&amp; (activityStatus == 'ready' || activityStatus == 'active')</TextValue>
+  </ConditionExpression>
+</Page>

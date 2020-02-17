@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="120" gr:y="65" id="mov2#opm1" name="Generar ex&#225;men">
+  <OperationUnits>
+    <InputCollectorUnit id="mov2#opm1#icu5" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov2#opm1#icu5#icp1" name="oidAplicante"/>
+      <OKLink id="mov2#opm1#icu5#oln44" name="OKFlow44" to="mov2#opm1#scu3" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <ScriptUnit gr:x="325" gr:y="70" id="mov2#opm1#scu3" name="generaArreglosPreguntas">
+      <ScriptUnitText xml:space="preserve">#output
+
+int totalPreguntas = 180;
+int preguntasParte1 = 126;
+int preguntasParte2 = 54;
+
+
+
+int contexto1 = 38;
+int contexto2 = 38;
+int contexto3 = 26;
+int contexto4 = 12;
+int contexto5 = 12;
+
+int contexto6 = 16
+int contexto7 = 16
+int contexto8 = 10
+int contexto9 = 6
+int contexto10 = 6</ScriptUnitText>
+    </ScriptUnit>
+  </OperationUnits>
+</OperationModule>

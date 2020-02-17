@@ -1,0 +1,225 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-165" gr:y="1465" id="sv3#page21" name="Agregar">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page21#enu12" name="Form12" linkOrder="sv3#page21#enu12#ln115" fieldOrder="sv3#page21#enu12#fld80 sv3#page21#enu12#fld81 sv3#page21#enu12#fld82 sv3#page21#enu12#fld83">
+      <Field id="sv3#page21#enu12#fld80" name="CURP" type="string" modifiable="true"/>
+      <Link id="sv3#page21#enu12#ln115" name="Flow115" to="sv3#seu13" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#page21#enu12#ln118" name="Flow118" to="sv3#cru8" type="transport" validate="true">
+        <LinkParameter id="sv3#page21#enu12#ln118#par168" name="CURP_userName" source="sv3#page21#enu12#fld80" target="sv3#cru8.userName"/>
+        <LinkParameter id="sv3#page21#enu12#ln118#par1879" name="Apellido2_apellidomaterno" source="sv3#page21#enu12#fld83" target="sv3#cru8.ent6#att17"/>
+        <LinkParameter id="sv3#page21#enu12#ln118#par1880" name="Apellido1_apellidopaterno" source="sv3#page21#enu12#fld82" target="sv3#cru8.ent6#att16"/>
+        <LinkParameter id="sv3#page21#enu12#ln118#par1881" name="1_Group.oid(defaultGroup)" sourceValue="1" target="sv3#cru8.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#page21#enu12#ln118#par1882" name="1_Group.oid(groups)" sourceValue="1" target="sv3#cru8.User2Group.groupOID"/>
+        <LinkParameter id="sv3#page21#enu12#ln118#par1883" name="Nombre_nombre" source="sv3#page21#enu12#fld81" target="sv3#cru8.ent6#att18"/>
+      </Link>
+      <Field id="sv3#page21#enu12#fld83" name="Apellido2" type="string" modifiable="true"/>
+      <Field id="sv3#page21#enu12#fld82" name="Apellido1" type="string" modifiable="true"/>
+      <Field id="sv3#page21#enu12#fld81" name="Nombre" type="string" modifiable="true"/>
+    </EntryUnit>
+    <IndexUnit gr:x="10" gr:y="65" id="sv3#page21#inu6" name="Administradores" entity="ent6" displayAttributes="userName password ent6#att16 ent6#att17 ent6#att18"/>
+    <MultiMessageUnit gr:x="85" gr:y="0" id="sv3#page21#mssu7" name="Message7"/>
+    <EntryUnit gr:x="80" gr:y="155" id="sv3#page21#enu13" name="Buttons" linkOrder="sv3#page21#enu13#ln119">
+      <Link id="sv3#page21#enu13#ln119" name="Flow119" to="sv3#page20" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page21#mssu7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9" layout:cellLayout="Print Frame" layout:frameLayout="None">
+        <layout:Grid containerType="grid" label="Form12">
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page21#enu12" mode="full" field="sv3#page21#enu12#fld80">
+                <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page21#enu12" mode="full" field="sv3#page21#enu12#fld81">
+                <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page21#enu12" mode="full" field="sv3#page21#enu12#fld82">
+                <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page21#enu12" mode="full" field="sv3#page21#enu12#fld83">
+                <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="3"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Link unitId="sv3#page21#enu12" link="sv3#page21#enu12#ln115">
+                <layout:LayoutParameter name="show-label" value="false" type="unit"/>
+                <layout:LayoutParameter name="btn-style" value="primary" type="link"/>
+              </layout:Link>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="3"/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page21#inu6">
+          <layout:Attribute attribute="userName"/>
+          <layout:Attribute attribute="password"/>
+          <layout:Attribute attribute="ent6#att16"/>
+          <layout:Attribute attribute="ent6#att17"/>
+          <layout:Attribute attribute="ent6#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9" layout:cellLayout="Print Frame" layout:frameLayout="None">
+        <layout:Grid containerType="grid" label="Buttons">
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Link unitId="sv3#page21#enu13" link="sv3#page21#enu13#ln119"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+</Page>

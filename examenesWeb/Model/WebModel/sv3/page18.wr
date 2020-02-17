@@ -1,0 +1,240 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1580" gr:y="900" id="sv3#page18" name="Home administrador">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="80" id="sv3#page18#inu5" name="Aspirantes" entity="ent7" displayAttributes="ent7#att20 ent7#att21 ent7#att22 ent7#att31 password"/>
+    <EntryUnit gr:x="135" gr:y="90" id="sv3#page18#enu18" name="Form18" fieldOrder="sv3#page18#enu18#fld14 sv3#page18#enu18#fld18 sv3#page18#enu18#fld19 sv3#page18#enu18#fld20 sv3#page18#enu18#fld21 sv3#page18#enu18#fld13" linkOrder="sv3#page18#enu18#ln127">
+      <Field id="sv3#page18#enu18#fld21" name="Hora de aplicaci&#243;n" type="string" modifiable="true"/>
+      <Field id="sv3#page18#enu18#fld20" name="Fecha de aplicaci&#243;n" type="timestamp" modifiable="true"/>
+      <Field id="sv3#page18#enu18#fld19" name="Apellido Materno" type="string" modifiable="true"/>
+      <Field id="sv3#page18#enu18#fld18" name="Apellido Paterno" type="string" modifiable="true"/>
+      <Field id="sv3#page18#enu18#fld14" name="Nombre" type="string" modifiable="true"/>
+      <Field id="sv3#page18#enu18#fld13" name="CURP" type="string" modifiable="true"/>
+      <Link id="sv3#page18#enu18#ln127" name="Flow127" to="sv3#scu9" type="normal" validate="true">
+        <LinkParameter id="sv3#page18#enu18#ln127#par132" name="Apellido Paterno_app1" source="sv3#page18#enu18#fld18" target="sv3#scu9.app1"/>
+        <LinkParameter id="sv3#page18#enu18#ln127#par135" name="Apellido Materno_app2" source="sv3#page18#enu18#fld19" target="sv3#scu9.app2"/>
+        <LinkParameter id="sv3#page18#enu18#ln127#par136" name="CURP_CURP" source="sv3#page18#enu18#fld13" target="sv3#scu9.CURP"/>
+        <LinkParameter id="sv3#page18#enu18#ln127#par139" name="Fecha de aplicaci&#243;n_fecha" source="sv3#page18#enu18#fld20" target="sv3#scu9.fecha"/>
+        <LinkParameter id="sv3#page18#enu18#ln127#par140" name="Nombre_nombre" source="sv3#page18#enu18#fld14" target="sv3#scu9.nombre"/>
+      </Link>
+      <Link id="sv3#page18#enu18#ln131" name="Flow131" to="sv3#cru5" type="transport" validate="true">
+        <LinkParameter id="sv3#page18#enu18#ln131#par110" name="Apellido Materno_apellidomaterno" source="sv3#page18#enu18#fld19" target="sv3#cru5.ent7#att21"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par111" name="Apellido Paterno_apellidopaterno" source="sv3#page18#enu18#fld18" target="sv3#cru5.ent7#att20"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par112" name="Fecha de aplicaci&#243;n_fechaRegistro" source="sv3#page18#enu18#fld20" target="sv3#cru5.ent7#att31"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par113" name="2_Group.oid(defaultGroup)" sourceValue="2" target="sv3#cru5.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par114" name="2_Group.oid(groups)" sourceValue="2" target="sv3#cru5.User2Group.groupOID"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par115" name="Nombre_nombre" source="sv3#page18#enu18#fld14" target="sv3#cru5.ent7#att22"/>
+        <LinkParameter id="sv3#page18#enu18#ln131#par116" name="CURP_userName" source="sv3#page18#enu18#fld13" target="sv3#cru5.userName"/>
+      </Link>
+      <Link id="sv3#page18#enu18#ln112" name="Flow112" to="sv3#seu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page18#enu18#ln112#par106" name="CURP_CURP" source="sv3#page18#enu18#fld13" target="sv3#seu14#su41#acond21"/>
+      </Link>
+      <Link id="sv3#page18#enu18#ln114" name="Flow114" to="sv3#scu12" type="transport" validate="true">
+        <LinkParameter id="sv3#page18#enu18#ln114#par131" name="Fecha de aplicaci&#243;n_fechaAplicacion" source="sv3#page18#enu18#fld20" target="sv3#scu12.fechaAplicacion"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="40" gr:y="0" id="sv3#page18#mssu4" name="Message4"/>
+    <EntryUnit gr:x="175" gr:y="15" id="sv3#page18#enu19" name="button" linkOrder="sv3#page18#enu19#ln148">
+      <Link id="sv3#page18#enu19#ln148" name="Flow148" to="sv3#page31" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page18#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9" layout:cellLayout="Print Frame" layout:frameLayout="None">
+        <layout:Grid containerType="grid" label="Form18">
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page18#enu18" mode="full" field="sv3#page18#enu18#fld14">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page18#enu18" mode="full" field="sv3#page18#enu18#fld18">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page18#enu18" mode="full" field="sv3#page18#enu18#fld19">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page18#enu18" mode="full" field="sv3#page18#enu18#fld13">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="6">
+              <layout:Field unitId="sv3#page18#enu18" mode="full" field="sv3#page18#enu18#fld20">
+                <layout:LayoutParameter name="label-position" value="top" type="field"/>
+              </layout:Field>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="6"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="5"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="7">
+              <layout:Link unitId="sv3#page18#enu18" link="sv3#page18#enu18#ln127">
+                <layout:LayoutParameter name="btn-style" value="primary" type="link"/>
+              </layout:Link>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page18#inu5">
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att21"/>
+          <layout:Attribute attribute="ent7#att22"/>
+          <layout:Attribute attribute="ent7#att31"/>
+          <layout:Attribute attribute="password"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="9" layout:cellLayout="Print Frame">
+        <layout:Grid containerType="grid" label="button">
+          <layout:Row>
+            <layout:Cell colspan="7"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell colspan="5">
+              <layout:Link unitId="sv3#page18#enu19" link="sv3#page18#enu19#ln148">
+                <layout:LayoutParameter name="btn-style" value="primary" type="link"/>
+              </layout:Link>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+</Page>

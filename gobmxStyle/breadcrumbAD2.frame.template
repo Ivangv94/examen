@@ -1,0 +1,20 @@
+#?delimiters [%, %], [%=, %]
+[%setHTMLOutput()%]
+
+<head>
+    <meta charset="utf-8">
+</head>
+<ul class="wizard-steps-extensive">
+    <li class="completed">
+        <h5>1</h5>
+        <span>Seleccionar liquidador</span>
+    </li>
+    <li class="completed">
+            <h5>2</h5>
+            <span>Acuerdo de disoluci—n</span>
+    </li>
+    <li>
+        <h5>3</h5>
+        <span>Socios o accionistas que han manifestado su voluntad de publicar el acta de disoluci—n y liquidaci—n</span>
+    </li>
+</ul>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBMetaData driverMajorVersion="10" driverMinorVersion="2" driverVersion="10.2.0.1.0" productVersion="Oracle Database 11g Release 11.1.0.0.0 - Production" identifierQuoteString="&quot;" transactionLevel="Read Committed" driverName="Oracle JDBC driver" productName="Oracle">
+  <Schema name="EXAMENES"/>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ACTIVITYINSTANCE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="STATUS" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="READY_SINCE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="ACTIVE_SINCE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="COMPLETED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="ABORTED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="CANCELLED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="WORKED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="1" decimalDigits="0" webMLType="integer" name="ROLLBACKABLE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="CONTEXT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYTYPE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESSINSTANCE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ACTIVITYINSTANCE_CANDIDATEUSER" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ACTIVITYTYPE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="ID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="CODE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="DEFAULT_INSTANCE_NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="2005" indexed="unknown" autoIncrement="false" type="CLOB" size="4000" decimalDigits="0" name="DESCRIPTION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="TYPE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="EXECUTION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="6" indexed="unknown" autoIncrement="false" type="FLOAT" size="126" decimalDigits="0" name="SORT_NUMBER" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="UUID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESS_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ADMINEXAMEN" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PORCENTAJE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MATERIA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDADMIN" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ADMINISTRADOR" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="APELLIDOPATERNO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="APELLIDOMATERNO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NOMBRE" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ASPIRANTE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="APELLIDOPATERNO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="APELLIDOMATERNO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NOMBRE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="FECHAREGISTRO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="ESTATUS" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ASPIRANTE_RESPUESTAS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="RESPUESTAS_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="ATTACHMENT" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="FILE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="TITLE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="TIMESTAMP" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="BANCOPREGUNTAS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="PREGUNTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="FRACCION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="ARTICULO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDCONTEXTO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="MATERIAS_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="19" decimalDigits="0" name="CONTEXTO_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="19" decimalDigits="0" name="CONTEXTOGLOBAL_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="BANCORESPUESTAS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="1" decimalDigits="0" webMLType="integer" name="RESPUESTACORRECTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="RESPUESTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="BANCOPREGUNTAS_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="CONTEXTO" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="CONTEXTO" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="NUMEROPREGUNTAS" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="CONTEXTOGLOBAL_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="CONTEXTOGLOBAL" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MATERIA" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="EXAMEN" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDPREGUNTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="FASE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="NUMEROPREGUNTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="EXAMENES_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="EXAMENES" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="FECHACREACION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NOMBRE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="ESTATUS" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ADMINISTRADOR_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ASPIRANTE_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="GROUP" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="GROUPNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="MODULE_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="GROUP_ACTIVITYTYPE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYTYPE_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="GROUP_MODULE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="MODULE_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="HT_ASPIRANTE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="MATERIAS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="2005" indexed="unknown" autoIncrement="false" type="CLOB" size="4000" decimalDigits="0" name="DESCRIPCION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MATERIA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="CONTEXTO_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="MODULE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MODULEID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MODULENAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MODULEDOMAINNAME" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="NOTE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="2005" indexed="unknown" autoIncrement="false" type="CLOB" size="4000" decimalDigits="0" name="TEXT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="TIMESTAMP" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="NOTE_ACTIVITYINSTANCE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="NOTE_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="NOTE_PROCESSINSTANCE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="NOTE_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESSINSTANCE_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="NOTIFICATION" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="MESSAGE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="1" decimalDigits="0" webMLType="integer" name="READ" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="PARAMETERINSTANCE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="VALUE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="1" decimalDigits="0" webMLType="integer" name="CURRENT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="TIMESTAMP" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PARAMETERTYPE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESSINSTANCE_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="PARAMETERTYPE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="DESCRIPTION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="TYPE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESS_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="PREVIOUSACTIVITYINSTANCE_NEXTA" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID_2" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYINSTANCE_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="PROCESS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="CODE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="DEFAULT_INSTANCE_NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="2005" indexed="unknown" autoIncrement="false" type="CLOB" size="4000" decimalDigits="0" name="DESCRIPTION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="UUID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="VERSION" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="PROCESSINSTANCE" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="NAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="SUBPROCESSINDEX" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="STATUS" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="ACTIVE_SINCE" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="COMPLETED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="CANCELLED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="ABORTED_AT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESS_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="PROCESSINSTANCE_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="RESPUESTAS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDRESPUESTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDPREGUNTA" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OIDEXAMEN" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="93" indexed="unknown" autoIncrement="false" type="TIMESTAMP(6)" size="11" decimalDigits="6" name="ESTAMPARESPUESTA" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="SEQUENCEFLOW" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="LABEL" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="CONDITION" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="1" decimalDigits="0" webMLType="integer" name="DEFAULT" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="6" indexed="unknown" autoIncrement="false" type="FLOAT" size="126" decimalDigits="0" name="SORT_NUMBER" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYTYPE_OID" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="ACTIVITYTYPE_OID_2" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="USER" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="USERNAME" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="PASSWORD" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR2" size="1020" decimalDigits="0" name="EMAIL" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="false" notNull="false"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="USER_GROUP" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="GROUP_OID" primaryKey="true" notNull="true"/>
+  </Table>
+  <Table schema="EXAMENES" ignoreIndexes="false" name="USER_NOTIFICATIONS" type="TABLE" refreshed="true">
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="USER_OID" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="3" indexed="unknown" autoIncrement="false" type="NUMBER" size="10" decimalDigits="0" name="NOTIFICATION_OID" primaryKey="true" notNull="true"/>
+  </Table>
+</DBMetaData>

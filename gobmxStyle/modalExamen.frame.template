@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<!-- The Modal -->
+  
+  <div id="myModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      
+        <h4 class="modal-title">Fin de la fase 1</h4>
+      </div>
+      <div class="modal-body" onload="redireccionar()">
+      <div class="alert alert-info">
+      <h2>El tiempo de la fase actual finalizó</h2>
+        <br>
+        <p>Puedes esperar 5 minutos o presionar el botón para continuar</p>
+      </div>
+        
+      </div>
+      <div class="modal-footer">
+        <div class="btn-group">
+         <a href="fase2.do" type="button" class="btn btn-primary">Continuar a la siguiente fase</a>
+       </div>  
+       
+       <script type="text/javascript">
+function redireccionar(){
+  location.href="fase2.do";
+} 
+setTimeout ("redireccionar()", 2*60*1000); //tiempo expresado en milisegundos
+</script>​​
+​
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+
+// Obtiene el modal mediante el ID
+var modal = document.getElementById("myModal");
+// Ejecuta la funcion que llama al modal con un timeOut
+setTimeout(function(){ modal.style.display = "block"; },1*60*1000);
+</script>
+<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+</body>
+</html>

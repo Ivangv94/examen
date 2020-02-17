@@ -1,0 +1,15 @@
+<WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" layout:style="gobmxStyle" layout:inheritParameters="true" control="Q291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbUxhbmd1YWdlSVNPQ3R4UGFyYW1Vc2VyQ3R4UGFyYW0=" edtLvl="WebRatio Enterprise Platform # 20191008" edtLvlCtrl="V2ViUmF0aW8gRW50ZXJwcmlzZSBQbGF0Zm9ybSAjIDIwMTkxMDA4Q291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbUxhbmd1YWdlSVNPQ3R4UGFyYW1Vc2VyQ3R4UGFyYW0=" homeSiteView="sv1" defaultLocale="lcl2">
+  <ContextParameter id="UserCtxParam" name="UserCtxParam" entity="User" type="entity"/>
+  <ContextParameter id="GroupCtxParam" name="GroupCtxParam" entity="Group" type="entity"/>
+  <ContextParameter id="LanguageISOCtxParam" name="LanguageISOCtxParam" type="string"/>
+  <ContextParameter id="CountryISOCtxParam" name="CountryISOCtxParam" type="string"/>
+  <Locale id="lcl2" country="MX" language="es">
+    <PatternConfiguration type="timestamp" pattern="d/M/yy HH:mm:ss"/>
+    <PatternConfiguration type="time" pattern="hh:mm:ss a"/>
+    <PatternConfiguration type="integer" minInteger="1" useThousandSeparator="true" pattern="#,##0"/>
+    <PatternConfiguration type="boolean" pattern="yes|no"/>
+    <PatternConfiguration type="date" pattern="d/MM/yy"/>
+    <PatternConfiguration type="float" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" pattern="#,##0.###"/>
+    <PatternConfiguration type="decimal" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" pattern="#,##0.###"/>
+  </Locale>
+</WebModel>

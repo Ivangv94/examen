@@ -1,0 +1,26 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="990" gr:y="680" id="sv3#page20" name="Super usuario" layout:pageLayout="WRDefault/Empty">
+  <ContentUnits>
+    <NoOpContentUnit gr:x="0" gr:y="0" id="sv3#page20#gctu2" name="ViewComponent2"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#gctu2" layout:frameLayout="gobmxStyle/Landing-SU"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:LayoutParameter name="show-left-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-right-column" value="false" type="page"/>
+  <layout:LayoutParameter name="show-page-title" value="false" type="page"/>
+</Page>

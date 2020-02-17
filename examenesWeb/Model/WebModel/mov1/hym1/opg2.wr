@@ -1,0 +1,24 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#hym1#opg2" name="Notes" transaction="true" gr:x="118" gr:y="688">
+  <OperationUnits>
+    <TimeUnit id="mov1#hym1#opg2#tmu6" name="NOW" gr:x="174" gr:y="9">
+      <OKLink id="mov1#hym1#opg2#tmu6#oln15" name="OKLink16" to="mov1#hym1#opg2#cru2">
+        <LinkParameter id="mov1#hym1#opg2#tmu6#oln15#par92" name="Current/Input Timestamp_timestamp" source="currentTimestamp" target="mov1#hym1#opg2#cru2.noteTimestamp"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit id="mov1#hym1#opg2#cru2" name="Create Note" gr:x="9" gr:y="116" entity="Note">
+      <OKLink id="mov1#hym1#opg2#cru2#oln16" name="OKLink17" to="mov1#hym1#opg2#cnu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <GetUnit id="mov1#hym1#opg2#gtu8" name="User" gr:x="0" gr:y="0" contextParameters="UserCtxParam">
+      <Link id="mov1#hym1#opg2#gtu8#ln98" name="Link71" to="mov1#hym1#opg2#cru2" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <ConnectUnit id="mov1#hym1#opg2#cnu2" name="Connect to process" gr:x="163" gr:y="105" relationship="processInstance2Notes">
+      <SourceSelector id="mov1#hym1#opg2#cnu2#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#opg2#cnu2#su36#kcond23" name="KeyCondition39" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov1#hym1#opg2#cnu2#su37" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#hym1#opg2#cnu2#su37#kcond24" name="KeyCondition40" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov1#hym1#opg2#cnu2#oln17" name="OKLink40" to="mov1#hym1#mpage3" automaticCoupling="true"/>
+    </ConnectUnit>
+  </OperationUnits>
+</OperationGroup>
